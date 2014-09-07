@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2900DD0319BC209800A4FF45 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2900DD0119BC209800A4FF45 /* blueButton.png */; };
+		2900DD0419BC209800A4FF45 /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2900DD0219BC209800A4FF45 /* whiteButton.png */; };
 		29A955DA19B513540031549F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A955D919B513540031549F /* Foundation.framework */; };
 		29A955DC19B513540031549F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A955DB19B513540031549F /* CoreGraphics.framework */; };
 		29A955DE19B513540031549F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A955DD19B513540031549F /* UIKit.framework */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2900DD0119BC209800A4FF45 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
+		2900DD0219BC209800A4FF45 /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
 		29A955D619B513540031549F /* Control Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Control Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A955D919B513540031549F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29A955DB19B513540031549F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +120,8 @@
 		29A955DF19B513540031549F /* Control Fun */ = {
 			isa = PBXGroup;
 			children = (
+				2900DD0119BC209800A4FF45 /* blueButton.png */,
+				2900DD0219BC209800A4FF45 /* whiteButton.png */,
 				29A955E819B513540031549F /* BIDAppDelegate.h */,
 				29A955E919B513540031549F /* BIDAppDelegate.m */,
 				29A955EB19B513540031549F /* Main.storyboard */,
@@ -238,7 +244,9 @@
 				29A9561119B513F70031549F /* apress_logo_344.png in Resources */,
 				29A955F219B513540031549F /* Images.xcassets in Resources */,
 				29A9561019B513F70031549F /* apress_logo_172.png in Resources */,
+				2900DD0319BC209800A4FF45 /* blueButton.png in Resources */,
 				29A955E419B513540031549F /* InfoPlist.strings in Resources */,
+				2900DD0419BC209800A4FF45 /* whiteButton.png in Resources */,
 				29A955ED19B513540031549F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +473,7 @@
 				29A9560A19B513540031549F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29A9560B19B513540031549F /* Build configuration list for PBXNativeTarget "Control FunTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +482,7 @@
 				29A9560D19B513540031549F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

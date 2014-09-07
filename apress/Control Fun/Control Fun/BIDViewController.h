@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BIDViewController : UIViewController
-
+@interface BIDViewController : UIViewController<UIActionSheetDelegate>
+- (IBAction)textFieldDoneEditing:(id)sender;
 @end
