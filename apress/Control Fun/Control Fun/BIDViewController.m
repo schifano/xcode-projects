@@ -103,7 +103,7 @@
                               message:msg
                               delegate:self
                               cancelButtonTitle:@"Phew!"
-                              otherButtonTitles:nil];
+                              otherButtonTitles:@"Meow",@"Meowingtons", nil];
         [alert show];
     }
 }
