@@ -10,6 +10,12 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *actionButton1;
+@property (strong, nonatomic) IBOutlet UIView *actionButton2;
+@property (weak, nonatomic) IBOutlet UIButton *actionButton3;
+@property (weak, nonatomic) IBOutlet UIButton *actionButton4;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
 @end
 
 @implementation ViewController
