@@ -67,10 +67,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0l2-DV-bwS" firstAttribute="width" secondItem="1pC-Db-1Do" secondAttribute="width" id="HNY-ca-TVO"/>
+                            <constraint firstItem="0l2-DV-bwS" firstAttribute="leading" secondItem="1pC-Db-1Do" secondAttribute="trailing" constant="8" id="7YG-XP-wo3"/>
                             <constraint firstItem="0l2-DV-bwS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="JZc-ef-oTi"/>
                             <constraint firstAttribute="centerY" secondItem="OYj-cu-HcT" secondAttribute="centerY" id="LAO-Rw-W2Z"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CI4-RR-LSe" secondAttribute="bottom" constant="8" symbolic="YES" id="O3u-WE-XB6"/>
+                            <constraint firstItem="0l2-DV-bwS" firstAttribute="width" secondItem="1pC-Db-1Do" secondAttribute="width" id="RNk-a8-GYX"/>
                             <constraint firstItem="95W-d6-bLt" firstAttribute="trailing" secondItem="0l2-DV-bwS" secondAttribute="trailing" id="Tow-pg-deg"/>
                             <constraint firstItem="95W-d6-bLt" firstAttribute="baseline" secondItem="OYj-cu-HcT" secondAttribute="baseline" id="Z2C-hc-Sao"/>
                             <constraint firstItem="0l2-DV-bwS" firstAttribute="trailing" secondItem="kto-qI-KDl" secondAttribute="trailing" id="ZVe-Dx-Fkb"/>
@@ -79,7 +80,6 @@
                             <constraint firstItem="1pC-Db-1Do" firstAttribute="baseline" secondItem="0l2-DV-bwS" secondAttribute="baseline" id="baN-lB-lcq"/>
                             <constraint firstItem="CI4-RR-LSe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gCy-x4-DaG"/>
                             <constraint firstItem="kto-qI-KDl" firstAttribute="baseline" secondItem="CI4-RR-LSe" secondAttribute="baseline" id="kWN-Yh-Uaz"/>
-                            <constraint firstItem="0l2-DV-bwS" firstAttribute="leading" secondItem="1pC-Db-1Do" secondAttribute="trailing" constant="8" id="zvf-dK-wIc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -88,10 +88,10 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="baN-lB-lcq"/>
-                                <exclude reference="HNY-ca-TVO"/>
+                                <exclude reference="7YG-XP-wo3"/>
                                 <exclude reference="JZc-ef-oTi"/>
+                                <exclude reference="RNk-a8-GYX"/>
                                 <exclude reference="ZVe-Dx-Fkb"/>
-                                <exclude reference="zvf-dK-wIc"/>
                                 <exclude reference="LAO-Rw-W2Z"/>
                                 <exclude reference="Tow-pg-deg"/>
                                 <exclude reference="Z2C-hc-Sao"/>
@@ -109,10 +109,10 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="baN-lB-lcq"/>
-                                <include reference="HNY-ca-TVO"/>
+                                <include reference="7YG-XP-wo3"/>
                                 <include reference="JZc-ef-oTi"/>
+                                <include reference="RNk-a8-GYX"/>
                                 <include reference="ZVe-Dx-Fkb"/>
-                                <include reference="zvf-dK-wIc"/>
                                 <include reference="LAO-Rw-W2Z"/>
                                 <include reference="Tow-pg-deg"/>
                                 <include reference="Z2C-hc-Sao"/>
