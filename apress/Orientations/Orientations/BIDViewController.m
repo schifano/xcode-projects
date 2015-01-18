@@ -26,4 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Apple docs
+- (NSUInteger)supportedInterfaceOrientations {
+    return (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft);
+}
+
+
 @end
