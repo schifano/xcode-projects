@@ -50,7 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="actionButton1" destination="3hX-c1-eSB" id="DlL-iW-eOd"/>
-                        <outlet property="actionButton2" destination="kh9-bI-dsS" id="gO0-rR-x9I"/>
+                        <outlet property="actionButton2" destination="aps-8H-odZ" id="KNP-EW-ei6"/>
                         <outlet property="actionButton3" destination="W4v-m2-8EE" id="1PD-fY-xXZ"/>
                         <outlet property="actionButton4" destination="Xt4-M2-8F2" id="wu1-k3-Dbq"/>
                         <outlet property="contentView" destination="c83-MB-lbA" id="fqo-5a-pwf"/>
