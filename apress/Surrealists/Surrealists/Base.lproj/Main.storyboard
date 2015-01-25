@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IjB-9R-vHg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Women Surrealists-->
@@ -77,12 +78,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RemediosVaro2" translatesAutoresizingMaskIntoConstraints="NO" id="56m-42-tTd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RemediosVaro2" translatesAutoresizingMaskIntoConstraints="NO" id="56m-42-tTd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK5-e1-0eR">
-                                <rect key="frame" x="330" y="96" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK5-e1-0eR">
+                                <rect key="frame" x="354" y="72" width="230" height="270"/>
                                 <color key="backgroundColor" white="0.50457442434210531" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="C9A-g9-zLh"/>
+                                    <constraint firstAttribute="height" constant="270" id="CCj-KU-wry"/>
+                                </constraints>
                                 <string key="text">(1908-1963) Born in Girona, Spain, Remedios Varo Uranga studies art in Madrid before seeking refuge in Paris during the Spanish Civil War. She married the French surrealist poet Benjamin Péret and joined the art group Logicophobiste.
 
 Before the Nazi occupation of France, she fled again to Mexico, where she met Frida Kahlo and Diego Revera. She remained in Latin America for the rest of her life.
@@ -98,6 +103,26 @@ Her mature paintings, fraught with arguably feminist meaning, are predominantly 
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="56m-42-tTd" firstAttribute="leading" secondItem="Dko-Ep-c06" secondAttribute="leading" id="Af2-wl-z2P"/>
+                            <constraint firstItem="56m-42-tTd" firstAttribute="leading" secondItem="Dko-Ep-c06" secondAttribute="leading" id="HI6-yW-EFp"/>
+                            <constraint firstItem="56m-42-tTd" firstAttribute="top" secondItem="Dko-Ep-c06" secondAttribute="top" id="IuU-La-VVz"/>
+                            <constraint firstItem="dK5-e1-0eR" firstAttribute="top" secondItem="AnF-2N-JtL" secondAttribute="bottom" constant="8" symbolic="YES" id="Kv0-6U-s43"/>
+                            <constraint firstItem="dK5-e1-0eR" firstAttribute="trailing" secondItem="Dko-Ep-c06" secondAttribute="trailingMargin" id="Tt5-9p-oAH"/>
+                            <constraint firstAttribute="trailing" secondItem="56m-42-tTd" secondAttribute="trailing" id="fFS-Bm-fTG"/>
+                            <constraint firstItem="56m-42-tTd" firstAttribute="top" secondItem="Dko-Ep-c06" secondAttribute="top" id="hqC-zq-O2m"/>
+                            <constraint firstAttribute="trailing" secondItem="56m-42-tTd" secondAttribute="trailing" id="jJo-o2-KLA"/>
+                            <constraint firstItem="4pr-HX-ama" firstAttribute="top" secondItem="56m-42-tTd" secondAttribute="bottom" id="pci-Nc-QPy"/>
+                            <constraint firstItem="4pr-HX-ama" firstAttribute="top" secondItem="56m-42-tTd" secondAttribute="bottom" id="rzF-hO-CiP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Af2-wl-z2P"/>
+                                <exclude reference="IuU-La-VVz"/>
+                                <exclude reference="fFS-Bm-fTG"/>
+                                <exclude reference="pci-Nc-QPy"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgU-wc-hlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
