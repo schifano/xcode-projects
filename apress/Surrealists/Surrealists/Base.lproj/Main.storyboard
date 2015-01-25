@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3n-V8-24Z">
-                                <rect key="frame" x="0.0" y="65" width="300" height="265"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3n-V8-24Z">
+                                <rect key="frame" x="0.0" y="65" width="300" height="267"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Remedios Varo" backgroundImage="RemediosVaro1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,24 +28,24 @@
                                     <segue destination="gPF-UB-8eW" kind="show" id="3XP-1u-t8F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gX-S7-50x">
-                                <rect key="frame" x="0.0" y="335" width="300" height="265"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gX-S7-50x">
+                                <rect key="frame" x="0.0" y="332" width="300" height="268"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Leonora Carrington" backgroundImage="LeonoraCarrington1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-F6-1br">
-                                <rect key="frame" x="300" y="335" width="300" height="265"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-F6-1br">
+                                <rect key="frame" x="300" y="332" width="300" height="268"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Frida Kahlo" backgroundImage="FridaKahlo1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-gA-5dC">
-                                <rect key="frame" x="300" y="65" width="300" height="265"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-gA-5dC">
+                                <rect key="frame" x="300" y="64" width="300" height="268"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Kay Sage" backgroundImage="KaySage1">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,9 +55,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1gX-S7-50x" firstAttribute="width" secondItem="8aR-F6-1br" secondAttribute="width" id="5bH-Km-qP2"/>
-                            <constraint firstItem="1gX-S7-50x" firstAttribute="width" secondItem="z3n-V8-24Z" secondAttribute="width" id="fhI-ZQ-8zd"/>
-                            <constraint firstItem="1gX-S7-50x" firstAttribute="width" secondItem="Gmo-gA-5dC" secondAttribute="width" id="zMu-sf-hQW"/>
+                            <constraint firstItem="z3n-V8-24Z" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="0kR-EF-kR4"/>
+                            <constraint firstItem="Gmo-gA-5dC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="1Rf-qE-5j4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8aR-F6-1br" secondAttribute="bottom" id="DOI-QK-IWc"/>
+                            <constraint firstAttribute="trailing" secondItem="Gmo-gA-5dC" secondAttribute="trailing" id="LSn-eM-RdP"/>
+                            <constraint firstItem="1gX-S7-50x" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="U6g-X1-yFD"/>
+                            <constraint firstItem="1gX-S7-50x" firstAttribute="width" secondItem="8aR-F6-1br" secondAttribute="width" id="e7N-z9-Bhc"/>
+                            <constraint firstItem="1gX-S7-50x" firstAttribute="top" secondItem="z3n-V8-24Z" secondAttribute="bottom" id="gPP-QE-dCn"/>
+                            <constraint firstItem="8aR-F6-1br" firstAttribute="top" secondItem="Gmo-gA-5dC" secondAttribute="bottom" id="gpy-RH-zHW"/>
+                            <constraint firstItem="Gmo-gA-5dC" firstAttribute="width" secondItem="z3n-V8-24Z" secondAttribute="width" id="nDS-xi-lKY"/>
+                            <constraint firstAttribute="trailing" secondItem="8aR-F6-1br" secondAttribute="trailing" id="npW-sy-Uvh"/>
+                            <constraint firstItem="Gmo-gA-5dC" firstAttribute="leading" secondItem="z3n-V8-24Z" secondAttribute="trailing" id="r02-QY-xjI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1gX-S7-50x" secondAttribute="bottom" id="s2j-VA-eFv"/>
+                            <constraint firstItem="1gX-S7-50x" firstAttribute="height" secondItem="z3n-V8-24Z" secondAttribute="height" id="sui-LZ-br9"/>
+                            <constraint firstItem="8aR-F6-1br" firstAttribute="leading" secondItem="1gX-S7-50x" secondAttribute="trailing" id="t9J-tw-oDa"/>
+                            <constraint firstItem="z3n-V8-24Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vVw-qA-ggB"/>
+                            <constraint firstItem="Gmo-gA-5dC" firstAttribute="height" secondItem="8aR-F6-1br" secondAttribute="height" id="zCW-dJ-F1b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Women Surrealists" id="Lp1-Er-Owl"/>
