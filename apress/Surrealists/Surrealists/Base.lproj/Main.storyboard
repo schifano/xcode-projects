@@ -252,7 +252,7 @@ Her mature paintings, fraught with arguably feminist meaning, are predominantly 
                                     <constraint firstAttribute="height" constant="270" id="T1L-GP-20g"/>
                                     <constraint firstAttribute="width" constant="230" id="hvC-9K-BRE"/>
                                 </constraints>
-                                <mutableString key="text">(1898-1963) Katherine Linn Sage was born in Albany, New York, to wealthy timber magnate and state senator, Henry Sage, and her mother Anne Sage. Anne soon left Henry and moved to Europe, taking Kay with her.
+                                <string key="text">(1898-1963) Katherine Linn Sage was born in Albany, New York, to wealthy timber magnate and state senator, Henry Sage, and her mother Anne Sage. Anne soon left Henry and moved to Europe, taking Kay with her.
 
 Kay's home became Rapallo, Itally, but she spent much time exploring Europe, including Paris, with her mother. She was fluent in English, Italian, and French. She returned to the states at the beginning of World War I, attending schools in Virginia and Washington, D.C. After the war, her and her mother returned to Rome where she continued her studies.
 
@@ -266,7 +266,7 @@ In 1933 Sage moved to Paris, to "become an artist," wherein she encountered the 
 
 At the outbreak of World War II, Sage returned again to New York, where she used her wealth and influence to raise awareness of surrealism in the United States, and where she finally established herself as a successful, and widely praised, artist. Sage did the bulk of her mature work between 1940, when she married Tanguy, and 1955, when he died suddenly from a cerebral hemorrhage.
 
-[I Saw Three Cities, 1944]</mutableString>
+[I Saw Three Cities, 1944]</string>
                                 <color key="textColor" red="0.96480846840000001" green="1" blue="0.98102408149999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -332,7 +332,7 @@ Frida died at the age of 47. She was in constant pain her final years, often bed
 Kahlo embraced indigenous Mexican culture, often combining elements of religious tradition, dramatic symbolism, bright colors, and primitive style in her artwork. She was often the subject of her own art, and produced many self portraits during her career. Her early works was strongly influenced by Diego, but always incorporated her own symbolism and imagery.
 
 [The Suicide of Dorothy Hale, 1938]</mutableString>
-                                <color key="textColor" red="0.96480846840000001" green="1" blue="0.98102408149999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
