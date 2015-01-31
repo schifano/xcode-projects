@@ -20,7 +20,9 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-jI-5Sh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="UVg-wc-flW"/>
+                                    <navigationItem title="Title" id="UVg-wc-flW">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="uxl-mH-tZo"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5I-Rf-agT">
@@ -39,9 +41,7 @@
                             <constraint firstItem="b5I-Rf-agT" firstAttribute="top" secondItem="ycg-jI-5Sh" secondAttribute="bottom" id="vbd-9B-kVl"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="uxl-mH-tZo"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
