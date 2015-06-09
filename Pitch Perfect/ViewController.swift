@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     @IBAction func recordAudio(sender: UIButton) {
         // TODO: Show text "recording in progress"
         // TODO: Record the user's voice
-
+        
+        // When the button is pressed, show the button
         recordingLabel.hidden = false
 
         println("in recordAudio") // TEST
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // When the view loads, hide the label
         recordingLabel.hidden = true
     }
 
