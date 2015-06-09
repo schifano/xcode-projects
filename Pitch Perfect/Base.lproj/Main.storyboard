@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
+                                <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-dE-7IF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="record-button">
@@ -25,42 +31,53 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AV2-4j-mbx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
-                                <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-oC-vJk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop@2x-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mmC-tZ-TCS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="centerX" secondItem="DBd-dE-7IF" secondAttribute="centerX" id="F73-sI-ycM"/>
                             <constraint firstItem="EZx-QT-Niw" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="20" id="MqL-BS-uAY"/>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="ew5-hY-mqJ"/>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t5y-Cc-dIm"/>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="top" secondItem="EZx-QT-Niw" secondAttribute="bottom" constant="35" id="uzI-y6-kqx"/>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="EZx-QT-Niw" secondAttribute="centerX" constant="-0.5" id="yc3-tY-yNk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="DBd-dE-7IF"/>
                                 <exclude reference="EZx-QT-Niw"/>
+                                <exclude reference="DBd-dE-7IF"/>
+                                <exclude reference="0d8-oC-vJk"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ew5-hY-mqJ"/>
                                 <exclude reference="t5y-Cc-dIm"/>
                                 <exclude reference="yc3-tY-yNk"/>
                                 <exclude reference="MqL-BS-uAY"/>
+                                <exclude reference="F73-sI-ycM"/>
+                                <exclude reference="uzI-y6-kqx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="DBd-dE-7IF"/>
                                 <include reference="EZx-QT-Niw"/>
+                                <include reference="DBd-dE-7IF"/>
+                                <include reference="0d8-oC-vJk"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ew5-hY-mqJ"/>
                                 <include reference="t5y-Cc-dIm"/>
                                 <include reference="yc3-tY-yNk"/>
                                 <include reference="MqL-BS-uAY"/>
+                                <include reference="F73-sI-ycM"/>
+                                <include reference="uzI-y6-kqx"/>
                             </mask>
                         </variation>
                     </view>
@@ -74,5 +91,6 @@
     </scenes>
     <resources>
         <image name="record-button" width="100" height="100"/>
+        <image name="stop@2x-iphone" width="50" height="50"/>
     </resources>
 </document>
