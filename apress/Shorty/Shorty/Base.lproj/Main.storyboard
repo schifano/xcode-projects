@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shorty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,33 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-jI-5Sh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="UVg-wc-flW">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="uxl-mH-tZo"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5I-Rf-agT">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ycg-jI-5Sh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="B8y-Zz-Al0"/>
-                            <constraint firstItem="b5I-Rf-agT" firstAttribute="leading" secondItem="wfy-db-euE" secondAttribute="leading" id="BBH-V4-MzB"/>
-                            <constraint firstItem="b5I-Rf-agT" firstAttribute="trailing" secondItem="wfy-db-euE" secondAttribute="trailing" id="D5Q-2c-SgB"/>
-                            <constraint firstItem="b5I-Rf-agT" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="URr-NS-Lts"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ycg-jI-5Sh" secondAttribute="trailing" id="qE8-G3-oON"/>
-                            <constraint firstItem="ycg-jI-5Sh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="siR-tm-6qM"/>
-                            <constraint firstItem="b5I-Rf-agT" firstAttribute="top" secondItem="ycg-jI-5Sh" secondAttribute="bottom" id="vbd-9B-kVl"/>
-                        </constraints>
                     </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-dE-7IF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="record-button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AV2-4j-mbx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
+                                <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EZx-QT-Niw" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="20" id="MqL-BS-uAY"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="ew5-hY-mqJ"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t5y-Cc-dIm"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="EZx-QT-Niw" secondAttribute="centerX" constant="-0.5" id="yc3-tY-yNk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DBd-dE-7IF"/>
+                                <exclude reference="EZx-QT-Niw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ew5-hY-mqJ"/>
+                                <exclude reference="t5y-Cc-dIm"/>
+                                <exclude reference="yc3-tY-yNk"/>
+                                <exclude reference="MqL-BS-uAY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DBd-dE-7IF"/>
+                                <include reference="EZx-QT-Niw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ew5-hY-mqJ"/>
+                                <include reference="t5y-Cc-dIm"/>
+                                <include reference="yc3-tY-yNk"/>
+                                <include reference="MqL-BS-uAY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="EZx-QT-Niw" id="YIE-tF-pti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="record-button" width="100" height="100"/>
+    </resources>
+</document>

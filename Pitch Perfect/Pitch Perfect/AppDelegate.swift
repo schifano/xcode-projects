@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Shorty
+//  Pitch Perfect
 //
-//  Created by Rachel Schifano on 2/26/15.
-//  Copyright (c) 2015 apress. All rights reserved.
+//  Created by Rachel Schifano on 5/11/15.
+//  Copyright (c) 2015 schifano. All rights reserved.
 //
 
 import UIKit

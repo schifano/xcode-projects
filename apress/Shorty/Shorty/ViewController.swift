@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Shorty
 //
-//  Created by Rachel Schifano on 1/28/15.
+//  Created by Rachel Schifano on 2/26/15.
 //  Copyright (c) 2015 apress. All rights reserved.
 //
 
