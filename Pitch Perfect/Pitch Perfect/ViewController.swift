@@ -13,13 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordingLabel: UILabel!
     
     @IBAction func recordAudio(sender: UIButton) {
-        // TODO: Show text "recording in progress"
         // TODO: Record the user's voice
         
         // When the button is pressed, show the button
         recordingLabel.hidden = false
 
         println("in recordAudio") // TEST
+    }
+    
+    
+    @IBAction func stopRecordingAudio(sender: UIButton) {
+        
+        recordingLabel.hidden = true
     }
     
     override func viewDidLoad() {
