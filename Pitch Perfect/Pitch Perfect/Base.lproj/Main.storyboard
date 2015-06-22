@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XCz-Ed-3UN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -93,17 +94,51 @@
             </objects>
             <point key="canvasLocation" x="1509" y="330"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="xal-1G-KZa">
             <objects>
-                <viewController id="C3x-yG-rTl" sceneMemberID="viewController">
+                <viewController id="C3x-yG-rTl" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HBa-NE-w5g"/>
                         <viewControllerLayoutGuide type="bottom" id="Ayf-V5-1vd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tKY-Du-DUR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqh-GG-fTB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="slow@2x-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlaySlow:" destination="C3x-yG-rTl" eventType="touchUpInside" id="69m-eZ-k4X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pqh-GG-fTB" firstAttribute="leading" secondItem="tKY-Du-DUR" secondAttribute="leadingMargin" constant="30" id="HNW-JG-s8D"/>
+                            <constraint firstItem="pqh-GG-fTB" firstAttribute="top" secondItem="HBa-NE-w5g" secondAttribute="bottom" constant="50" id="fpH-ii-Bfb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pqh-GG-fTB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HNW-JG-s8D"/>
+                                <exclude reference="fpH-ii-Bfb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pqh-GG-fTB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="HNW-JG-s8D"/>
+                                <include reference="fpH-ii-Bfb"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLd-eo-lOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,6 +166,7 @@
     </scenes>
     <resources>
         <image name="record-button" width="100" height="100"/>
+        <image name="slow@2x-iphone" width="100" height="100"/>
         <image name="stop@2x-iphone" width="50" height="50"/>
     </resources>
 </document>
