@@ -14,6 +14,7 @@
 		2966D7721B01865600782867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2966D7711B01865600782867 /* Images.xcassets */; };
 		2966D7751B01865600782867 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2966D7731B01865600782867 /* LaunchScreen.xib */; };
 		2966D7811B01865600782867 /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2966D7801B01865600782867 /* Pitch_PerfectTests.swift */; };
+		299C4C311B39EB0700753293 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299C4C301B39EB0700753293 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2966D77A1B01865600782867 /* Pitch PerfectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch PerfectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2966D77F1B01865600782867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2966D7801B01865600782867 /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
+		299C4C301B39EB0700753293 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = "Pitch Perfect/movie_quote.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		2966D75C1B01865500782867 = {
 			isa = PBXGroup;
 			children = (
+				299C4C321B39EB0C00753293 /* Resources */,
 				2966D7671B01865500782867 /* Pitch Perfect */,
 				2966D77D1B01865600782867 /* Pitch PerfectTests */,
 				2966D7661B01865500782867 /* Products */,
@@ -113,6 +116,14 @@
 				2966D77F1B01865600782867 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		299C4C321B39EB0C00753293 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				299C4C301B39EB0700753293 /* movie_quote.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			files = (
 				2966D7701B01865600782867 /* Main.storyboard in Resources */,
 				2966D7751B01865600782867 /* LaunchScreen.xib in Resources */,
+				299C4C311B39EB0700753293 /* movie_quote.mp3 in Resources */,
 				2966D7721B01865600782867 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
