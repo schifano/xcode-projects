@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XCz-Ed-3UN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -37,6 +38,9 @@
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="175" y="520" width="50" height="50"/>
+                                </variation>
                                 <connections>
                                     <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mmC-tZ-TCS"/>
                                     <segue destination="C3x-yG-rTl" kind="show" id="uvA-Pv-P49"/>
@@ -129,6 +133,9 @@
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="175" y="520" width="50" height="50"/>
+                                </variation>
                                 <connections>
                                     <action selector="stopAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="Llc-CS-ssJ"/>
                                 </connections>
@@ -150,12 +157,12 @@
                                 <exclude reference="Wfr-Fa-sR0"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HNW-JG-s8D"/>
-                                <exclude reference="fpH-ii-Bfb"/>
-                                <exclude reference="5h3-7f-D3S"/>
-                                <exclude reference="w2C-SK-BeP"/>
                                 <exclude reference="Bwc-hL-BZw"/>
                                 <exclude reference="nKX-ez-2YR"/>
+                                <exclude reference="5h3-7f-D3S"/>
+                                <exclude reference="w2C-SK-BeP"/>
+                                <exclude reference="HNW-JG-s8D"/>
+                                <exclude reference="fpH-ii-Bfb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -165,12 +172,12 @@
                                 <include reference="Wfr-Fa-sR0"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HNW-JG-s8D"/>
-                                <include reference="fpH-ii-Bfb"/>
-                                <include reference="5h3-7f-D3S"/>
-                                <include reference="w2C-SK-BeP"/>
                                 <include reference="Bwc-hL-BZw"/>
                                 <include reference="nKX-ez-2YR"/>
+                                <include reference="5h3-7f-D3S"/>
+                                <include reference="w2C-SK-BeP"/>
+                                <include reference="HNW-JG-s8D"/>
+                                <include reference="fpH-ii-Bfb"/>
                             </mask>
                         </variation>
                     </view>
@@ -206,6 +213,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0QK-jr-DeW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w2o-hB-U2R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
