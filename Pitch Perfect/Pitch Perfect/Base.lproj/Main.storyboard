@@ -38,9 +38,6 @@
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="520" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mmC-tZ-TCS"/>
                                     <segue destination="C3x-yG-rTl" kind="show" id="uvA-Pv-P49"/>
@@ -133,9 +130,6 @@
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="520" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="Llc-CS-ssJ"/>
                                 </connections>
