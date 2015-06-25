@@ -15,6 +15,7 @@
 		2966D7751B01865600782867 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2966D7731B01865600782867 /* LaunchScreen.xib */; };
 		2966D7811B01865600782867 /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2966D7801B01865600782867 /* Pitch_PerfectTests.swift */; };
 		299C4C311B39EB0700753293 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299C4C301B39EB0700753293 /* movie_quote.mp3 */; };
+		29BC167E1B3CA86E00D66FF3 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC167D1B3CA86E00D66FF3 /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2966D77F1B01865600782867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2966D7801B01865600782867 /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
 		299C4C301B39EB0700753293 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = "Pitch Perfect/movie_quote.mp3"; sourceTree = "<group>"; };
+		29BC167D1B3CA86E00D66FF3 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		2966D75C1B01865500782867 = {
 			isa = PBXGroup;
 			children = (
+				29BC167D1B3CA86E00D66FF3 /* RecordedAudio.swift */,
 				299C4C321B39EB0C00753293 /* Resources */,
 				2966D7671B01865500782867 /* Pitch Perfect */,
 				2966D77D1B01865600782867 /* Pitch PerfectTests */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BC167E1B3CA86E00D66FF3 /* RecordedAudio.swift in Sources */,
 				2966D76D1B01865600782867 /* RecordSoundsViewController.swift in Sources */,
 				295207FE1B38A68D00E744FC /* PlaySoundsViewController.swift in Sources */,
 				2966D76B1B01865600782867 /* AppDelegate.swift in Sources */,
