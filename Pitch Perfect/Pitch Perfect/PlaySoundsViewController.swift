@@ -34,8 +34,6 @@ class PlaySoundsViewController: UIViewController {
         
         // Initialize, used to convert NSURL to AVAudioFile
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
-
-        
     }
 
     override func didReceiveMemoryWarning() {
