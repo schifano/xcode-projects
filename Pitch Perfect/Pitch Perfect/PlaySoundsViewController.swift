@@ -60,6 +60,10 @@ class PlaySoundsViewController: UIViewController {
         playAudioWithVariablePitch(1000)
     }
     
+    @IBAction func playDarthVaderAudio(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
+    }
+    
     // Helper method
     func playAudioWithVariablePitch(pitch: Float) {
         // Stop all audio before playing it back
@@ -90,7 +94,6 @@ class PlaySoundsViewController: UIViewController {
         
         audioPlayerNode.play()
     }
-    
     
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
