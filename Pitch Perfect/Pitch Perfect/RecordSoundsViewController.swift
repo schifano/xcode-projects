@@ -13,6 +13,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     // Declare global AVAudioRecorder variable
     var audioRecorder:AVAudioRecorder!
+    // Create new object for the RecordedAudio class
+    var recordedAudio: RecordedAudio!
     
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -46,9 +48,30 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
-        // TODO: Step 1 - Save the recorded audio
+        if (flag) {
+            // Initialize the recordedAudio object
+            recordedAudio = RecordedAudio()
+            recordedAudio.filePathUrl = recorder.url
+            recordedAudio.title = recorder.url.lastPathComponent
         
-        // TODO: Step 2 - Move to the next scene aka perform seguet
+            // Inherit from UIViewController, recordedAudio is obj that initiates segue
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        } else {
+            println("Recording not successful")
+            recordButton.enabled = true // Record again
+            stopButton.hidden = true
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Important if multiple segues for a view controller
+        if (segue.identifier == "stopRecording") {
+            // Make destinationVC the correct type
+            let playSoundsVC: PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            let data = sender as! RecordedAudio
+            playSoundsVC.receivedAudio = data
+            
+        }
     }
     
     @IBAction func stopRecordingAudio(sender: UIButton) {
