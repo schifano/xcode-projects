@@ -9,10 +9,13 @@
 import UIKit
 import AVFoundation
 
+
 class PlaySoundsViewController: UIViewController {
 
     var audioPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
+    var audioEngine: AVAudioEngine!
+    var audioFile: AVAudioFile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,14 @@ class PlaySoundsViewController: UIViewController {
 //        }
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
+        
+        // Create audio engine object
+        audioEngine = AVAudioEngine()
+        
+        // Initialize, used to convert NSURL to AVAudioFile
+        audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +59,38 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
+        playAudioWithVariablePitch(1000)
+    }
+    
+    // Helper method
+    func playAudioWithVariablePitch(pitch: Float) {
+        // Stop all audio before playing it back
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        // Create AudioPlayerNode object
+        var audioPlayerNode = AVAudioPlayerNode()
+        // Attach AVAudioPlayerNode to AVAudioEngine
+        audioEngine.attachNode(audioPlayerNode)
+        
+        // Create AVAudioUnitTimePitch
+        var changePitchEffect = AVAudioUnitTimePitch()
+        changePitchEffect.pitch = pitch
+        // Attach AVAudioUniteTimePtich to AVAudioEngine
+        audioEngine.attachNode(changePitchEffect)
+        
+        // Connect AVAudioPlayerNode to AVAudioUnitTimePitch
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
+        // Connect AVAudioUnitTimePitch to Output (speakers)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        
+        // Start audio engine
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
     }
     
     
