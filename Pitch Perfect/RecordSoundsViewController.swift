@@ -21,8 +21,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var stopButton: UIButton!
     
     @IBAction func recordAudio(sender: UIButton) {
-        // TODO: Record the user's voice
-        
         recordButton.enabled = false
         stopButton.hidden = false
         recordingLabel.hidden = false
@@ -70,7 +68,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundsVC: PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
             let data = sender as! RecordedAudio
             playSoundsVC.receivedAudio = data
-            
         }
     }
     

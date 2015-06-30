@@ -15,17 +15,17 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="120" y="438" width="175" height="16"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                 <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-dE-7IF">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
                                 <state key="normal" image="record-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-oC-vJk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="182" y="489" width="50" height="50"/>
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,36 +54,6 @@
                             </constraint>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="EZx-QT-Niw" secondAttribute="centerX" constant="-0.5" id="yc3-tY-yNk"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="EZx-QT-Niw"/>
-                                <exclude reference="DBd-dE-7IF"/>
-                                <exclude reference="0d8-oC-vJk"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="MqL-BS-uAY"/>
-                                <exclude reference="F73-sI-ycM"/>
-                                <exclude reference="uzI-y6-kqx"/>
-                                <exclude reference="ew5-hY-mqJ"/>
-                                <exclude reference="t5y-Cc-dIm"/>
-                                <exclude reference="yc3-tY-yNk"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="EZx-QT-Niw"/>
-                                <include reference="DBd-dE-7IF"/>
-                                <include reference="0d8-oC-vJk"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="MqL-BS-uAY"/>
-                                <include reference="F73-sI-ycM"/>
-                                <include reference="uzI-y6-kqx"/>
-                                <include reference="ew5-hY-mqJ"/>
-                                <include reference="t5y-Cc-dIm"/>
-                                <include reference="yc3-tY-yNk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="tKR-gk-A9U"/>
                     <connections>
@@ -106,11 +76,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Ayf-V5-1vd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tKY-Du-DUR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqh-GG-fTB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="41" y="114" width="100" height="100"/>
                                 <state key="normal" image="slow@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -119,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-3D-nkb">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="273" y="114" width="100" height="100"/>
                                 <state key="normal" image="fast@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -128,7 +98,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfr-Fa-sR0">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="182" y="488" width="50" height="50"/>
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -137,7 +107,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-Re-MXR">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="41" y="301" width="100" height="100"/>
                                 <state key="normal" image="chipmunk@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -146,7 +116,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS0-k7-Xkk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="273" y="301" width="100" height="100"/>
                                 <state key="normal" image="darthvader@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -161,59 +131,13 @@
                             <constraint firstItem="pqh-GG-fTB" firstAttribute="leading" secondItem="tKY-Du-DUR" secondAttribute="leadingMargin" constant="25" id="HNW-JG-s8D"/>
                             <constraint firstItem="wS0-k7-Xkk" firstAttribute="top" secondItem="hX4-3D-nkb" secondAttribute="bottom" constant="87" id="K77-up-FDp"/>
                             <constraint firstAttribute="centerX" secondItem="Wfr-Fa-sR0" secondAttribute="centerX" id="PRa-24-7mS"/>
-                            <constraint firstItem="Zmg-Re-MXR" firstAttribute="top" secondItem="pqh-GG-fTB" secondAttribute="bottom" constant="118" id="bWQ-u7-tqB">
-                                <variation key="heightClass=regular-widthClass=compact" constant="87"/>
-                            </constraint>
+                            <constraint firstItem="Zmg-Re-MXR" firstAttribute="top" secondItem="pqh-GG-fTB" secondAttribute="bottom" constant="87" id="bWQ-u7-tqB"/>
                             <constraint firstItem="pqh-GG-fTB" firstAttribute="top" secondItem="HBa-NE-w5g" secondAttribute="bottom" constant="50" id="fpH-ii-Bfb"/>
-                            <constraint firstAttribute="centerY" secondItem="Wfr-Fa-sR0" secondAttribute="centerY" id="nKX-ez-2YR">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-145"/>
-                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="Wfr-Fa-sR0" secondAttribute="centerY" constant="-145" id="nKX-ez-2YR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wS0-k7-Xkk" secondAttribute="trailing" constant="25" id="nnG-6Q-Xe2"/>
                             <constraint firstItem="hX4-3D-nkb" firstAttribute="top" secondItem="HBa-NE-w5g" secondAttribute="bottom" constant="50" id="w2C-SK-BeP"/>
                             <constraint firstItem="Zmg-Re-MXR" firstAttribute="leading" secondItem="tKY-Du-DUR" secondAttribute="leadingMargin" constant="25" id="yaT-67-nMT"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="pqh-GG-fTB"/>
-                                <exclude reference="hX4-3D-nkb"/>
-                                <exclude reference="Wfr-Fa-sR0"/>
-                                <exclude reference="Zmg-Re-MXR"/>
-                                <exclude reference="wS0-k7-Xkk"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="HNW-JG-s8D"/>
-                                <exclude reference="fpH-ii-Bfb"/>
-                                <exclude reference="5h3-7f-D3S"/>
-                                <exclude reference="w2C-SK-BeP"/>
-                                <exclude reference="bWQ-u7-tqB"/>
-                                <exclude reference="yaT-67-nMT"/>
-                                <exclude reference="K77-up-FDp"/>
-                                <exclude reference="nnG-6Q-Xe2"/>
-                                <exclude reference="PRa-24-7mS"/>
-                                <exclude reference="nKX-ez-2YR"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="pqh-GG-fTB"/>
-                                <include reference="hX4-3D-nkb"/>
-                                <include reference="Wfr-Fa-sR0"/>
-                                <include reference="Zmg-Re-MXR"/>
-                                <include reference="wS0-k7-Xkk"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="HNW-JG-s8D"/>
-                                <include reference="fpH-ii-Bfb"/>
-                                <include reference="5h3-7f-D3S"/>
-                                <include reference="w2C-SK-BeP"/>
-                                <include reference="bWQ-u7-tqB"/>
-                                <include reference="yaT-67-nMT"/>
-                                <include reference="K77-up-FDp"/>
-                                <include reference="nnG-6Q-Xe2"/>
-                                <include reference="PRa-24-7mS"/>
-                                <include reference="nKX-ez-2YR"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLd-eo-lOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,6 +149,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCz-Ed-3UN" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bby-NL-TPY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,7 +161,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZb-BA-DBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682.5" y="330"/>
+            <point key="canvasLocation" x="774" y="330"/>
         </scene>
     </scenes>
     <resources>
