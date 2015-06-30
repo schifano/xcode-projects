@@ -19,12 +19,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-//            // Convert string to NSURL
-//            var filePathURL = NSURL.fileURLWithPath(filePath)
-//        } else {
-//            println("File not found")
-//        }
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
         
@@ -37,7 +31,6 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // TODO create function for repeating code in slow/fast audio
     @IBAction func playSlowAudio(sender: UIButton) {
         audioPlayer.stop()
         audioPlayer.rate = 0.5
@@ -99,10 +92,10 @@ class PlaySoundsViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
+       }
     */
 
 }
