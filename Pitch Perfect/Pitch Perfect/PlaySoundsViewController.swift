@@ -11,17 +11,16 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    var audioFile: AVAudioFile!
     var audioPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
     let audioEngine = AVAudioEngine()
-    var audioFile: AVAudioFile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
-        
         // Initialize, used to convert NSURL to AVAudioFile
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
     }
