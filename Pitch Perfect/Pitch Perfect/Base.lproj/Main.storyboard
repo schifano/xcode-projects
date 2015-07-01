@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
-                                <rect key="frame" x="120" y="438" width="175" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
+                                <rect key="frame" x="118" y="390" width="180" height="16"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                 <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-dE-7IF">
-                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <rect key="frame" x="157" y="265" width="100" height="100"/>
                                 <state key="normal" image="record-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-oC-vJk">
-                                <rect key="frame" x="182" y="489" width="50" height="50"/>
+                                <rect key="frame" x="183" y="489" width="50" height="50"/>
                                 <state key="normal" image="stop@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,11 +45,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0d8-oC-vJk" firstAttribute="centerX" secondItem="DBd-dE-7IF" secondAttribute="centerX" id="F73-sI-ycM"/>
-                            <constraint firstItem="EZx-QT-Niw" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="20" id="MqL-BS-uAY"/>
-                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="ew5-hY-mqJ"/>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="centerX" secondItem="DBd-dE-7IF" secondAttribute="centerX" constant="1" id="F73-sI-ycM"/>
+                            <constraint firstItem="EZx-QT-Niw" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="25" id="MqL-BS-uAY"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-53" id="ew5-hY-mqJ"/>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t5y-Cc-dIm"/>
-                            <constraint firstItem="0d8-oC-vJk" firstAttribute="top" secondItem="EZx-QT-Niw" secondAttribute="bottom" constant="35" id="uzI-y6-kqx">
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="top" secondItem="EZx-QT-Niw" secondAttribute="bottom" constant="83" id="uzI-y6-kqx">
                                 <variation key="heightClass=regular-widthClass=compact" constant="34"/>
                             </constraint>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="EZx-QT-Niw" secondAttribute="centerX" constant="-0.5" id="yc3-tY-yNk"/>
