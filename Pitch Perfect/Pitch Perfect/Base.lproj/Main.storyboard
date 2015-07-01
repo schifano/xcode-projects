@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XCz-Ed-3UN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recording in Progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
                                 <rect key="frame" x="118" y="390" width="180" height="16"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                 <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,16 +41,23 @@
                                     <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mmC-tZ-TCS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAy-Ex-Jet">
+                                <rect key="frame" x="152" y="390" width="110" height="16"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
+                                <color key="textColor" red="0.047692560049999999" green="0.20651434499999999" blue="0.2897332702" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="top" secondItem="yAy-Ex-Jet" secondAttribute="bottom" constant="83" id="1vI-6d-i8Q"/>
                             <constraint firstItem="0d8-oC-vJk" firstAttribute="centerX" secondItem="DBd-dE-7IF" secondAttribute="centerX" constant="1" id="F73-sI-ycM"/>
+                            <constraint firstItem="yAy-Ex-Jet" firstAttribute="trailing" secondItem="DBd-dE-7IF" secondAttribute="trailing" constant="5" id="JtR-gh-t8X"/>
                             <constraint firstItem="EZx-QT-Niw" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="25" id="MqL-BS-uAY"/>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="top" secondItem="EZx-QT-Niw" secondAttribute="bottom" constant="83" id="PNT-LJ-6Pe"/>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-53" id="ew5-hY-mqJ"/>
+                            <constraint firstItem="yAy-Ex-Jet" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="25" id="mEU-ax-ja1"/>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t5y-Cc-dIm"/>
-                            <constraint firstItem="0d8-oC-vJk" firstAttribute="top" secondItem="EZx-QT-Niw" secondAttribute="bottom" constant="83" id="uzI-y6-kqx">
-                                <variation key="heightClass=regular-widthClass=compact" constant="34"/>
-                            </constraint>
                             <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="EZx-QT-Niw" secondAttribute="centerX" constant="-0.5" id="yc3-tY-yNk"/>
                         </constraints>
                     </view>
@@ -60,6 +66,7 @@
                         <outlet property="recordButton" destination="DBd-dE-7IF" id="87x-Vp-aKc"/>
                         <outlet property="recordingLabel" destination="EZx-QT-Niw" id="YIE-tF-pti"/>
                         <outlet property="stopButton" destination="0d8-oC-vJk" id="wef-md-z6a"/>
+                        <outlet property="tapToRecordLabel" destination="yAy-Ex-Jet" id="PD7-I7-4Nk"/>
                         <segue destination="C3x-yG-rTl" kind="show" identifier="stopRecording" id="3hj-YP-0Vr"/>
                     </connections>
                 </viewController>
@@ -162,6 +169,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZb-BA-DBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="774" y="330"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="26O-nm-bJl">
+            <objects>
+                <viewController id="CkJ-Mw-i6a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UjU-rw-WkQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ibz-Xm-qxw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zcY-AZ-Odg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcb-an-bsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
