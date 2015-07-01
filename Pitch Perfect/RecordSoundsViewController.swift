@@ -16,6 +16,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     // Create new object for the RecordedAudio class
     var recordedAudio: RecordedAudio!
     
+    @IBOutlet weak var tapToRecordLabel: UILabel!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
@@ -28,6 +29,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
         stopButton.hidden = false
+        tapToRecordLabel.hidden = true
         recordingLabel.hidden = false
         
         // Prepare for recording audio
@@ -98,11 +100,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         // When the view loads, hide the label
         recordingLabel.hidden = true
+        tapToRecordLabel.hidden = false
     }
 
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordButton.enabled = true
+        tapToRecordLabel.hidden = false
     }
     
     override func didReceiveMemoryWarning() {
