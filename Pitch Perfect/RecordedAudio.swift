@@ -8,13 +8,19 @@
 
 import Foundation
 
-// Model within MVC
+/// Model within MVC
 class RecordedAudio: NSObject {
     // Variables to store the filepath and title of the recorded audio
     var filePathUrl: NSURL!
     var title: String!
     
-    // Task 1: Add an initializer / constructor to initialize properties
+    /** 
+        Initialized a new RecordedAudio object.
+    
+        :param: filePathUrl
+        :param: title
+    
+    */
     init(filePathUrl: NSURL, title: String) {
         self.filePathUrl = filePathUrl
         self.title = title

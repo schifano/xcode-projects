@@ -20,12 +20,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    /**
+        Records audio and hides the stop button and recording label.
+    
+        :param: sender The UIButton clicked on - microphone button
+    */
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
         stopButton.hidden = false
         recordingLabel.hidden = false
-
-        println("in recordAudio") // TEST
         
         // Prepare for recording audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
@@ -45,6 +48,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     
+    /**
+        Checks if a recording has completed successfully or not.
+        This function is an AVAudioRecorder delegate.
+    
+        :param: recorder The audio recorder that has finished recording.
+        :param: flag A boolean value for success or failure
+    */
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         if (flag) {
             // Initialize the recordedAudio object
@@ -69,6 +79,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    /**
+        Stops recording audio.
+    
+        :param: sender The UIButton - stop image
+    */
     @IBAction func stopRecordingAudio(sender: UIButton) {
         recordingLabel.hidden = true
         

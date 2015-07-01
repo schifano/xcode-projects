@@ -30,30 +30,62 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    /**
+        Plays back audio at a slower rate.
+    
+        :param: sender The UIButton clicked on - snail image
+    */
     @IBAction func playSlowAudio(sender: UIButton) {
         playAudioWithVariableRate(0.5)
     }
     
+    /**
+        Plays back audio at a faster rate.
+    
+        :param: sender The UIButton clicked on - rabbit image
+    */
     @IBAction func playFastAudio(sender: UIButton) {
         playAudioWithVariableRate(2.0)
     }
     
+    /**
+        Helper function for playing back audio at variable rates.
+    
+        :param: rate The playback rate value
+    */
     func playAudioWithVariableRate(rate: Float) {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0 // play from beginning
         audioPlayer.play()
     }
     
+    /**
+        Plays back audio at a higher pitch.
+    
+        :param: sender The UIButton clicked on - chipmunk image
+    */
     @IBAction func playChipmunkAudio(sender: UIButton) {
         playAudioWithVariablePitch(1000)
     }
     
+    /**
+        Plays back audio at a lower pitch.
+    
+        :param: sender The UIButton clicked on - Darth Vader image
+    */
     @IBAction func playDarthVaderAudio(sender: UIButton) {
         playAudioWithVariablePitch(-1000)
     }
     
-    // Helper method
+    /**
+        Helper function for playing back audio at variable pitches.
+    
+        :param: pitch The playback pitch value
+    */
     func playAudioWithVariablePitch(pitch: Float) {
         // Stop all audio before playing it back
         audioPlayer.stop()
@@ -84,6 +116,11 @@ class PlaySoundsViewController: UIViewController {
         audioPlayerNode.play()
     }
     
+    /**
+        Stops audio from playing back.
+    
+        :param: sender The UIButton clicked on - stop button
+    */
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
     }
@@ -97,5 +134,4 @@ class PlaySoundsViewController: UIViewController {
         // Pass the selected object to the new view controller.
        }
     */
-
 }
