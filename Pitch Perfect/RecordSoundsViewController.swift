@@ -15,10 +15,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder:AVAudioRecorder!
     // Create new object for the RecordedAudio class
     var recordedAudio: RecordedAudio!
+    var resume: Bool = false
     
+    @IBOutlet weak var tapToResumeLabel: UILabel!
     @IBOutlet weak var tapToRecordLabel: UILabel!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
     /**
@@ -28,26 +31,44 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     */
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
-        stopButton.hidden = false
         tapToRecordLabel.hidden = true
+        stopButton.hidden = false
+        pauseButton.hidden = false
         recordingLabel.hidden = false
+        tapToResumeLabel.hidden = true
         
-        // Prepare for recording audio
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        let recordingName = "my_audio.wav"
-        let pathArray = [dirPath, recordingName]
-        let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath)
-        
-        // Create new recording session
-        var session = AVAudioSession.sharedInstance()
-        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
-        
-        audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
-        audioRecorder.delegate = self
-        audioRecorder.meteringEnabled = true
-        audioRecorder.prepareToRecord()
-        audioRecorder.record()
+        // Check if a resume needs to occur due to previous pause
+        if (resume) {
+            audioRecorder.record()
+        } else {
+            // Prepare for recording audio
+            let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+            let recordingName = "my_audio.wav"
+            let pathArray = [dirPath, recordingName]
+            let filePath = NSURL.fileURLWithPathComponents(pathArray)
+            println(filePath)
+            
+            // Create new recording session
+            var session = AVAudioSession.sharedInstance()
+            session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+            
+            audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+            audioRecorder.delegate = self
+            audioRecorder.meteringEnabled = true
+            audioRecorder.prepareToRecord()
+            audioRecorder.record()
+        }
+    }
+    
+    /**
+        Pauses audio from recording.
+    */
+    @IBAction func pauseAudio(sender: UIButton) {
+        audioRecorder.pause()
+        recordingLabel.hidden = true
+        tapToResumeLabel.hidden = false
+        recordButton.enabled = true
+        resume = true
     }
     
     /**
@@ -105,7 +126,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
+        pauseButton.hidden = true
         recordButton.enabled = true
+        tapToResumeLabel.hidden = true
         tapToRecordLabel.hidden = false
     }
     
