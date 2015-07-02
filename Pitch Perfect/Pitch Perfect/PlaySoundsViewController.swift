@@ -94,6 +94,7 @@ class PlaySoundsViewController: UIViewController {
         
         // Create AudioPlayerNode object
         var audioPlayerNode = AVAudioPlayerNode()
+        
         // Attach AVAudioPlayerNode to AVAudioEngine
         audioEngine.attachNode(audioPlayerNode)
         
@@ -123,6 +124,7 @@ class PlaySoundsViewController: UIViewController {
     */
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
+        // FIXME: audioPlayerNode will not stop. If I try to stop it, it crashes.
     }
     
     /*
