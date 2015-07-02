@@ -17,8 +17,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var recordedAudio: RecordedAudio!
     var paused: Bool = false
     
-    @IBOutlet weak var tapToResumeLabel: UILabel!
-    @IBOutlet weak var tapToRecordLabel: UILabel!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
@@ -31,11 +29,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     */
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
-        tapToRecordLabel.hidden = true
         stopButton.hidden = false
         pauseButton.hidden = false
         recordingLabel.hidden = false
-        tapToResumeLabel.hidden = true
+        recordingLabel.text = "Recording in Progress..."
         
         // Check if a resume needs to occur due to previous pause
         if (paused) {
@@ -65,8 +62,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     */
     @IBAction func pauseAudio(sender: UIButton) {
         audioRecorder.pause()
-        recordingLabel.hidden = true
-        tapToResumeLabel.hidden = false
+        recordingLabel.text = "Tap Record to Resume"
         recordButton.enabled = true
         paused = true
     }
@@ -108,18 +104,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         // When the view loads, hide the label
-        recordingLabel.hidden = true
-        tapToRecordLabel.hidden = false
     }
 
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         pauseButton.hidden = true
         recordButton.enabled = true
-        tapToResumeLabel.hidden = true
-        tapToRecordLabel.hidden = false
+        recordingLabel.hidden = false
+        recordingLabel.text = "Tap to Record"
     }
     
     override func didReceiveMemoryWarning() {
