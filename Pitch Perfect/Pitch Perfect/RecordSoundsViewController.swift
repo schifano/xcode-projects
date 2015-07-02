@@ -15,7 +15,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder:AVAudioRecorder!
     // Create new object for the RecordedAudio class
     var recordedAudio: RecordedAudio!
-    var resume: Bool = false
+    var paused: Bool = false
     
     @IBOutlet weak var tapToResumeLabel: UILabel!
     @IBOutlet weak var tapToRecordLabel: UILabel!
@@ -38,7 +38,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         tapToResumeLabel.hidden = true
         
         // Check if a resume needs to occur due to previous pause
-        if (resume) {
+        if (paused) {
             audioRecorder.record()
         } else {
             // Prepare for recording audio
@@ -68,7 +68,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordingLabel.hidden = true
         tapToResumeLabel.hidden = false
         recordButton.enabled = true
-        resume = true
+        paused = true
     }
     
     /**
@@ -89,16 +89,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             println("Recording not successful")
             recordButton.enabled = true // Record again
             stopButton.hidden = true
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Important if multiple segues for a view controller
-        if (segue.identifier == "stopRecording") {
-            // Make destinationVC the correct type
-            let playSoundsVC: PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
-            let data = sender as! RecordedAudio
-            playSoundsVC.receivedAudio = data
         }
     }
     
@@ -136,5 +126,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Important if multiple segues for a view controller
+        if (segue.identifier == "stopRecording") {
+            // Make destinationVC the correct type
+            let playSoundsVC: PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            let data = sender as! RecordedAudio
+            playSoundsVC.receivedAudio = data
+        }
+    }
 }
-

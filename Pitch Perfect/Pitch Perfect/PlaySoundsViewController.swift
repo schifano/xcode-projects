@@ -109,6 +109,10 @@ class PlaySoundsViewController: UIViewController {
         // Connect AVAudioUnitTimePitch to Output (speakers)
         audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
         
+        var date = NSDate()
+        let timeInterval = NSTimeInterval(1.0)
+        date = date.dateByAddingTimeInterval(timeInterval)
+        
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         
         // Start audio engine
@@ -124,7 +128,7 @@ class PlaySoundsViewController: UIViewController {
     */
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
-        // FIXME: audioPlayerNode will not stop. If I try to stop it, it crashes.
+        audioEngine.stop()
     }
     
     /*
