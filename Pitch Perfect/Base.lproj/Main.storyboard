@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-Re-MXR">
-                                <rect key="frame" x="41" y="301" width="100" height="100"/>
+                                <rect key="frame" x="41" y="243" width="100" height="100"/>
                                 <state key="normal" image="chipmunk@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -126,8 +126,26 @@
                                     <action selector="playChipmunkAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="iy2-SY-Q8i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-Gz-nsa">
+                                <rect key="frame" x="41" y="379" width="100" height="100"/>
+                                <state key="normal" image="reverb@2x-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudioWithReverb:" destination="C3x-yG-rTl" eventType="touchUpInside" id="TjY-Lm-i8v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ade-AQ-8hk">
+                                <rect key="frame" x="300" y="431" width="35" height="30"/>
+                                <state key="normal" title="Echo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudioWithEcho:" destination="C3x-yG-rTl" eventType="touchUpInside" id="5OY-f9-laj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS0-k7-Xkk">
-                                <rect key="frame" x="273" y="301" width="100" height="100"/>
+                                <rect key="frame" x="273" y="243" width="100" height="100"/>
                                 <state key="normal" image="darthvader@2x-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -138,12 +156,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5fW-Gz-nsa" firstAttribute="leading" secondItem="tKY-Du-DUR" secondAttribute="leadingMargin" constant="25" id="22g-8Z-Y5O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hX4-3D-nkb" secondAttribute="trailing" constant="25" id="5h3-7f-D3S"/>
                             <constraint firstItem="pqh-GG-fTB" firstAttribute="leading" secondItem="tKY-Du-DUR" secondAttribute="leadingMargin" constant="25" id="HNW-JG-s8D"/>
-                            <constraint firstItem="wS0-k7-Xkk" firstAttribute="top" secondItem="hX4-3D-nkb" secondAttribute="bottom" constant="87" id="K77-up-FDp"/>
+                            <constraint firstItem="wS0-k7-Xkk" firstAttribute="top" secondItem="hX4-3D-nkb" secondAttribute="bottom" constant="29" id="K77-up-FDp"/>
                             <constraint firstAttribute="centerX" secondItem="Wfr-Fa-sR0" secondAttribute="centerX" id="PRa-24-7mS"/>
-                            <constraint firstItem="Zmg-Re-MXR" firstAttribute="top" secondItem="pqh-GG-fTB" secondAttribute="bottom" constant="87" id="bWQ-u7-tqB"/>
+                            <constraint firstItem="Zmg-Re-MXR" firstAttribute="top" secondItem="pqh-GG-fTB" secondAttribute="bottom" constant="29" id="bWQ-u7-tqB"/>
                             <constraint firstItem="pqh-GG-fTB" firstAttribute="top" secondItem="HBa-NE-w5g" secondAttribute="bottom" constant="50" id="fpH-ii-Bfb"/>
+                            <constraint firstItem="5fW-Gz-nsa" firstAttribute="top" secondItem="Zmg-Re-MXR" secondAttribute="bottom" constant="36" id="hQd-fM-9wC"/>
                             <constraint firstAttribute="centerY" secondItem="Wfr-Fa-sR0" secondAttribute="centerY" constant="-145" id="nKX-ez-2YR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wS0-k7-Xkk" secondAttribute="trailing" constant="25" id="nnG-6Q-Xe2"/>
                             <constraint firstItem="hX4-3D-nkb" firstAttribute="top" secondItem="HBa-NE-w5g" secondAttribute="bottom" constant="50" id="w2C-SK-BeP"/>
@@ -181,6 +201,7 @@
         <image name="fast@2x-iphone" width="100" height="100"/>
         <image name="pause@2x-iphone" width="50" height="50"/>
         <image name="record-button" width="100" height="100"/>
+        <image name="reverb@2x-iphone" width="100" height="100"/>
         <image name="slow@2x-iphone" width="100" height="100"/>
         <image name="stop@2x-iphone" width="50" height="50"/>
     </resources>
