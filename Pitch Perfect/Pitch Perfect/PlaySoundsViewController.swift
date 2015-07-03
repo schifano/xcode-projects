@@ -14,7 +14,8 @@ class PlaySoundsViewController: UIViewController {
     var audioFile: AVAudioFile!
     var audioPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
-    let audioEngine = AVAudioEngine()
+    var audioEngine = AVAudioEngine()!
+    var audioEngine2 = AVAudioEngine()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +82,36 @@ class PlaySoundsViewController: UIViewController {
         playAudioWithVariablePitch(-1000)
     }
     
+    @IBAction func playAudioWithEcho(sender: UIButton) {
+    }
+    
+    @IBAction func playAudioWithReverb(sender: UIButton) {
+        // FIXME: Add reverb
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine2.stop()
+        audioEngine2.reset()
+        
+        var audioPlayerNode2 = AVAudioPlayerNode()
+        var reverbEffect = AVAudioUnitReverb()
+        reverbEffect.loadFactoryPreset(.LargeHall2)
+        reverbEffect.wetDryMix = 50
+
+        
+        audioEngine2.attachNode(audioPlayerNode2)
+        audioEngine2.attachNode(reverbEffect)
+        
+        audioEngine2.connect(audioPlayerNode2, to: reverbEffect, format: nil)
+        audioEngine2.connect(reverbEffect, to: audioEngine2.outputNode, format: nil)
+        
+        audioPlayerNode2.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        
+        // Start audio engine
+        audioEngine2.startAndReturnError(nil)
+        
+        audioPlayerNode2.play()
+    }
+    
     /**
         Helper function for playing back audio at variable pitches.
     
@@ -108,10 +139,6 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
         // Connect AVAudioUnitTimePitch to Output (speakers)
         audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
-        
-        var date = NSDate()
-        let timeInterval = NSTimeInterval(1.0)
-        date = date.dateByAddingTimeInterval(timeInterval)
         
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         
