@@ -83,10 +83,33 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playAudioWithEcho(sender: UIButton) {
+        // FIXME: Refactor Echo
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine2.stop()
+        audioEngine2.reset()
+        
+        var audioPlayerNode2 = AVAudioPlayerNode()
+        var delayEffect = AVAudioUnitDelay()
+        delayEffect.wetDryMix = 50
+        delayEffect.delayTime = 0.5
+        
+        audioEngine2.attachNode(audioPlayerNode2)
+        audioEngine2.attachNode(delayEffect)
+        
+        audioEngine2.connect(audioPlayerNode2, to: delayEffect, format: nil)
+        audioEngine2.connect(delayEffect, to: audioEngine2.outputNode, format: nil)
+        
+        audioPlayerNode2.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        
+        // Start audio engine
+        audioEngine2.startAndReturnError(nil)
+        
+        audioPlayerNode2.play()
     }
     
     @IBAction func playAudioWithReverb(sender: UIButton) {
-        // FIXME: Add reverb
+        // FIXME: Refactor reverb
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine2.stop()
@@ -96,7 +119,6 @@ class PlaySoundsViewController: UIViewController {
         var reverbEffect = AVAudioUnitReverb()
         reverbEffect.loadFactoryPreset(.LargeHall2)
         reverbEffect.wetDryMix = 50
-
         
         audioEngine2.attachNode(audioPlayerNode2)
         audioEngine2.attachNode(reverbEffect)
