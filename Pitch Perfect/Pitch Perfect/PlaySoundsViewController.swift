@@ -82,58 +82,6 @@ class PlaySoundsViewController: UIViewController {
         playAudioWithVariablePitch(-1000)
     }
     
-    @IBAction func playAudioWithEcho(sender: UIButton) {
-        // FIXME: Refactor Echo
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine2.stop()
-        audioEngine2.reset()
-        
-        var audioPlayerNode2 = AVAudioPlayerNode()
-        var delayEffect = AVAudioUnitDelay()
-        delayEffect.wetDryMix = 50
-        delayEffect.delayTime = 0.5
-        
-        audioEngine2.attachNode(audioPlayerNode2)
-        audioEngine2.attachNode(delayEffect)
-        
-        audioEngine2.connect(audioPlayerNode2, to: delayEffect, format: nil)
-        audioEngine2.connect(delayEffect, to: audioEngine2.outputNode, format: nil)
-        
-        audioPlayerNode2.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        
-        // Start audio engine
-        audioEngine2.startAndReturnError(nil)
-        
-        audioPlayerNode2.play()
-    }
-    
-    @IBAction func playAudioWithReverb(sender: UIButton) {
-        // FIXME: Refactor reverb
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine2.stop()
-        audioEngine2.reset()
-        
-        var audioPlayerNode2 = AVAudioPlayerNode()
-        var reverbEffect = AVAudioUnitReverb()
-        reverbEffect.loadFactoryPreset(.LargeHall2)
-        reverbEffect.wetDryMix = 50
-        
-        audioEngine2.attachNode(audioPlayerNode2)
-        audioEngine2.attachNode(reverbEffect)
-        
-        audioEngine2.connect(audioPlayerNode2, to: reverbEffect, format: nil)
-        audioEngine2.connect(reverbEffect, to: audioEngine2.outputNode, format: nil)
-        
-        audioPlayerNode2.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        
-        // Start audio engine
-        audioEngine2.startAndReturnError(nil)
-        
-        audioPlayerNode2.play()
-    }
-    
     /**
         Helper function for playing back audio at variable pitches.
     
@@ -170,6 +118,66 @@ class PlaySoundsViewController: UIViewController {
         audioPlayerNode.play()
     }
     
+    /**
+        Plays back audio with echo (delayed) effect.
+    
+        :param: sender The UIButton clicked on - the right circles button.
+    */
+    @IBAction func playAudioWithEcho(sender: UIButton) {
+        // FIXME: Refactor Echo
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        var delayEffect = AVAudioUnitDelay()
+        delayEffect.wetDryMix = 50
+        delayEffect.delayTime = 0.5
+        
+        audioEngine.attachNode(audioPlayerNode)
+        audioEngine.attachNode(delayEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: delayEffect, format: nil)
+        audioEngine.connect(delayEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        
+        // Start audio engine
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
+    }
+    
+    /**
+        Plays back audio with reverb effect.
+    
+        :param: sender The UIButton clicked on - the left circles button.
+    */
+    @IBAction func playAudioWithReverb(sender: UIButton) {
+        // FIXME: Refactor reverb
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        var reverbEffect = AVAudioUnitReverb()
+        reverbEffect.loadFactoryPreset(.LargeHall2)
+        reverbEffect.wetDryMix = 50
+        
+        audioEngine.attachNode(audioPlayerNode)
+        audioEngine.attachNode(reverbEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: reverbEffect, format: nil)
+        audioEngine.connect(reverbEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        
+        // Start audio engine
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
+    }
+
     /**
         Stops audio from playing back.
     
