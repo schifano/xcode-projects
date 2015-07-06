@@ -15,7 +15,8 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
     var audioEngine = AVAudioEngine()!
-    var audioEngine2 = AVAudioEngine()!
+    
+    // FIXME: Add accessibility
     
     override func viewDidLoad() {
         super.viewDidLoad()
