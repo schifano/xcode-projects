@@ -89,34 +89,9 @@ class PlaySoundsViewController: UIViewController {
         :param: pitch The playback pitch value
     */
     func playAudioWithVariablePitch(pitch: Float) {
-        // Stop all audio before playing it back
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        
-        // Create AudioPlayerNode object
-        var audioPlayerNode = AVAudioPlayerNode()
-        
-        // Attach AVAudioPlayerNode to AVAudioEngine
-        audioEngine.attachNode(audioPlayerNode)
-        
-        // Create AVAudioUnitTimePitch
-        var changePitchEffect = AVAudioUnitTimePitch()
-        changePitchEffect.pitch = pitch
-        // Attach AVAudioUniteTimePtich to AVAudioEngine
-        audioEngine.attachNode(changePitchEffect)
-        
-        // Connect AVAudioPlayerNode to AVAudioUnitTimePitch
-        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
-        // Connect AVAudioUnitTimePitch to Output (speakers)
-        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
-        
-        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        
-        // Start audio engine
-        audioEngine.startAndReturnError(nil)
-        
-        audioPlayerNode.play()
+        var pitchEffect = AVAudioUnitTimePitch()
+        pitchEffect.pitch = pitch
+        playAudioWithEffect(pitchEffect)
     }
     
     /**
@@ -125,28 +100,10 @@ class PlaySoundsViewController: UIViewController {
         :param: sender The UIButton clicked on - the right circles button.
     */
     @IBAction func playAudioWithEcho(sender: UIButton) {
-        // FIXME: Refactor Echo
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        
-        var audioPlayerNode = AVAudioPlayerNode()
         var delayEffect = AVAudioUnitDelay()
         delayEffect.wetDryMix = 50
         delayEffect.delayTime = 0.5
-        
-        audioEngine.attachNode(audioPlayerNode)
-        audioEngine.attachNode(delayEffect)
-        
-        audioEngine.connect(audioPlayerNode, to: delayEffect, format: nil)
-        audioEngine.connect(delayEffect, to: audioEngine.outputNode, format: nil)
-        
-        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        
-        // Start audio engine
-        audioEngine.startAndReturnError(nil)
-        
-        audioPlayerNode.play()
+        playAudioWithEffect(delayEffect)
     }
     
     /**
@@ -155,32 +112,17 @@ class PlaySoundsViewController: UIViewController {
         :param: sender The UIButton clicked on - the left circles button.
     */
     @IBAction func playAudioWithReverb(sender: UIButton) {
-        // FIXME: Refactor reverb
-//        audioPlayer.stop()
-//        audioEngine.stop()
-//        audioEngine.reset()
-        
-//        var audioPlayerNode = AVAudioPlayerNode()
         var reverbEffect = AVAudioUnitReverb()
         reverbEffect.loadFactoryPreset(.LargeHall2)
         reverbEffect.wetDryMix = 50
-
         playAudioWithEffect(reverbEffect)
-//
-//        audioEngine.attachNode(audioPlayerNode)
-//        audioEngine.attachNode(reverbEffect)
-//        
-//        audioEngine.connect(audioPlayerNode, to: reverbEffect, format: nil)
-//        audioEngine.connect(reverbEffect, to: audioEngine.outputNode, format: nil)
-//        
-//        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-//        
-//        // Start audio engine
-//        audioEngine.startAndReturnError(nil)
-//        
-//        audioPlayerNode.play()
     }
     
+    /**
+        Plays audio  back with various effect params.
+    
+        :parm: effect The effect subclassed within AVAudioUnit
+    */
     func playAudioWithEffect(effect: AVAudioUnit) {
         audioPlayer.stop()
         audioEngine.stop()
@@ -188,19 +130,15 @@ class PlaySoundsViewController: UIViewController {
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
-        
-
         audioEngine.attachNode(effect)
-
 
         audioEngine.connect(audioPlayerNode, to: effect, format: nil)
         audioEngine.connect(effect, to: audioEngine.outputNode, format: nil)
         
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         
-        // Start audio engine
+        // Start and play audio engine
         audioEngine.startAndReturnError(nil)
-        
         audioPlayerNode.play()
     }
 
