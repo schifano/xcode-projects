@@ -156,20 +156,45 @@ class PlaySoundsViewController: UIViewController {
     */
     @IBAction func playAudioWithReverb(sender: UIButton) {
         // FIXME: Refactor reverb
+//        audioPlayer.stop()
+//        audioEngine.stop()
+//        audioEngine.reset()
+        
+//        var audioPlayerNode = AVAudioPlayerNode()
+        var reverbEffect = AVAudioUnitReverb()
+        reverbEffect.loadFactoryPreset(.LargeHall2)
+        reverbEffect.wetDryMix = 50
+
+        playAudioWithEffect(reverbEffect)
+//
+//        audioEngine.attachNode(audioPlayerNode)
+//        audioEngine.attachNode(reverbEffect)
+//        
+//        audioEngine.connect(audioPlayerNode, to: reverbEffect, format: nil)
+//        audioEngine.connect(reverbEffect, to: audioEngine.outputNode, format: nil)
+//        
+//        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+//        
+//        // Start audio engine
+//        audioEngine.startAndReturnError(nil)
+//        
+//        audioPlayerNode.play()
+    }
+    
+    func playAudioWithEffect(effect: AVAudioUnit) {
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         
         var audioPlayerNode = AVAudioPlayerNode()
-        var reverbEffect = AVAudioUnitReverb()
-        reverbEffect.loadFactoryPreset(.LargeHall2)
-        reverbEffect.wetDryMix = 50
-        
         audioEngine.attachNode(audioPlayerNode)
-        audioEngine.attachNode(reverbEffect)
         
-        audioEngine.connect(audioPlayerNode, to: reverbEffect, format: nil)
-        audioEngine.connect(reverbEffect, to: audioEngine.outputNode, format: nil)
+
+        audioEngine.attachNode(effect)
+
+
+        audioEngine.connect(audioPlayerNode, to: effect, format: nil)
+        audioEngine.connect(effect, to: audioEngine.outputNode, format: nil)
         
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         
