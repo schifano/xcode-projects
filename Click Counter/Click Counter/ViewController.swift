@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 schifano. All rights reserved.
 //
 
+// Udacity notes
 // TODO: Add an additional label and have it increment with the first
 // TODO: Add a decrement button
 // TODO: Add an action that toggles the background color of the view with each click
