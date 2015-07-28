@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     var count = 0
     var label:UILabel! // make optional since this is currently nil
+    var label2: UILabel!
     
     // Executes once after initial view object is set
     override func viewDidLoad() {
@@ -32,9 +33,16 @@ class ViewController: UIViewController {
         
         self.label = label
         
+        // Add a second label
+        var label2 = UILabel()
+        label2.frame = CGRectMake(100, 150, 60, 60)
+        label2.text = "0"
+        self.label2 = label2
+        
         // Add label view to the view hierarchy so that it appears
         // Add as subview to root view
         self.view.addSubview(label)
+        self.view.addSubview(label2)
         
         // BUTTON
         var button = UIButton()
@@ -51,5 +59,6 @@ class ViewController: UIViewController {
         self.count++
         // self reaches out of view controller object, gives outlet to label
         self.label.text = "\(self.count)"
+        self.label2.text = "\(self.count)"
     }
 }
