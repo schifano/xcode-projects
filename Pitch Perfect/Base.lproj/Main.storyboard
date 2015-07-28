@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XCz-Ed-3UN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in Progress..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZx-QT-Niw">
+                                <rect key="frame" x="119" y="414" width="178" height="16"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
+                                <color key="textColor" red="0.047692560054509385" green="0.20651434497266752" blue="0.28973327020202022" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-dE-7IF">
+                                <rect key="frame" x="157" y="265" width="100" height="100"/>
+                                <state key="normal" image="record-button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AV2-4j-mbx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-oC-vJk">
+                                <rect key="frame" x="232" y="666" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="c6e-4u-Syj"/>
+                                </constraints>
+                                <state key="normal" image="stop@2x-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mmC-tZ-TCS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vba-Lb-nGH">
+                                <rect key="frame" x="132" y="666" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vNO-yQ-H0k"/>
+                                </constraints>
+                                <state key="normal" image="pause@2x-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nvD-gE-bwg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24705882352941178" green="0.77254901960784317" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0d8-oC-vJk" secondAttribute="bottom" constant="20" id="BNG-SU-TBF"/>
+                            <constraint firstItem="EZx-QT-Niw" firstAttribute="top" secondItem="DBd-dE-7IF" secondAttribute="bottom" constant="49" id="MqL-BS-uAY"/>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="leading" secondItem="DBd-dE-7IF" secondAttribute="trailing" constant="-25" id="PI1-DV-FH8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vba-Lb-nGH" secondAttribute="bottom" constant="20" id="ZZm-nZ-xuV"/>
+                            <constraint firstItem="Vba-Lb-nGH" firstAttribute="top" secondItem="0d8-oC-vJk" secondAttribute="top" id="bm7-Ze-MGI"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-53" id="ew5-hY-mqJ"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t5y-Cc-dIm"/>
+                            <constraint firstItem="0d8-oC-vJk" firstAttribute="leading" secondItem="Vba-Lb-nGH" secondAttribute="trailing" constant="50" id="wu9-ge-RQZ"/>
+                            <constraint firstItem="DBd-dE-7IF" firstAttribute="centerX" secondItem="EZx-QT-Niw" secondAttribute="centerX" constant="-0.5" id="yc3-tY-yNk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record" id="tKR-gk-A9U"/>
+                    <connections>
+                        <outlet property="pauseButton" destination="Vba-Lb-nGH" id="Re1-YY-OtU"/>
+                        <outlet property="recordButton" destination="DBd-dE-7IF" id="87x-Vp-aKc"/>
+                        <outlet property="recordingLabel" destination="EZx-QT-Niw" id="YIE-tF-pti"/>
+                        <outlet property="stopButton" destination="0d8-oC-vJk" id="wef-md-z6a"/>
+                        <segue destination="C3x-yG-rTl" kind="show" identifier="stopRecording" id="3hj-YP-0Vr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="330"/>
+        </scene>
+        <!--Play Sounds View Controller-->
+        <scene sceneID="xal-1G-KZa">
+            <objects>
+                <viewController id="C3x-yG-rTl" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HBa-NE-w5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ayf-V5-1vd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tKY-Du-DUR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKI-0a-TUx">
+                                <rect key="frame" x="16" y="84" width="382" height="340"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-3D-nkb">
+                                        <rect key="frame" x="282" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hX4-3D-nkb" secondAttribute="height" multiplier="1:1" id="vIV-Ir-W58"/>
+                                        </constraints>
+                                        <state key="normal" image="fast@2x-iphone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playFastAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="ZfF-Hv-mgb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-Re-MXR">
+                                        <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                        <state key="normal" image="chipmunk@2x-iphone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playChipmunkAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="iy2-SY-Q8i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ade-AQ-8hk">
+                                        <rect key="frame" x="282" y="240" width="100" height="100"/>
+                                        <state key="normal" image="echo@2x-iphone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAudioWithEcho:" destination="C3x-yG-rTl" eventType="touchUpInside" id="5OY-f9-laj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-Gz-nsa">
+                                        <rect key="frame" x="0.0" y="240" width="100" height="100"/>
+                                        <state key="normal" image="reverb@2x-iphone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAudioWithReverb:" destination="C3x-yG-rTl" eventType="touchUpInside" id="TjY-Lm-i8v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqh-GG-fTB">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pqh-GG-fTB" secondAttribute="height" multiplier="1:1" id="oJf-qg-lkz"/>
+                                        </constraints>
+                                        <state key="normal" image="slow@2x-iphone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playSlowAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="YTQ-cv-KaI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS0-k7-Xkk">
+                                        <rect key="frame" x="282" y="120" width="100" height="100"/>
+                                        <state key="normal" image="darthvader@2x-iphone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playDarthVaderAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="eJ3-aY-ef5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ade-AQ-8hk" firstAttribute="height" secondItem="hX4-3D-nkb" secondAttribute="height" id="0yM-hZ-iNj"/>
+                                    <constraint firstItem="Zmg-Re-MXR" firstAttribute="width" secondItem="pqh-GG-fTB" secondAttribute="width" id="15k-Bf-zRV"/>
+                                    <constraint firstItem="5fW-Gz-nsa" firstAttribute="leading" secondItem="PKI-0a-TUx" secondAttribute="leading" id="1Bq-Mx-YPn"/>
+                                    <constraint firstItem="hX4-3D-nkb" firstAttribute="top" secondItem="PKI-0a-TUx" secondAttribute="top" id="1yp-tU-CAr"/>
+                                    <constraint firstItem="hX4-3D-nkb" firstAttribute="height" secondItem="wS0-k7-Xkk" secondAttribute="height" id="BJ1-Yl-hOO"/>
+                                    <constraint firstAttribute="centerY" secondItem="Zmg-Re-MXR" secondAttribute="centerY" id="Bfq-qD-qmt"/>
+                                    <constraint firstAttribute="trailing" secondItem="wS0-k7-Xkk" secondAttribute="trailing" id="IRH-TB-4Zk"/>
+                                    <constraint firstItem="pqh-GG-fTB" firstAttribute="top" secondItem="PKI-0a-TUx" secondAttribute="top" id="J1g-RP-35L"/>
+                                    <constraint firstItem="5fW-Gz-nsa" firstAttribute="top" secondItem="Zmg-Re-MXR" secondAttribute="bottom" constant="20" id="MbD-YR-iEn"/>
+                                    <constraint firstItem="Zmg-Re-MXR" firstAttribute="top" relation="lessThanOrEqual" secondItem="pqh-GG-fTB" secondAttribute="bottom" priority="200" constant="50" id="MnM-nj-Ixx"/>
+                                    <constraint firstItem="pqh-GG-fTB" firstAttribute="leading" secondItem="PKI-0a-TUx" secondAttribute="leading" id="OHe-f3-GeX"/>
+                                    <constraint firstItem="Zmg-Re-MXR" firstAttribute="height" secondItem="pqh-GG-fTB" secondAttribute="height" id="OW9-kW-OvF"/>
+                                    <constraint firstItem="Zmg-Re-MXR" firstAttribute="top" secondItem="pqh-GG-fTB" secondAttribute="bottom" constant="20" id="SQU-NB-tQt"/>
+                                    <constraint firstItem="pqh-GG-fTB" firstAttribute="width" secondItem="5fW-Gz-nsa" secondAttribute="width" id="Tbj-Ch-1db"/>
+                                    <constraint firstItem="5fW-Gz-nsa" firstAttribute="top" relation="lessThanOrEqual" secondItem="Zmg-Re-MXR" secondAttribute="bottom" priority="200" constant="50" id="U9Z-nV-cuj"/>
+                                    <constraint firstItem="ade-AQ-8hk" firstAttribute="top" relation="lessThanOrEqual" secondItem="wS0-k7-Xkk" secondAttribute="bottom" priority="200" constant="50" id="Xt5-sh-84y"/>
+                                    <constraint firstItem="wS0-k7-Xkk" firstAttribute="top" relation="lessThanOrEqual" secondItem="hX4-3D-nkb" secondAttribute="bottom" priority="200" constant="50" id="eXa-HY-1tm"/>
+                                    <constraint firstAttribute="bottom" secondItem="5fW-Gz-nsa" secondAttribute="bottom" id="fZ2-cm-4UN"/>
+                                    <constraint firstItem="wS0-k7-Xkk" firstAttribute="top" secondItem="hX4-3D-nkb" secondAttribute="bottom" constant="20" id="ftB-DV-qny"/>
+                                    <constraint firstItem="hX4-3D-nkb" firstAttribute="width" secondItem="wS0-k7-Xkk" secondAttribute="width" id="in2-XD-uu7"/>
+                                    <constraint firstAttribute="centerY" secondItem="wS0-k7-Xkk" secondAttribute="centerY" id="kpK-8R-Qvq"/>
+                                    <constraint firstAttribute="trailing" secondItem="hX4-3D-nkb" secondAttribute="trailing" id="nK0-Rl-TCE"/>
+                                    <constraint firstItem="pqh-GG-fTB" firstAttribute="height" secondItem="5fW-Gz-nsa" secondAttribute="height" id="pD9-iU-C4J"/>
+                                    <constraint firstItem="ade-AQ-8hk" firstAttribute="top" secondItem="wS0-k7-Xkk" secondAttribute="bottom" constant="20" id="rVQ-Xt-r4W"/>
+                                    <constraint firstItem="ade-AQ-8hk" firstAttribute="width" secondItem="hX4-3D-nkb" secondAttribute="width" id="ue0-GZ-RgZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ade-AQ-8hk" secondAttribute="bottom" id="vEd-eB-Y5S"/>
+                                    <constraint firstItem="Zmg-Re-MXR" firstAttribute="leading" secondItem="PKI-0a-TUx" secondAttribute="leading" id="wcJ-if-EMh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ade-AQ-8hk" secondAttribute="trailing" id="zQF-EK-LV3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfr-Fa-sR0">
+                                <rect key="frame" x="182" y="666" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wun-2X-tQb"/>
+                                </constraints>
+                                <state key="normal" image="stop@2x-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="C3x-yG-rTl" eventType="touchUpInside" id="Llc-CS-ssJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ayf-V5-1vd" firstAttribute="top" secondItem="Wfr-Fa-sR0" secondAttribute="bottom" constant="20" id="7Oh-6U-afe"/>
+                            <constraint firstItem="PKI-0a-TUx" firstAttribute="leading" secondItem="tKY-Du-DUR" secondAttribute="leadingMargin" id="MJR-JQ-P2J"/>
+                            <constraint firstItem="PKI-0a-TUx" firstAttribute="trailing" secondItem="tKY-Du-DUR" secondAttribute="trailingMargin" id="Qji-Xv-Q5j"/>
+                            <constraint firstItem="Wfr-Fa-sR0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PKI-0a-TUx" secondAttribute="bottom" constant="50" id="Ssr-xl-5I0"/>
+                            <constraint firstAttribute="centerX" secondItem="Wfr-Fa-sR0" secondAttribute="centerX" id="Tw6-b7-tPW"/>
+                            <constraint firstItem="PKI-0a-TUx" firstAttribute="top" secondItem="HBa-NE-w5g" secondAttribute="bottom" constant="20" id="aYC-pS-Mr2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLd-eo-lOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2262" y="330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NPN-3m-TVE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCz-Ed-3UN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bby-NL-TPY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Bhu-ma-XFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZb-BA-DBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="330"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chipmunk@2x-iphone" width="100" height="100"/>
+        <image name="darthvader@2x-iphone" width="100" height="100"/>
+        <image name="echo@2x-iphone" width="100" height="100"/>
+        <image name="fast@2x-iphone" width="100" height="100"/>
+        <image name="pause@2x-iphone" width="50" height="50"/>
+        <image name="record-button" width="100" height="100"/>
+        <image name="reverb@2x-iphone" width="100" height="100"/>
+        <image name="slow@2x-iphone" width="100" height="100"/>
+        <image name="stop@2x-iphone" width="50" height="50"/>
+    </resources>
+</document>
