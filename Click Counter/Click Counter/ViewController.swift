@@ -7,8 +7,6 @@
 //
 
 // Udacity notes
-// TODO: Add an additional label and have it increment with the first
-// TODO: Add a decrement button
 // TODO: Add an action that toggles the background color of the view with each click
 
 import UIKit
@@ -46,18 +44,34 @@ class ViewController: UIViewController {
         
         // BUTTON
         var button = UIButton()
-        button.frame = CGRectMake(150, 250, 60, 60)
-        button.setTitle("Click", forState: .Normal)
+        button.frame = CGRectMake(150, 250, 100, 100)
+        button.setTitle("Increment", forState: .Normal)
         button.setTitleColor(UIColor.blueColor(), forState: .Normal)
         self.view.addSubview(button)
         
+        // BUTTON for decrementing
+        var decrementButton = UIButton()
+        decrementButton.frame = CGRectMake(50, 250, 100, 100)
+        decrementButton.setTitle("Decrement", forState: .Normal)
+        decrementButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        self.view.addSubview(decrementButton)
+        
+        
         // Add target action
         button.addTarget(self, action: "incrementCount", forControlEvents: UIControlEvents.TouchUpInside)
+        decrementButton.addTarget(self, action: "decrementCount", forControlEvents: UIControlEvents.TouchUpInside)
+        
     }
     
     func incrementCount() {
         self.count++
         // self reaches out of view controller object, gives outlet to label
+        self.label.text = "\(self.count)"
+        self.label2.text = "\(self.count)"
+    }
+    
+    func decrementCount() {
+        self.count--
         self.label.text = "\(self.count)"
         self.label2.text = "\(self.count)"
     }
