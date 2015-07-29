@@ -22,11 +22,18 @@ class ViewController: UIViewController {
         
     }
     
-    // FIXME: Create OK button for user
     @IBAction func experiment3() {
         let alertController = UIAlertController()
         alertController.title = "Test Alert"
         alertController.message = "This is a test alert"
+//        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        // Create closure to add OK button for user
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) {
+            action in self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        alertController.addAction(okAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
