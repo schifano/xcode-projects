@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         self.view.addSubview(decrementButton)
         
         
-        // Add target action
+        // Add target action(s)
         button.addTarget(self, action: "incrementCount", forControlEvents: UIControlEvents.TouchUpInside)
         decrementButton.addTarget(self, action: "decrementCount", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -66,12 +66,7 @@ class ViewController: UIViewController {
         self.label.text = "\(self.count)"
         self.label2.text = "\(self.count)"
         
-        view.backgroundColor = UIColor (
-            red: CGFloat(arc4random_uniform(3)),
-            green: CGFloat(arc4random_uniform(3)),
-            blue: CGFloat(arc4random_uniform(3)),
-            alpha: 1.0
-        )
+        randomizeBackgroundColor()
     }
     
     func decrementCount() {
@@ -79,6 +74,10 @@ class ViewController: UIViewController {
         self.label.text = "\(self.count)"
         self.label2.text = "\(self.count)"
         
+        randomizeBackgroundColor()
+    }
+    
+    func randomizeBackgroundColor() {
         view.backgroundColor = UIColor (
             red: CGFloat(arc4random_uniform(3)),
             green: CGFloat(arc4random_uniform(3)),
