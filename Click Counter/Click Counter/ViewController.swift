@@ -60,6 +60,9 @@ class ViewController: UIViewController {
         
     }
     
+    /**
+        Function that increments the counter.
+    */
     func incrementCount() {
         self.count++
         // self reaches out of view controller object, gives outlet to label
@@ -69,6 +72,9 @@ class ViewController: UIViewController {
         randomizeBackgroundColor()
     }
     
+    /**
+        Function that decrements the counter.
+    */
     func decrementCount() {
         self.count--
         self.label.text = "\(self.count)"
@@ -77,6 +83,9 @@ class ViewController: UIViewController {
         randomizeBackgroundColor()
     }
     
+    /**
+        Helper function that randomizes the view background color.
+    */
     func randomizeBackgroundColor() {
         view.backgroundColor = UIColor (
             red: CGFloat(arc4random_uniform(3)),
