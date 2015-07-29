@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29CE9C1F1B68A06000CA4EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CE9C1E1B68A06000CA4EAB /* AppDelegate.swift */; };
+		29CE9C211B68A06000CA4EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CE9C201B68A06000CA4EAB /* ViewController.swift */; };
+		29CE9C241B68A06000CA4EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CE9C221B68A06000CA4EAB /* Main.storyboard */; };
+		29CE9C261B68A06000CA4EAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CE9C251B68A06000CA4EAB /* Images.xcassets */; };
+		29CE9C291B68A06000CA4EAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29CE9C271B68A06000CA4EAB /* LaunchScreen.xib */; };
+		29CE9C351B68A06000CA4EAB /* Click_Counter_With_StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CE9C341B68A06000CA4EAB /* Click_Counter_With_StoryboardTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29CE9C2F1B68A06000CA4EAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29CE9C111B68A06000CA4EAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29CE9C181B68A06000CA4EAB;
+			remoteInfo = "Click Counter With Storyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29CE9C191B68A06000CA4EAB /* Click Counter With Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Click Counter With Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CE9C1D1B68A06000CA4EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CE9C1E1B68A06000CA4EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29CE9C201B68A06000CA4EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29CE9C231B68A06000CA4EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29CE9C251B68A06000CA4EAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		29CE9C281B68A06000CA4EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		29CE9C2E1B68A06000CA4EAB /* Click Counter With StoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Click Counter With StoryboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CE9C331B68A06000CA4EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CE9C341B68A06000CA4EAB /* Click_Counter_With_StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Click_Counter_With_StoryboardTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29CE9C161B68A06000CA4EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CE9C2B1B68A06000CA4EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29CE9C101B68A06000CA4EAB = {
+			isa = PBXGroup;
+			children = (
+				29CE9C1B1B68A06000CA4EAB /* Click Counter With Storyboard */,
+				29CE9C311B68A06000CA4EAB /* Click Counter With StoryboardTests */,
+				29CE9C1A1B68A06000CA4EAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29CE9C1A1B68A06000CA4EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29CE9C191B68A06000CA4EAB /* Click Counter With Storyboard.app */,
+				29CE9C2E1B68A06000CA4EAB /* Click Counter With StoryboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29CE9C1B1B68A06000CA4EAB /* Click Counter With Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				29CE9C1E1B68A06000CA4EAB /* AppDelegate.swift */,
+				29CE9C201B68A06000CA4EAB /* ViewController.swift */,
+				29CE9C221B68A06000CA4EAB /* Main.storyboard */,
+				29CE9C251B68A06000CA4EAB /* Images.xcassets */,
+				29CE9C271B68A06000CA4EAB /* LaunchScreen.xib */,
+				29CE9C1C1B68A06000CA4EAB /* Supporting Files */,
+			);
+			path = "Click Counter With Storyboard";
+			sourceTree = "<group>";
+		};
+		29CE9C1C1B68A06000CA4EAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29CE9C1D1B68A06000CA4EAB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29CE9C311B68A06000CA4EAB /* Click Counter With StoryboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				29CE9C341B68A06000CA4EAB /* Click_Counter_With_StoryboardTests.swift */,
+				29CE9C321B68A06000CA4EAB /* Supporting Files */,
+			);
+			path = "Click Counter With StoryboardTests";
+			sourceTree = "<group>";
+		};
+		29CE9C321B68A06000CA4EAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29CE9C331B68A06000CA4EAB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29CE9C181B68A06000CA4EAB /* Click Counter With Storyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CE9C381B68A06000CA4EAB /* Build configuration list for PBXNativeTarget "Click Counter With Storyboard" */;
+			buildPhases = (
+				29CE9C151B68A06000CA4EAB /* Sources */,
+				29CE9C161B68A06000CA4EAB /* Frameworks */,
+				29CE9C171B68A06000CA4EAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Click Counter With Storyboard";
+			productName = "Click Counter With Storyboard";
+			productReference = 29CE9C191B68A06000CA4EAB /* Click Counter With Storyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29CE9C2D1B68A06000CA4EAB /* Click Counter With StoryboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CE9C3B1B68A06000CA4EAB /* Build configuration list for PBXNativeTarget "Click Counter With StoryboardTests" */;
+			buildPhases = (
+				29CE9C2A1B68A06000CA4EAB /* Sources */,
+				29CE9C2B1B68A06000CA4EAB /* Frameworks */,
+				29CE9C2C1B68A06000CA4EAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29CE9C301B68A06000CA4EAB /* PBXTargetDependency */,
+			);
+			name = "Click Counter With StoryboardTests";
+			productName = "Click Counter With StoryboardTests";
+			productReference = 29CE9C2E1B68A06000CA4EAB /* Click Counter With StoryboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29CE9C111B68A06000CA4EAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = schifano;
+				TargetAttributes = {
+					29CE9C181B68A06000CA4EAB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					29CE9C2D1B68A06000CA4EAB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 29CE9C181B68A06000CA4EAB;
+					};
+				};
+			};
+			buildConfigurationList = 29CE9C141B68A06000CA4EAB /* Build configuration list for PBXProject "Click Counter With Storyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29CE9C101B68A06000CA4EAB;
+			productRefGroup = 29CE9C1A1B68A06000CA4EAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29CE9C181B68A06000CA4EAB /* Click Counter With Storyboard */,
+				29CE9C2D1B68A06000CA4EAB /* Click Counter With StoryboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29CE9C171B68A06000CA4EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CE9C241B68A06000CA4EAB /* Main.storyboard in Resources */,
+				29CE9C291B68A06000CA4EAB /* LaunchScreen.xib in Resources */,
+				29CE9C261B68A06000CA4EAB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CE9C2C1B68A06000CA4EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29CE9C151B68A06000CA4EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CE9C211B68A06000CA4EAB /* ViewController.swift in Sources */,
+				29CE9C1F1B68A06000CA4EAB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CE9C2A1B68A06000CA4EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CE9C351B68A06000CA4EAB /* Click_Counter_With_StoryboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29CE9C301B68A06000CA4EAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29CE9C181B68A06000CA4EAB /* Click Counter With Storyboard */;
+			targetProxy = 29CE9C2F1B68A06000CA4EAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29CE9C221B68A06000CA4EAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CE9C231B68A06000CA4EAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29CE9C271B68A06000CA4EAB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CE9C281B68A06000CA4EAB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29CE9C361B68A06000CA4EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29CE9C371B68A06000CA4EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29CE9C391B68A06000CA4EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Click Counter With Storyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29CE9C3A1B68A06000CA4EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Click Counter With Storyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		29CE9C3C1B68A06000CA4EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Click Counter With StoryboardTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Click Counter With Storyboard.app/Click Counter With Storyboard";
+			};
+			name = Debug;
+		};
+		29CE9C3D1B68A06000CA4EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Click Counter With StoryboardTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Click Counter With Storyboard.app/Click Counter With Storyboard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29CE9C141B68A06000CA4EAB /* Build configuration list for PBXProject "Click Counter With Storyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CE9C361B68A06000CA4EAB /* Debug */,
+				29CE9C371B68A06000CA4EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29CE9C381B68A06000CA4EAB /* Build configuration list for PBXNativeTarget "Click Counter With Storyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CE9C391B68A06000CA4EAB /* Debug */,
+				29CE9C3A1B68A06000CA4EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29CE9C3B1B68A06000CA4EAB /* Build configuration list for PBXNativeTarget "Click Counter With StoryboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CE9C3C1B68A06000CA4EAB /* Debug */,
+				29CE9C3D1B68A06000CA4EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29CE9C111B68A06000CA4EAB /* Project object */;
+}
