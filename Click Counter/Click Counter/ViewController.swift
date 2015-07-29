@@ -6,9 +6,6 @@
 //  Copyright (c) 2015 schifano. All rights reserved.
 //
 
-// Udacity notes
-// TODO: Add an action that toggles the background color of the view with each click
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -68,11 +65,25 @@ class ViewController: UIViewController {
         // self reaches out of view controller object, gives outlet to label
         self.label.text = "\(self.count)"
         self.label2.text = "\(self.count)"
+        
+        view.backgroundColor = UIColor (
+            red: CGFloat(arc4random_uniform(3)),
+            green: CGFloat(arc4random_uniform(3)),
+            blue: CGFloat(arc4random_uniform(3)),
+            alpha: 1.0
+        )
     }
     
     func decrementCount() {
         self.count--
         self.label.text = "\(self.count)"
         self.label2.text = "\(self.count)"
+        
+        view.backgroundColor = UIColor (
+            red: CGFloat(arc4random_uniform(3)),
+            green: CGFloat(arc4random_uniform(3)),
+            blue: CGFloat(arc4random_uniform(3)),
+            alpha: 1.0
+        )
     }
 }
