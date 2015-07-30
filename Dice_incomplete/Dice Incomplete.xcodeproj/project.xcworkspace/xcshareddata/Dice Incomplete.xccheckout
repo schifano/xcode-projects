@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6665233B-E901-47A2-A2A8-B78E14548705</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Dice Incomplete</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764</key>
+		<string>https://github.com/udacity/ios-nanodegree-uikit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Dice Incomplete/Dice Incomplete.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/udacity/ios-nanodegree-uikit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-nanodegree-uikit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
