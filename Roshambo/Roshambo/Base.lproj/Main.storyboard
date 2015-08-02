@@ -37,10 +37,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="resultImage" destination="yyF-Gl-gck" id="4ub-5E-Cid"/>
-                        <outlet property="resultLabel" destination="ppU-Mb-Lcy" id="goo-fE-YYT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4e-zX-dZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="play2" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LCO-Zy-0Ih"/>
+                                    <action selector="playPaper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9A4-Fg-n2k"/>
                                     <segue destination="euv-a8-BAu" kind="presentation" identifier="showResult2" id="h1p-rW-3ky"/>
                                 </connections>
                             </button>
@@ -83,13 +79,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="play" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PvH-U1-Rus"/>
+                                    <action selector="playRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XcE-8A-pZs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="paperButton" destination="Wyh-yf-dVL" id="Zox-dt-att"/>
+                        <outlet property="rockButton" destination="7P6-qk-TSe" id="tDu-tS-yas"/>
+                        <outlet property="scissorsButton" destination="beh-55-DUZ" id="Abr-oD-tQB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

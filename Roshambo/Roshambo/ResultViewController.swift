@@ -11,13 +11,6 @@ import Foundation
 
 class ResultViewController: UIViewController {
     
-    @IBOutlet weak var resultImage: UIImageView!
-    @IBOutlet weak var resultLabel: UILabel!
-    
-//    // Variables for results
-//    var playImage: String?
-//    var playResult: String?
-    
     /**
         Dismisses the current view controller.
     */
