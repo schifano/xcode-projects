@@ -37,6 +37,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="yyF-Gl-gck" id="sZf-oo-3Xr"/>
+                        <outlet property="resultLabel" destination="ppU-Mb-Lcy" id="TeN-Ax-oVO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4e-zX-dZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +65,6 @@
                                 </state>
                                 <connections>
                                     <action selector="playPaper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9A4-Fg-n2k"/>
-                                    <segue destination="euv-a8-BAu" kind="presentation" identifier="showResult2" id="h1p-rW-3ky"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beh-55-DUZ">
@@ -102,7 +105,4 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="h1p-rW-3ky"/>
-    </inferredMetricsTieBreakers>
 </document>

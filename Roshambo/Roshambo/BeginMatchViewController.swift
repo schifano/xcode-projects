@@ -14,8 +14,9 @@ class BeginMatchViewController: UIViewController {
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     
+    // MARK: Code
     /**
-        Code: Makes a RPS selection and programatically bring up the 
+        Makes a RPS selection and programatically bring up the
         next view controller.
     
         Rock button.
@@ -25,35 +26,54 @@ class BeginMatchViewController: UIViewController {
         var resultViewController: ResultViewController
         resultViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
         
-        // pass the selected choice (RPS)
-        // randomize a choice (RPS)
-        // compare and pass result: image + label
+        // Pass values - the user's choice
+        resultViewController.userChoice = playChoice(sender)
         
         // Present the view controller
         self.presentViewController(resultViewController, animated: true, completion: nil)
     }
     
+    // MARK: Code and Segue
     /**
-        Code and Segue: Performs segue with the segue associated
+        Performs segue with the segue associated
         with the button pressed.
     
         Paper button.
     */
     @IBAction func playPaper(sender: UIButton) {
-        self.performSegueWithIdentifier("showResult2", sender: self)
+        // TODO: Had sender: self...what was the result of this?
+        self.performSegueWithIdentifier("showResult", sender: sender)
     }
     
+    // MARK: Segue
     /**
-        Segue: The prepareForSegue func checks which segue ID
+        The prepareForSegue func checks which segue ID
         is being passed and presents the next view controller.
         
         Scissors button.
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showResult" {
-            let controller = segue.destinationViewController as! ResultViewController
+            let resultViewController = segue.destinationViewController as! ResultViewController
             
-            // pass values
+            // Pass values
+            resultViewController.userChoice = playChoice(sender as! UIButton)
+        }
+    }
+    
+    /**
+        Helper method that determines what the user choice was.
+    */
+    private func playChoice(sender: UIButton) -> String {
+        
+        if sender == "rockButton" {
+            return "Rock"
+        }
+        else if sender == "paperButton" {
+            return "Paper"
+        }
+        else {
+            return "Scissors"
         }
     }
 }
