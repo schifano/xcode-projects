@@ -58,18 +58,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-qk-TSe">
-                                <rect key="frame" x="189" y="163" width="36" height="30"/>
-                                <state key="normal" title="Rock">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="play" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PvH-U1-Rus"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyh-yf-dVL">
-                                <rect key="frame" x="187" y="233" width="41" height="30"/>
-                                <state key="normal" title="Paper">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyh-yf-dVL">
+                                <rect key="frame" x="170" y="244" width="75" height="65"/>
+                                <state key="normal" image="paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -77,13 +68,22 @@
                                     <segue destination="euv-a8-BAu" kind="presentation" identifier="showResult2" id="h1p-rW-3ky"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beh-55-DUZ">
-                                <rect key="frame" x="178" y="317" width="59" height="30"/>
-                                <state key="normal" title="Scissors">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beh-55-DUZ">
+                                <rect key="frame" x="170" y="361" width="75" height="65"/>
+                                <state key="normal" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="euv-a8-BAu" kind="presentation" id="dOY-MS-NVI"/>
+                                    <segue destination="euv-a8-BAu" kind="presentation" identifier="showResult" id="dOY-MS-NVI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-qk-TSe">
+                                <rect key="frame" x="170" y="121" width="75" height="65"/>
+                                <state key="normal" image="rock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PvH-U1-Rus"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,7 +96,12 @@
             <point key="canvasLocation" x="199" y="371"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dOY-MS-NVI"/>
+        <segue reference="h1p-rW-3ky"/>
     </inferredMetricsTieBreakers>
 </document>
