@@ -11,23 +11,26 @@ import Foundation
 
 class ResultViewController: UIViewController {
     
+    // TODO: Cleanup test println
+    // TODO: Write lessons learned and remove note comments
+    
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resultImageView: UIImageView!
     
     // Do not use optional, use ! if you are sure it won't be nil
     var userChoice: String!
     var opponentChoice: String!
-    
-    var youWin: Bool!
 
     // View hierarchy?
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
         opponentChoice = generateOpponentChoice()
-        println("Opponent Choice: \(opponentChoice)") // TEST
+        println("##########################") // TEST
+        println("User Choice: \(userChoice)") // TEST
+        println("Oppt Choice: \(opponentChoice)") // TEST
         
-        generateResults()
+        displayResults()
     }
     
     /**
@@ -35,7 +38,7 @@ class ResultViewController: UIViewController {
     */
     func generateOpponentChoice() -> String {
         
-        // FIXME: Make this more elegant?
+        // FIXME: Make this more elegant
         var randomNumber = arc4random_uniform(3)
         if randomNumber == 1 {
             return "Rock"
@@ -49,13 +52,19 @@ class ResultViewController: UIViewController {
     }
     
     /**
-        Helper function to create results label.
+        Helper function to display the results of the game!
     */
-    func generateResults() {
+    func displayResults() {
+        
+        // Would need to make optional if global and without class init
+        var youWin: Bool
         
         // Check if you have a tie
         if userChoice == opponentChoice {
+            self.resultImageView.image = UIImage(named: "itsATie.png")
             self.resultLabel.text = "It's a tie!"
+            println("It's a tie!")
+            return
         }
         
         // Check if the user has won
@@ -63,19 +72,28 @@ class ResultViewController: UIViewController {
         switch (userChoice) {
         case "Rock":
             youWin = opponentChoice == "Scissors"
+            self.resultImageView.image = UIImage(named: "RockCrushesScissors.png")
         case "Paper":
             youWin = opponentChoice == "Rock"
-        case "Scissors":
+            self.resultImageView.image = UIImage(named: "PaperCoversRock.png")
+        default: // scissors
             youWin = opponentChoice == "Paper"
-        default:
-            "I like kittens, too"
+            self.resultImageView.image = UIImage(named: "ScissorsCutPaper.png")
         }
-    }
-    
-    /**
-        Helper function to display the results of the game!
-    */
-    func displayResults() {
+        
+        // FIXME: Find a better solution for displaying losing images ok
+        if youWin == true {
+            self.resultLabel.text = "Congrats! You won! \n \(userChoice) beats \(opponentChoice)"
+        } else {
+            self.resultLabel.text = "You lost. :( \n \(opponentChoice) beats \(userChoice)"
+            if opponentChoice == "Rock" {
+                self.resultImageView.image = UIImage(named: "RockCrushesScissors.png")
+            } else if opponentChoice == "Paper" {
+                self.resultImageView.image = UIImage(named: "PaperCoversRock.png")
+            } else {
+                self.resultImageView.image = UIImage(named: "ScissorsCutPaper.png")
+            }
+        }
     }
     
     /**

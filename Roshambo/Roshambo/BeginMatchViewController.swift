@@ -10,6 +10,9 @@ import UIKit
 
 class BeginMatchViewController: UIViewController {
 
+    // TODO: Refactor? Change BeginMatch to Play(?)
+    // TODO: Remove test println
+    
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
@@ -61,15 +64,18 @@ class BeginMatchViewController: UIViewController {
         }
     }
     
+    // TODO: Is there a better way to check which button is passed besides currentTitle?
     /**
         Helper method that determines what the user choice was.
     */
     private func playChoice(sender: UIButton) -> String {
         
-        if sender == "rockButton" {
+        println("PLAYCHOICE") // TEST
+        println("currentTitle: \(sender.currentTitle)") // TEST
+        if sender.currentTitle == "rockButton" {
             return "Rock"
         }
-        else if sender == "paperButton" {
+        else if sender.currentTitle == "paperButton" {
             return "Paper"
         }
         else {

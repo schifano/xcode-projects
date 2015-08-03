@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Result View Controller-->
@@ -16,8 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jom-by-eie">
-                                <rect key="frame" x="171" y="626" width="73" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-Gl-gck">
+                                <rect key="frame" x="107" y="135" width="200" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-Mb-Lcy">
+                                <rect key="frame" x="82" y="381" width="250" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jom-by-eie">
+                                <rect key="frame" x="131" y="626" width="144" height="30"/>
                                 <state key="normal" title="Play Again">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,17 +35,20 @@
                                     <action selector="dismiss" destination="euv-a8-BAu" eventType="touchUpInside" id="Tbh-Zz-9t7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-Gl-gck">
-                                <rect key="frame" x="90" y="148" width="240" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-Mb-Lcy">
-                                <rect key="frame" x="186" y="357" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jom-by-eie" secondAttribute="trailing" constant="123" id="06o-3K-tGo"/>
+                            <constraint firstItem="yyF-Gl-gck" firstAttribute="leading" secondItem="kFk-yG-Dve" secondAttribute="leadingMargin" constant="91" id="C2J-AD-kUA"/>
+                            <constraint firstItem="yyF-Gl-gck" firstAttribute="top" secondItem="oBg-ui-lP3" secondAttribute="bottom" constant="115" id="UrU-k1-934"/>
+                            <constraint firstItem="ppU-Mb-Lcy" firstAttribute="leading" secondItem="kFk-yG-Dve" secondAttribute="leadingMargin" constant="66" id="Zah-Is-QZi"/>
+                            <constraint firstItem="7XO-Ke-9Vc" firstAttribute="top" secondItem="Jom-by-eie" secondAttribute="bottom" constant="80" id="ahc-bz-NBR"/>
+                            <constraint firstItem="Jom-by-eie" firstAttribute="leading" secondItem="kFk-yG-Dve" secondAttribute="leadingMargin" constant="115" id="awA-1q-Kxr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yyF-Gl-gck" secondAttribute="trailing" constant="91" id="jOh-TN-Erx"/>
+                            <constraint firstItem="ppU-Mb-Lcy" firstAttribute="top" secondItem="oBg-ui-lP3" secondAttribute="bottom" constant="361" id="nJR-Hh-bbh"/>
+                            <constraint firstItem="ppU-Mb-Lcy" firstAttribute="top" secondItem="yyF-Gl-gck" secondAttribute="bottom" constant="46" id="rms-Rk-zU1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ppU-Mb-Lcy" secondAttribute="trailing" constant="66" id="s3h-bJ-Azb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="resultImageView" destination="yyF-Gl-gck" id="sZf-oo-3Xr"/>
@@ -58,9 +71,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyh-yf-dVL">
-                                <rect key="frame" x="170" y="244" width="75" height="65"/>
-                                <state key="normal" image="paper">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyh-yf-dVL" userLabel="paperButton">
+                                <rect key="frame" x="170" y="246" width="75" height="65"/>
+                                <state key="normal" title="paperButton" image="paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -68,17 +81,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beh-55-DUZ">
-                                <rect key="frame" x="170" y="361" width="75" height="65"/>
-                                <state key="normal" image="scissors">
+                                <rect key="frame" x="170" y="369" width="75" height="65"/>
+                                <state key="normal" title="scissorsButton" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="euv-a8-BAu" kind="presentation" identifier="showResult" id="dOY-MS-NVI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-qk-TSe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-qk-TSe" userLabel="rockButton">
                                 <rect key="frame" x="170" y="121" width="75" height="65"/>
-                                <state key="normal" image="rock">
+                                <state key="normal" title="rockButton" image="rock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
