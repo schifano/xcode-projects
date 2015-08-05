@@ -83,7 +83,8 @@ class RockPaperScissorsViewController: UIViewController {
         historyViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController") as! HistoryViewController
 
             // Pass values - the user's choice
-            
+            historyViewController.history = self.history
+        
             // Present the view controller
             self.presentViewController(historyViewController, animated: true, completion: nil)
     }
