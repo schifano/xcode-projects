@@ -24,7 +24,7 @@
         <!--View Controller-->
         <scene sceneID="jwh-XH-OqO">
             <objects>
-                <viewController id="FWA-9T-Lhn" sceneMemberID="viewController">
+                <viewController id="FWA-9T-Lhn" customClass="ViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lJa-Sk-iD8"/>
                         <viewControllerLayoutGuide type="bottom" id="iQc-a6-IFp"/>
@@ -72,7 +72,7 @@ What should she do?</string>
         <!--View Controller-->
         <scene sceneID="6HO-hu-Ren">
             <objects>
-                <viewController id="J6j-T4-kOU" sceneMemberID="viewController">
+                <viewController id="J6j-T4-kOU" customClass="ViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LDn-GN-NAf"/>
                         <viewControllerLayoutGuide type="bottom" id="0SY-Ac-pV4"/>
@@ -112,7 +112,7 @@ What should she do?</string>
         <scene sceneID="Sa2-Bs-sqC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGF-Gb-ipL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="3zA-lY-YxK" sceneMemberID="viewController">
+                <viewController id="3zA-lY-YxK" customClass="ViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gJg-zg-AFS"/>
                         <viewControllerLayoutGuide type="bottom" id="kVe-OX-gEx"/>
