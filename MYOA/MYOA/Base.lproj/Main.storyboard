@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H4E-t4-Fw0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3oU-Mn-Gin">
+            <objects>
+                <navigationController id="H4E-t4-Fw0" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8TE-QL-U1s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FWA-9T-Lhn" kind="relationship" relationship="rootViewController" id="5BD-H6-HaZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIW-g1-2Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56" y="338"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jwh-XH-OqO">
+            <objects>
+                <viewController id="FWA-9T-Lhn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lJa-Sk-iD8"/>
+                        <viewControllerLayoutGuide type="bottom" id="iQc-a6-IFp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Blb-Wr-TaH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYl-aw-dlo">
+                                <rect key="frame" x="32" y="473" width="350" height="30"/>
+                                <state key="normal" title="Leap through the door and roar!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="J6j-T4-kOU" kind="show" id="Ilb-8s-yTT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f26-O2-ji3">
+                                <rect key="frame" x="32" y="520" width="350" height="30"/>
+                                <state key="normal" title="Stalk to the door, peer down the hallway.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3zA-lY-YxK" kind="show" id="8VC-HB-2NT"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lq-3L-pP3">
+                                <rect key="frame" x="32" y="64" width="350" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">An immense tiger wakes in an empty room. 
+A door opens into a hallway...
+What should she do?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cwp-o9-Z4Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewb-0N-DIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="338"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6HO-hu-Ren">
+            <objects>
+                <viewController id="J6j-T4-kOU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LDn-GN-NAf"/>
+                        <viewControllerLayoutGuide type="bottom" id="0SY-Ac-pV4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="leU-Vj-rne">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-cn-aWv">
+                                <rect key="frame" x="32" y="473" width="350" height="30"/>
+                                <state key="normal" title="Wait to see what happens next.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IP-af-x9y">
+                                <rect key="frame" x="32" y="520" width="350" height="30"/>
+                                <state key="normal" title="Attack the old man!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8j-h7-CGl">
+                                <rect key="frame" x="32" y="64" width="350" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rr3-sT-Z0R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byc-cS-5au" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="-18"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sa2-Bs-sqC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGF-Gb-ipL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="3zA-lY-YxK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJg-zg-AFS"/>
+                        <viewControllerLayoutGuide type="bottom" id="kVe-OX-gEx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="avp-aM-o0b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9B-Ln-FIS">
+                                <rect key="frame" x="32" y="473" width="350" height="30"/>
+                                <state key="normal" title="Leap through the door and roar!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyR-P9-iLi">
+                                <rect key="frame" x="32" y="520" width="350" height="30"/>
+                                <state key="normal" title="Stalk to the door, peer down the hallway.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98N-OY-iWz">
+                                <rect key="frame" x="32" y="64" width="350" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qRM-BJ-nvv"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="996" y="796"/>
+        </scene>
+    </scenes>
+</document>
