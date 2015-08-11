@@ -45,9 +45,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Move the view when the keyboard shows
     func keyboardWillShow(notification: NSNotification) {
-        if bearTextField.isFirstResponder() {
+        // TODO: Which way is better? Check or no check?
+//        if bearTextField.isFirstResponder() {
             self.view.frame.origin.y -= getKeyboardHeight(notification)
-        }
+//        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+//        if bearTextField.isFirstResponder() {
+            self.view.frame.origin.y += getKeyboardHeight(notification)
+//        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
@@ -56,12 +63,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return keyboardSize.CGRectValue().height
     }
     
-    // Subscribe and unsubscribe
+    // Keyboard Will Show: Subscribe and unsubscribe
     func subscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func unsubscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
 }
