@@ -21,11 +21,29 @@ class ViewController: UIViewController {
 
         self.searchTextField.delegate = trieTextFieldDelegate
         
+        var testTrie: Trie = Trie()
         // TEST
-        Trie().addWord("cat")
-        Trie().addWord("category")
-        Trie().addWord("cater")
+        testTrie.addWord("Ball")
+        testTrie.addWord("Balls")
+        testTrie.addWord("Balla")
+        testTrie.addWord("Ballr")
+        testTrie.addWord("Ballard")
+        testTrie.addWord("Bat")
+        testTrie.addWord("Bar")
         
+        testTrie.addWord("Cat")
+        testTrie.addWord("Car")
+        testTrie.addWord("Caw")
+        testTrie.addWord("Cap")
+        
+        testTrie.addWord("Elantra")
+        
+        // Seems to look for entire prefix + 1 letter after...
+        let wordList: Array<String>! = testTrie.findWord("Ca")
+        for word in wordList {
+            println("\(word) found in trie")
+        }
+
         
     }
 }

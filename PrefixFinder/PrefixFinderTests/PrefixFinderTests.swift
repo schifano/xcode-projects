@@ -8,29 +8,76 @@
 
 import UIKit
 import XCTest
+import PrefixFinder // Import the folder containing classes you may want to test
 
 class PrefixFinderTests: XCTestCase {
     
+    // Create new test Trie
+    var testTrie: Trie = Trie()
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        // I assume the message means error message
+        XCTAssertNotNil(testTrie, "Trie not properly initialized")
+        
+        // Add words to data structure
+        testTrie.addWord("Ball")
+        testTrie.addWord("Balls")
+        testTrie.addWord("Ballard")
+        testTrie.addWord("Bat")
+        testTrie.addWord("Bar")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    /*
+    the findWord algorithm will only return strings identified as words. For example, the prefix "Ba" has 3 children,
+    but only 2 are marked as final. Even though the phrase "Bal" is found in the trie, it is not
+    identified as a word.
+    */
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+    func testFindWithPrefix() {
+        
+        let wordList: Array<String>! = testTrie.findWord("B")
+        for word in wordList {
+            println("findWord: Ba, \(word) found in trie")
         }
+        
     }
     
+    
+    
+    /*
+    the findWord algorthim will identify both parents and children identified as words
+    */
+    
+    func testFindWithWord() {
+        
+        let wordList: Array<String>! = testTrie.findWord("Ball")
+        for word in wordList {
+            print("findWord: Ball, \(word) found in trie..")
+        }
+        
+    }
+    
+    
+    //testing false search results
+    func testFindNoExist() {
+        
+        let keyword: String = "Barstool"
+        let wordList: Array<String>! = testTrie.findWord(keyword)
+        
+        
+        if (wordList == nil) {
+            println("keyword \(keyword) not found in trie..")
+        }
+            
+        else {
+            for word in wordList {
+                println("\(word) found in trie..")
+            }
+        }
+        
+        
+        
+    } //end function
 }

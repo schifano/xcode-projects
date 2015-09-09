@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 // Extend String class functionality
-extension String {
+public extension String {
     
     // Compute length of string
     var length: Int {
@@ -18,6 +18,7 @@ extension String {
     }
     
     // Returns characters of a string up to a specified index
+    // "up-to" meaning, exclusive
     func substringToIndex(to: Int) -> String {
         return self.substringToIndex(advance(self.startIndex, to))
     }

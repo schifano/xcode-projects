@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 // Generic Tree Data Structure
-class TrieNode {
+public class TrieNode {
     
     var key: String!
     var children: Array<TrieNode>
