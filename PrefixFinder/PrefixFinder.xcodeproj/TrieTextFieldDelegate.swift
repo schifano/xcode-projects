@@ -18,13 +18,22 @@ class TrieTextFieldDelegate: NSObject, UITextFieldDelegate {
         var newText: NSString = textField.text
         newText = newText.stringByReplacingCharactersInRange(range, withString: string)
         
-        return true
+        var word: Array<String>! = Trie().findWord(textField.text)
+        
+        println("textField.text: \(textField.text)") // TEST
+        
+        
+        if  word != nil {
+            ViewController().resultLabel.text = word[0]
+            println(word[0]) // TEST
+            return false
+        } else {
+            return true
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
-    // MARK: Trie
 }

@@ -21,5 +21,11 @@ class ViewController: UIViewController {
 
         self.searchTextField.delegate = trieTextFieldDelegate
         
+        // TEST
+        Trie().addWord("cat")
+        Trie().addWord("category")
+        Trie().addWord("cater")
+        
+        
     }
 }
