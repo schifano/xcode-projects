@@ -35,14 +35,15 @@ class ViewController: UIViewController {
         testTrie.addWord("Car")
         testTrie.addWord("Caw")
         testTrie.addWord("Cap")
+        testTrie.addWord("Captain")
+        testTrie.addWord("Care")
         
-        testTrie.addWord("Elantra")
-        
-        // Seems to look for entire prefix + 1 letter after...
-        let wordList: Array<String>! = testTrie.findWord("Ca")
+//         Seems to look for entire prefix + 1 letter after...
+        let wordList: Array<String>! = testTrie.findWord("Ball")
         for word in wordList {
             println("\(word) found in trie")
         }
+
 
         
     }

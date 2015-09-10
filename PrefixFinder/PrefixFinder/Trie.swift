@@ -55,21 +55,29 @@ public class Trie {
                 current.children.append(childToUse)
             }
 
-            println("childToUse.key: \(childToUse.key)") // TEST
+//            println("childToUse.key: \(childToUse.key)") // TEST
 //            println("childToUse.level: \(childToUse.level)") // TEST
 //            println("childToUse: \(childToUse)") // TEST
-//            
+//           
+            println("FFFFFF current, \(current.key)") // TEST
+            println("FFFFFF childToUse, \(childToUse.key)") // TEST
             current = childToUse
         }
         
+//        for child in current.children {
+//            println("@@@@@@@@@@")
+//            println("WORD \(child.key)")
+//        }
+        
         // Add final end of word check
         if (keyword.length == current.level) {
-            println("childToUse (current): \(current.key)") // TEST
+//            println("childToUse (current): \(current.key)") // TEST
             current.isFinal = true
-            println("isFinal: \(current.isFinal)") // TEST
+//            println("isFinal: \(current.isFinal)") // TEST
 //            println("End of word reached") // TEST
-            return;
         }
+        
+        return
     }
     
     // FIXME: Why are words I added not being found?
@@ -83,26 +91,34 @@ public class Trie {
             return nil
         }
         
+//        println("root.key, \(root.key)") // TEST, NIL OKAY i know that
+        // Get current root tree and assign to root which is nil (initializes?)
         var current: TrieNode = root
         var searchKey: String!
-        var wordList: Array<String>! = Array<String>()
+        // Array of strings to store all matching words
+        var wordList: Array<String> = Array<String>()
         
+    
         while (keyword.length != current.level) {
             
 //            println("inside while") // TEST
             
             var childToUse: TrieNode!
-            var searchKey = keyword.substringToIndex(current.level)
+            var searchKey = keyword.substringToIndex(current.level + 1)
+            println("level value: \(current.level + 1)") // TEST
             
 //            println("current.children: \(current.children.count)") // TEST
             
             // Iterate through any children
             for child in current.children {
-//                println("inside for") // TEST
+                println("#################") // TEST
+                println("FOR: child in current.children, child: \(child.key)") // TEST
                 if child.key == searchKey {
 //                    println("inside if") // TEST
                     childToUse = child
                     current = childToUse
+                    println("child.key, \(child.key)") // TEST
+                    println("search key, \(searchKey)") // TEST
                     break
                 }
             }
@@ -112,25 +128,42 @@ public class Trie {
 //                println("childToUse == nil") // TEST
                 return nil
             }
+            
+
         }
 
 //        println("outside while") // TEST
         
         // Retrieve keyword and any descendants
         if ((current.key == keyword) && (current.isFinal)) {
+            println("descendants? \(current.key)") // TEST
             wordList.append(current.key)
         }
         
-        // Add children that are words
-        for child in current.children {
-            if (child.isFinal == true) {
-                wordList.append(child.key)
-//                println("child.key: \(child.key)") // TEST
-            }
-        }
+        wordList += findFinalWords(current)
+        
   
         println("END OF FIND") // TEST
         
         return wordList
     }
+
+    func findFinalWords(current: TrieNode) -> Array<String> {
+        
+        var wordList: Array<String> = Array<String>()
+        
+        // Add children that are words
+        for child in current.children {
+            println("~~~~~~~~") // TEST
+            println("child in current.children: \(child.key)") // TEST
+            if (child.isFinal == true) {
+                wordList.append(child.key)
+                println("child.key: \(child.key)") // TEST
+            }
+            wordList += findFinalWords(child)
+        }
+        
+        return wordList
+    }
+
 }

@@ -37,7 +37,7 @@ class PrefixFinderTests: XCTestCase {
     
     func testFindWithPrefix() {
         
-        let wordList: Array<String>! = testTrie.findWord("B")
+        let wordList: Array<String>! = testTrie.findWord("Ba")
         for word in wordList {
             println("findWord: Ba, \(word) found in trie")
         }
