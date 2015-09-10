@@ -53,8 +53,8 @@ public class Trie {
                 current.children.append(childToUse)
             }
   
-            println("FFFFFF current, \(current.key)") // TEST
-            println("FFFFFF childToUse, \(childToUse.key)") // TEST
+//            println("FFFFFF current, \(current.key)") // TEST
+//            println("FFFFFF childToUse, \(childToUse.key)") // TEST
             current = childToUse
         }
         

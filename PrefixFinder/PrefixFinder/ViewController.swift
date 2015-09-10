@@ -24,33 +24,40 @@ class ViewController: UIViewController {
         // Read text file to populate tree
         var testTrie: Trie = Trie()
         
-        readTextFile()
+        var textWords = readTextFile()
+        for word in textWords {
+            println(word)
+            testTrie.addWord(word)
+        }
+        
+        
 //        testTrie.addWord(readTextFile())
         
         // FIXME: Handle case sensitivity for word searches
-        testTrie.addWord("BALL")
-        testTrie.addWord("balls")
-        testTrie.addWord("balla")
-        testTrie.addWord("ballr")
-        testTrie.addWord("ballard")
-        testTrie.addWord("bat")
-        testTrie.addWord("bar")
+//        testTrie.addWord("BALL")
+//        testTrie.addWord("balls")
+//        testTrie.addWord("balla")
+//        testTrie.addWord("ballr")
+//        testTrie.addWord("ballard")
+//        testTrie.addWord("bat")
+//        testTrie.addWord("bar")
+//        
+//        testTrie.addWord("cat")
+//        testTrie.addWord("car")
+//        testTrie.addWord("caw")
+//        testTrie.addWord("cap")
+//        testTrie.addWord("captain")
+//        testTrie.addWord("care")
+//        
+//        testTrie.addWord("dog")
         
-        testTrie.addWord("cat")
-        testTrie.addWord("car")
-        testTrie.addWord("caw")
-        testTrie.addWord("cap")
-        testTrie.addWord("captain")
-        testTrie.addWord("care")
-        
-        testTrie.addWord("dog")
-        
-        let wordList: Array<String>! = testTrie.findWord("BALL")
-        
-        // Handle empty word lists
+        let prefix = "cat"
+        println("prefix: \(prefix)")
+        let wordList: Array<String>! = testTrie.findWord(prefix)
         if wordList != nil {
+            println("Words found in trie:")
             for word in wordList {
-                println("\(word) found in trie")
+                println(word)
             }
         } else {
             println("Word not found.")
@@ -58,17 +65,20 @@ class ViewController: UIViewController {
     }
     
     // Read basic text file for populating tree
-    func readTextFile() {
+    func readTextFile() -> [String] {
+        // 350,000 words
         let fileName = "dictionary"
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt")
         assert(nil != (path as String?))
         var error: NSError? = nil
         if let mytext = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: &error) {
             println("contentsOfFile was called successfully!")
-            println("mytext: \(mytext)")
+//            println("mytext: \(mytext)")
+            return mytext.componentsSeparatedByString("\n")
         } else {
             println("I should implement error handling. What happened? \(error)")
             assertionFailure("Check the debugger.")
+            return []
         }
     }
 }
