@@ -38,9 +38,9 @@ class ViewController: UIViewController {
         testTrie.addWord("captain")
         testTrie.addWord("care")
         
-        testTrie.addWord("elantra")
+        testTrie.addWord("dog")
         
-        let wordList: Array<String>! = testTrie.findWord("car")
+        let wordList: Array<String>! = testTrie.findWord("d")
         for word in wordList {
             println("\(word) found in trie")
         }
