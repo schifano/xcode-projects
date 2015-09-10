@@ -22,29 +22,27 @@ class ViewController: UIViewController {
         self.searchTextField.delegate = trieTextFieldDelegate
         
         var testTrie: Trie = Trie()
-        // TEST
-        testTrie.addWord("Ball")
-        testTrie.addWord("Balls")
-        testTrie.addWord("Balla")
-        testTrie.addWord("Ballr")
-        testTrie.addWord("Ballard")
-        testTrie.addWord("Bat")
-        testTrie.addWord("Bar")
+        // FIXME: Handle case sensitivity for word searches
+        testTrie.addWord("ball")
+        testTrie.addWord("balls")
+        testTrie.addWord("balla")
+        testTrie.addWord("ballr")
+        testTrie.addWord("ballard")
+        testTrie.addWord("bat")
+        testTrie.addWord("bar")
         
-        testTrie.addWord("Cat")
-        testTrie.addWord("Car")
-        testTrie.addWord("Caw")
-        testTrie.addWord("Cap")
-        testTrie.addWord("Captain")
-        testTrie.addWord("Care")
+        testTrie.addWord("cat")
+        testTrie.addWord("car")
+        testTrie.addWord("caw")
+        testTrie.addWord("cap")
+        testTrie.addWord("captain")
+        testTrie.addWord("care")
         
-//         Seems to look for entire prefix + 1 letter after...
-        let wordList: Array<String>! = testTrie.findWord("Ball")
+        testTrie.addWord("elantra")
+        
+        let wordList: Array<String>! = testTrie.findWord("car")
         for word in wordList {
             println("\(word) found in trie")
         }
-
-
-        
     }
 }

@@ -12,20 +12,22 @@ import Foundation
 class TrieTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate Protocol Methods
+    
+    // FIXME: Everything
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         // Retrieve current text and update with the new text
         var newText: NSString = textField.text
         newText = newText.stringByReplacingCharactersInRange(range, withString: string)
         
-        var word: Array<String>! = Trie().findWord(textField.text)
+        var wordList: Array<String>! = Array<String>()
+        wordList = Trie().findWord(textField.text)
         
         println("textField.text: \(textField.text)") // TEST
         
-        
-        if  word != nil {
-            ViewController().resultLabel.text = word[0]
-            println(word[0]) // TEST
+        if wordList != nil {
+            ViewController().resultLabel.text = wordList[0]
             return false
         } else {
             return true
