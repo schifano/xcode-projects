@@ -22,62 +22,68 @@ class PrefixFinderTests: XCTestCase {
         XCTAssertNotNil(testTrie, "Trie not properly initialized")
         
         // Add words to data structure
-        testTrie.addWord("Ball")
-        testTrie.addWord("Balls")
-        testTrie.addWord("Ballard")
-        testTrie.addWord("Bat")
-        testTrie.addWord("Bar")
+        testTrie.addWord("ball")
+        testTrie.addWord("balls")
+        testTrie.addWord("ballerina")
+        testTrie.addWord("bat")
+        testTrie.addWord("bar")
     }
     
     /*
-    the findWord algorithm will only return strings identified as words. For example, the prefix "Ba" has 3 children,
-    but only 2 are marked as final. Even though the phrase "Bal" is found in the trie, it is not
-    identified as a word.
+        Returns all strings marked as words that contain the given prefix.
     */
-    
     func testFindWithPrefix() {
         
-        let wordList: Array<String>! = testTrie.findWord("Ba")
+        let wordList: Array<String>! = testTrie.findWord("ba")
         for word in wordList {
             println("findWord: Ba, \(word) found in trie")
         }
-        
     }
     
-    
-    
     /*
-    the findWord algorthim will identify both parents and children identified as words
+        Returns the exact word match if it exists.
     */
     
     func testFindWithWord() {
         
-        let wordList: Array<String>! = testTrie.findWord("Ball")
+        let wordList: Array<String>! = testTrie.findWord("bat")
         for word in wordList {
-            print("findWord: Ball, \(word) found in trie..")
+            print("findWord: bat, \(word) found in trie")
         }
-        
     }
     
-    
-    //testing false search results
+    /*
+        Search a word that does not exist within the tree.
+    */
     func testFindNoExist() {
         
         let keyword: String = "Barstool"
         let wordList: Array<String>! = testTrie.findWord(keyword)
         
-        
-        if (wordList == nil) {
-            println("keyword \(keyword) not found in trie..")
-        }
-            
-        else {
+        if wordList != nil {
             for word in wordList {
-                println("\(word) found in trie..")
+                println("\(word) found in trie")
             }
+        } else {
+            println("Word not found.")
         }
+    }
+
+    // FIXME: Just because it returns true does not mean it's the behavior we expect.
+    /*
+        Search for a word that exists in the key given the word with varying case (upper/lower).
+    */
+    func testFindWordWithDifferentCase() {
         
+        let keyword: String = "Ball"
+        let wordList: Array<String>! = testTrie.findWord(keyword)
         
-        
-    } //end function
+        if wordList != nil {
+            for word in wordList {
+                println("\(word) found in trie")
+            }
+        } else {
+            println("Word not found.")
+        }
+    }
 }

@@ -32,7 +32,8 @@ public class Trie {
         // While we have not reached the end of the tree...
         while (keyword.length != current.level) {
             var childToUse: TrieNode!
-            var searchKey = keyword.substringToIndex(current.level + 1)
+            var lowercaseKeyword = keyword.lowercaseString
+            var searchKey = lowercaseKeyword.substringToIndex(current.level + 1)
 
             // Iterate through array of children Nodes
             for child in current.children {
@@ -78,7 +79,8 @@ public class Trie {
     
         while (keyword.length != current.level) {
             var childToUse: TrieNode!
-            var searchKey = keyword.substringToIndex(current.level + 1)
+            var lowercaseKeyword = keyword.lowercaseString
+            var searchKey = lowercaseKeyword.substringToIndex(current.level + 1)
             
             // Iterate through any children
             for child in current.children {

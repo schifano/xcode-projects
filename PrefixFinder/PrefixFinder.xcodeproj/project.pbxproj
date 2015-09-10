@@ -20,6 +20,7 @@
 		2923FB231BA0DB2F0083F348 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923FB1F1B9F9CCA0083F348 /* Trie.swift */; };
 		2923FB241BA0DC930083F348 /* TrieNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923FB1D1B9F9B9F0083F348 /* TrieNode.swift */; };
 		2923FB251BA0DC970083F348 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923FB211B9FBF9C0083F348 /* StringExtension.swift */; };
+		2923FB2C1BA222C80083F348 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2923FB2B1BA222C80083F348 /* dictionary.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2923FB1D1B9F9B9F0083F348 /* TrieNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrieNode.swift; sourceTree = "<group>"; };
 		2923FB1F1B9F9CCA0083F348 /* Trie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		2923FB211B9FBF9C0083F348 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		2923FB2B1BA222C80083F348 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dictionary.txt; path = PrefixFinder/dictionary.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				2923FAF61B9F90D60083F348 /* PrefixFinder */,
 				2923FB0C1B9F90D60083F348 /* PrefixFinderTests */,
 				2923FAF51B9F90D60083F348 /* Products */,
+				2923FB281BA216230083F348 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +128,14 @@
 				2923FB0E1B9F90D60083F348 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2923FB281BA216230083F348 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2923FB2B1BA222C80083F348 /* dictionary.txt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			files = (
 				2923FAFF1B9F90D60083F348 /* Main.storyboard in Resources */,
 				2923FB041B9F90D60083F348 /* LaunchScreen.xib in Resources */,
+				2923FB2C1BA222C80083F348 /* dictionary.txt in Resources */,
 				2923FB011B9F90D60083F348 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
