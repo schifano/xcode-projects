@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>81F42FC6-81AF-43CB-9E9F-633800CAC1B7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Dynamics</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
 		<string>github.com:schifano/xcode-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Dynamics/Dynamics.xcodeproj/project.xcworkspace</string>
+	<string>Dynamics/Dynamics.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
