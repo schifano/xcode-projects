@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2923FB3C1BA3C2730083F348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923FB3B1BA3C2730083F348 /* AppDelegate.swift */; };
+		2923FB3E1BA3C2730083F348 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923FB3D1BA3C2730083F348 /* ViewController.swift */; };
+		2923FB411BA3C2730083F348 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923FB3F1BA3C2730083F348 /* Main.storyboard */; };
+		2923FB431BA3C2730083F348 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2923FB421BA3C2730083F348 /* Images.xcassets */; };
+		2923FB461BA3C2730083F348 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2923FB441BA3C2730083F348 /* LaunchScreen.xib */; };
+		2923FB521BA3C2730083F348 /* CoolPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923FB511BA3C2730083F348 /* CoolPlayerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2923FB4C1BA3C2730083F348 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2923FB2E1BA3C2730083F348 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2923FB351BA3C2730083F348;
+			remoteInfo = CoolPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2923FB361BA3C2730083F348 /* CoolPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2923FB3A1BA3C2730083F348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2923FB3B1BA3C2730083F348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2923FB3D1BA3C2730083F348 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2923FB401BA3C2730083F348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2923FB421BA3C2730083F348 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2923FB451BA3C2730083F348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2923FB4B1BA3C2730083F348 /* CoolPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2923FB501BA3C2730083F348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2923FB511BA3C2730083F348 /* CoolPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolPlayerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2923FB331BA3C2730083F348 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2923FB481BA3C2730083F348 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2923FB2D1BA3C2730083F348 = {
+			isa = PBXGroup;
+			children = (
+				2923FB381BA3C2730083F348 /* CoolPlayer */,
+				2923FB4E1BA3C2730083F348 /* CoolPlayerTests */,
+				2923FB371BA3C2730083F348 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2923FB371BA3C2730083F348 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2923FB361BA3C2730083F348 /* CoolPlayer.app */,
+				2923FB4B1BA3C2730083F348 /* CoolPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2923FB381BA3C2730083F348 /* CoolPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2923FB3B1BA3C2730083F348 /* AppDelegate.swift */,
+				2923FB3D1BA3C2730083F348 /* ViewController.swift */,
+				2923FB3F1BA3C2730083F348 /* Main.storyboard */,
+				2923FB421BA3C2730083F348 /* Images.xcassets */,
+				2923FB441BA3C2730083F348 /* LaunchScreen.xib */,
+				2923FB391BA3C2730083F348 /* Supporting Files */,
+			);
+			path = CoolPlayer;
+			sourceTree = "<group>";
+		};
+		2923FB391BA3C2730083F348 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2923FB3A1BA3C2730083F348 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2923FB4E1BA3C2730083F348 /* CoolPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2923FB511BA3C2730083F348 /* CoolPlayerTests.swift */,
+				2923FB4F1BA3C2730083F348 /* Supporting Files */,
+			);
+			path = CoolPlayerTests;
+			sourceTree = "<group>";
+		};
+		2923FB4F1BA3C2730083F348 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2923FB501BA3C2730083F348 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2923FB351BA3C2730083F348 /* CoolPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2923FB551BA3C2730083F348 /* Build configuration list for PBXNativeTarget "CoolPlayer" */;
+			buildPhases = (
+				2923FB321BA3C2730083F348 /* Sources */,
+				2923FB331BA3C2730083F348 /* Frameworks */,
+				2923FB341BA3C2730083F348 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolPlayer;
+			productName = CoolPlayer;
+			productReference = 2923FB361BA3C2730083F348 /* CoolPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2923FB4A1BA3C2730083F348 /* CoolPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2923FB581BA3C2730083F348 /* Build configuration list for PBXNativeTarget "CoolPlayerTests" */;
+			buildPhases = (
+				2923FB471BA3C2730083F348 /* Sources */,
+				2923FB481BA3C2730083F348 /* Frameworks */,
+				2923FB491BA3C2730083F348 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2923FB4D1BA3C2730083F348 /* PBXTargetDependency */,
+			);
+			name = CoolPlayerTests;
+			productName = CoolPlayerTests;
+			productReference = 2923FB4B1BA3C2730083F348 /* CoolPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2923FB2E1BA3C2730083F348 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = schifano;
+				TargetAttributes = {
+					2923FB351BA3C2730083F348 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2923FB4A1BA3C2730083F348 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 2923FB351BA3C2730083F348;
+					};
+				};
+			};
+			buildConfigurationList = 2923FB311BA3C2730083F348 /* Build configuration list for PBXProject "CoolPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2923FB2D1BA3C2730083F348;
+			productRefGroup = 2923FB371BA3C2730083F348 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2923FB351BA3C2730083F348 /* CoolPlayer */,
+				2923FB4A1BA3C2730083F348 /* CoolPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2923FB341BA3C2730083F348 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2923FB411BA3C2730083F348 /* Main.storyboard in Resources */,
+				2923FB461BA3C2730083F348 /* LaunchScreen.xib in Resources */,
+				2923FB431BA3C2730083F348 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2923FB491BA3C2730083F348 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2923FB321BA3C2730083F348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2923FB3E1BA3C2730083F348 /* ViewController.swift in Sources */,
+				2923FB3C1BA3C2730083F348 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2923FB471BA3C2730083F348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2923FB521BA3C2730083F348 /* CoolPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2923FB4D1BA3C2730083F348 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2923FB351BA3C2730083F348 /* CoolPlayer */;
+			targetProxy = 2923FB4C1BA3C2730083F348 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2923FB3F1BA3C2730083F348 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2923FB401BA3C2730083F348 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2923FB441BA3C2730083F348 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2923FB451BA3C2730083F348 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2923FB531BA3C2730083F348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2923FB541BA3C2730083F348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2923FB561BA3C2730083F348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CoolPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2923FB571BA3C2730083F348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CoolPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2923FB591BA3C2730083F348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoolPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolPlayer.app/CoolPlayer";
+			};
+			name = Debug;
+		};
+		2923FB5A1BA3C2730083F348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoolPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolPlayer.app/CoolPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2923FB311BA3C2730083F348 /* Build configuration list for PBXProject "CoolPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2923FB531BA3C2730083F348 /* Debug */,
+				2923FB541BA3C2730083F348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2923FB551BA3C2730083F348 /* Build configuration list for PBXNativeTarget "CoolPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2923FB561BA3C2730083F348 /* Debug */,
+				2923FB571BA3C2730083F348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2923FB581BA3C2730083F348 /* Build configuration list for PBXNativeTarget "CoolPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2923FB591BA3C2730083F348 /* Debug */,
+				2923FB5A1BA3C2730083F348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2923FB2E1BA3C2730083F348 /* Project object */;
+}
