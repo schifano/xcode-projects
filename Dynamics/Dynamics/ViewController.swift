@@ -40,6 +40,10 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         collision.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collision)
 
+        let itemBehavior = UIDynamicItemBehavior(items: [square])
+        itemBehavior.elasticity = 0.6
+        animator.addBehavior(itemBehavior)
+        
         // Block to log collision
 //        collision.action = {
 //            println("\(NSStringFromCGAffineTransform(square.transform)) \(NSStringFromCGPoint(square.center))")
