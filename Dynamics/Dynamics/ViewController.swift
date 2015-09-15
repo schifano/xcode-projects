@@ -15,12 +15,14 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     var gravity: UIGravityBehavior!
     // Collision properties
     var collision: UICollisionBehavior!
+    var square: UIView!
+    var snap: UISnapBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Add square UIView
-        let square = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        square = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
         square.backgroundColor = UIColor.greenColor()
         view.addSubview(square)
         
@@ -59,6 +61,14 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         UIView.animateWithDuration(0.3) {
             collidingView.backgroundColor = UIColor.grayColor()
         }
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if (snap != nil) {
+            animator.removeBehavior(snap)
+        }
         
+        let touch = touches.first as! UITouch
+        snap = UISnapBehavior(item: square, snapToPoint: touch.locationInView(view))
     }
 }
