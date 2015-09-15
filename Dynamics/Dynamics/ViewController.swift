@@ -18,8 +18,6 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collision.collisionDelegate = self
         
         // Add square UIView
         let square = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
@@ -37,12 +35,26 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         
         // Collision (boundary)
         collision = UICollisionBehavior(items: [square])
+        collision.collisionDelegate = self
         collision.addBoundaryWithIdentifier("barrier", forPath: UIBezierPath(rect: barrier.frame))
         collision.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collision)
+
+        // Block to log collision
+//        collision.action = {
+//            println("\(NSStringFromCGAffineTransform(square.transform)) \(NSStringFromCGPoint(square.center))")
+//        }
     }
     
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying, atPoint p: CGPoint) {
-        println("Boundary contact occurred - \(identifier)")
+//        println("Boundary contact occurred - \(identifier)")
+        
+        // Change color of square when it collides
+        let collidingView = item as! UIView
+        collidingView.backgroundColor = UIColor.yellowColor()
+        UIView.animateWithDuration(0.3) {
+            collidingView.backgroundColor = UIColor.grayColor()
+        }
+        
     }
 }
