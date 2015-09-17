@@ -23,7 +23,7 @@ public class Trie {
         
         // Base case
         if keyword.length == 0 {
-            return;
+            return
         }
         
         var current: TrieNode = root
@@ -52,9 +52,7 @@ public class Trie {
                 childToUse.level = current.level + 1
                 current.children.append(childToUse)
             }
-  
-//            println("FFFFFF current, \(current.key)") // TEST
-//            println("FFFFFF childToUse, \(childToUse.key)") // TEST
+
             current = childToUse
         }
         
