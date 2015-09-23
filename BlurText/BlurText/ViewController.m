@@ -22,18 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    tableData = [NSArray arrayWithObjects:@"Skrillex", @"Ravine", @"Diplo", nil];
+    tableData = [NSArray arrayWithObjects:@"Skrillex", @"DJ Ravine", @"Diplo", nil];
+    
     
 //    BlurredUILabel *label = [[BlurredUILabel alloc] initWithFrame:CGRectMake(50, 50, 300, 50)];
 //    label.blurRadius = 2.0;
 //    label.backgroundColor = [UIColor redColor];
-//    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:35];
+//    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:50];
 //    label.textAlignment = NSTextAlignmentCenter;
 //    label.text = @"HELLO";
 //    [self.view addSubview:label];
 //    
 //    label.blurRadius = 1.5;
 //    [label performSelector:@selector(setText:) withObject:@"Test new string" afterDelay:2];
+//
+//    NSArray *fontFamilies = [UIFont familyNames];
+//    
+//    for (int i=0; i<[fontFamilies count]; i++)
+//    {
+//        NSLog(@"Font: %@ ...", [fontFamilies objectAtIndex:i]);
+//    }
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -51,29 +60,23 @@
     
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     
-//    CGRect textSize = CGRectMake(0, 0, 384, 59.5);
+    CGRect textSize = CGRectMake(0, 0, 384, 59.5);
     
-    BlurredUILabel *label = [[BlurredUILabel alloc] initWithFrame:cell.frame];
-    label.font = cell.textLabel.font;
-    label.blurRadius = 2.0;
+    BlurredUILabel *label = [[BlurredUILabel alloc] initWithFrame:textSize];
+    label.blurRadius = 4.0;
+//    label.font = [UIFont fontWithName:@"]cell.textLabel.font;
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:37];
     label.text = cell.textLabel.text;
-//    [cell addSubview:label];
+//    label.textAlignment = NSTextAlignmentCenter;
     [cell.textLabel addSubview:label];
     
-    cell.backgroundColor = [UIColor blueColor];
-    cell.textLabel.backgroundColor = [UIColor greenColor];
-
-
+//    label.blurRadius = 1.5;
     
-//    // Create blur effect
-//    UIVisualEffect *effect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
-//    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-//    blurEffectView.frame = cell.frame;
-//    [blurEffectView setFrame:cell.bounds];
-////    blurEffectView.alpha = 0.9;
-//    [cell addSubview:blurEffectView];
+//    cell.backgroundColor = [UIColor blueColor];
+//    cell.textLabel.backgroundColor = [UIColor greenColor];
 
-//    cell.textLabel.text = @"b";
+
+    cell.textLabel.text = @" ";
 
     return cell;
 }
