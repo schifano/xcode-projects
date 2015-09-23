@@ -55,7 +55,7 @@
     
     BlurredUILabel *label = [[BlurredUILabel alloc] initWithFrame:cell.frame];
     label.font = cell.textLabel.font;
-    label.blurRadius = 0.0;
+    label.blurRadius = 2.0;
     label.text = cell.textLabel.text;
 //    [cell addSubview:label];
     [cell.textLabel addSubview:label];
