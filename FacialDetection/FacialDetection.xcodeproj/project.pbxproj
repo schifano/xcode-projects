@@ -15,6 +15,7 @@
 		290D60781BBDD0300037CDB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290D60761BBDD0300037CDB7 /* LaunchScreen.storyboard */; };
 		290D60831BBDD0300037CDB7 /* FacialDetectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 290D60821BBDD0300037CDB7 /* FacialDetectionTests.m */; };
 		290D608E1BBDD0300037CDB7 /* FacialDetectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 290D608D1BBDD0300037CDB7 /* FacialDetectionUITests.m */; };
+		29A9C1801BBF841300115F0E /* steves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 29A9C17F1BBF841300115F0E /* steves.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		290D60891BBDD0300037CDB7 /* FacialDetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacialDetectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		290D608D1BBDD0300037CDB7 /* FacialDetectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacialDetectionUITests.m; sourceTree = "<group>"; };
 		290D608F1BBDD0300037CDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29A9C17F1BBF841300115F0E /* steves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steves.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				290D606B1BBDD0300037CDB7 /* AppDelegate.h */,
 				290D606C1BBDD0300037CDB7 /* AppDelegate.m */,
+				29A9C17F1BBF841300115F0E /* steves.jpg */,
 				290D606E1BBDD0300037CDB7 /* ViewController.h */,
 				290D606F1BBDD0300037CDB7 /* ViewController.m */,
 				290D60711BBDD0300037CDB7 /* Main.storyboard */,
@@ -246,6 +249,7 @@
 				290D60781BBDD0300037CDB7 /* LaunchScreen.storyboard in Resources */,
 				290D60751BBDD0300037CDB7 /* Assets.xcassets in Resources */,
 				290D60731BBDD0300037CDB7 /* Main.storyboard in Resources */,
+				29A9C1801BBF841300115F0E /* steves.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +500,7 @@
 				290D60941BBDD0300037CDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290D60951BBDD0300037CDB7 /* Build configuration list for PBXNativeTarget "FacialDetectionTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +509,7 @@
 				290D60971BBDD0300037CDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290D60981BBDD0300037CDB7 /* Build configuration list for PBXNativeTarget "FacialDetectionUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +518,7 @@
 				290D609A1BBDD0300037CDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

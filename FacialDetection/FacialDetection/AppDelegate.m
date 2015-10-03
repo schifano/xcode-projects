@@ -20,6 +20,9 @@
 
     UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"steves.jpg"]];
     [imageView setTransform:CGAffineTransformMakeScale(1, -1)];
+    [self.window setTransform:CGAffineTransformMakeScale(1, -1)];
+    [imageView setFrame:CGRectMake(0, 0, imageView.image.size.width, imageView.image.size.height)];
+    [self.window addSubview:imageView];
     
     
     return YES;
