@@ -24,6 +24,43 @@
     [imageView setFrame:CGRectMake(0, 0, imageView.image.size.width, imageView.image.size.height)];
     [self.window addSubview:imageView];
     
+    CIImage* image = [CIImage imageWithCGImage:imageView.image.CGImage];
+    CIDetector* detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyHigh forKey:CIDetectorAccuracy]];
+    
+    NSArray* features = [detector featuresInImage:image];
+    
+    
+    for(CIFaceFeature* feature in features)
+    {
+        UIView* face = [[UIView alloc] initWithFrame:feature.bounds];
+        [face setBackgroundColor:[[UIColor yellowColor] colorWithAlphaComponent:0.4]];
+        [self.window addSubview:face];
+        
+        if(feature.hasLeftEyePosition)
+        {
+            UIView* eye = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
+            [eye setBackgroundColor:[[UIColor blueColor] colorWithAlphaComponent:0.2]];
+            [eye setCenter:feature.leftEyePosition];
+            [self.window addSubview:eye];
+        }
+        
+        if(feature.hasRightEyePosition)
+        {
+            UIView* eye = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
+            [eye setBackgroundColor:[[UIColor redColor] colorWithAlphaComponent:0.2]];
+            [eye setCenter:feature.rightEyePosition];
+            [self.window addSubview:eye];
+        }
+        
+        if(feature.hasMouthPosition)
+        {
+            UIView* mouth = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
+            [mouth setBackgroundColor:[[UIColor greenColor] colorWithAlphaComponent:0.2]];
+            [mouth setCenter:feature.mouthPosition];
+            [self.window addSubview:mouth];
+        }
+    }
+    
     
     return YES;
 }
