@@ -15,6 +15,7 @@
 		290D60781BBDD0300037CDB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290D60761BBDD0300037CDB7 /* LaunchScreen.storyboard */; };
 		290D60831BBDD0300037CDB7 /* FacialDetectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 290D60821BBDD0300037CDB7 /* FacialDetectionTests.m */; };
 		290D608E1BBDD0300037CDB7 /* FacialDetectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 290D608D1BBDD0300037CDB7 /* FacialDetectionUITests.m */; };
+		2975BC0E1BC2D68200FF63B5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2975BC0D1BC2D68200FF63B5 /* CoreImage.framework */; };
 		29A9C1801BBF841300115F0E /* steves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 29A9C17F1BBF841300115F0E /* steves.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		290D60891BBDD0300037CDB7 /* FacialDetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacialDetectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		290D608D1BBDD0300037CDB7 /* FacialDetectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacialDetectionUITests.m; sourceTree = "<group>"; };
 		290D608F1BBDD0300037CDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2975BC0D1BC2D68200FF63B5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		29A9C17F1BBF841300115F0E /* steves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steves.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2975BC0E1BC2D68200FF63B5 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		290D605C1BBDD0300037CDB7 = {
 			isa = PBXGroup;
 			children = (
+				2975BC0D1BC2D68200FF63B5 /* CoreImage.framework */,
 				290D60671BBDD0300037CDB7 /* FacialDetection */,
 				290D60811BBDD0300037CDB7 /* FacialDetectionTests */,
 				290D608C1BBDD0300037CDB7 /* FacialDetectionUITests */,

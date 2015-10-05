@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  FacialDetection
+//  BackgroundCamera
 //
-//  Created by Rachel Schifano on 10/1/15.
+//  Created by Rachel Schifano on 10/5/15.
 //  Copyright © 2015 schifano. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
     return YES;
 }
 
