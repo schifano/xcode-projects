@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate, AVCaptureAudioDataOutputSampleBufferDelegate> {
+    
+    AVCaptureVideoDataOutput *videoDataOutput;
+    AVCaptureStillImageOutput *stillImageOutput;
+    dispatch_queue_t videoDataOutputQueue;
+    BOOL detectFaces;
+    BOOL isUsingFrontFacingCamera;
+}
 
 
 @end

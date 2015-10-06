@@ -15,6 +15,7 @@
 		2975BBEA1BC2C7C000FF63B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2975BBE81BC2C7C000FF63B5 /* LaunchScreen.storyboard */; };
 		2975BBF51BC2C7C000FF63B5 /* BackgroundCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975BBF41BC2C7C000FF63B5 /* BackgroundCameraTests.m */; };
 		2975BC001BC2C7C000FF63B5 /* BackgroundCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975BBFF1BC2C7C000FF63B5 /* BackgroundCameraUITests.m */; };
+		2975BC101BC45D0300FF63B5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2975BC0F1BC45D0300FF63B5 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2975BBFB1BC2C7C000FF63B5 /* BackgroundCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2975BBFF1BC2C7C000FF63B5 /* BackgroundCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundCameraUITests.m; sourceTree = "<group>"; };
 		2975BC011BC2C7C000FF63B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2975BC0F1BC45D0300FF63B5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2975BC101BC45D0300FF63B5 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		2975BBCE1BC2C7C000FF63B5 = {
 			isa = PBXGroup;
 			children = (
+				2975BC111BC45D0C00FF63B5 /* Frameworks */,
 				2975BBD91BC2C7C000FF63B5 /* BackgroundCamera */,
 				2975BBF31BC2C7C000FF63B5 /* BackgroundCameraTests */,
 				2975BBFE1BC2C7C000FF63B5 /* BackgroundCameraUITests */,
@@ -138,6 +142,14 @@
 				2975BC011BC2C7C000FF63B5 /* Info.plist */,
 			);
 			path = BackgroundCameraUITests;
+			sourceTree = "<group>";
+		};
+		2975BC111BC45D0C00FF63B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2975BC0F1BC45D0300FF63B5 /* CoreImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
