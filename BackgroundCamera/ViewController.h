@@ -12,13 +12,15 @@
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate> {
     
+    AVCaptureSession *session;
     AVCaptureVideoDataOutput *videoDataOutput;
     AVCaptureStillImageOutput *stillImageOutput;
     dispatch_queue_t videoDataOutputQueue;
     BOOL detectFaces;
     CIDetector *faceDetector;
+    
 }
 
+- (void)toggleFaceDetection;
 
 @end
-
