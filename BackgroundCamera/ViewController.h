@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+@class CIDetector;
 
-@interface ViewController : UIViewController <UIGestureRecognizerDelegate, AVCaptureAudioDataOutputSampleBufferDelegate> {
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate> {
     
     AVCaptureVideoDataOutput *videoDataOutput;
     AVCaptureStillImageOutput *stillImageOutput;
     dispatch_queue_t videoDataOutputQueue;
     BOOL detectFaces;
-    BOOL isUsingFrontFacingCamera;
+    CIDetector *faceDetector;
 }
 
 

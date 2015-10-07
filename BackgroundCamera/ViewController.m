@@ -12,9 +12,6 @@
 #import <ImageIO/ImageIO.h>
 #import <AssertMacros.h>
 
-// used for KVO observation of the @"capturingStillImage" property to perform flash bulb animation
-static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCaptureStillImageIsCapturingStillImageContext";
-
 @interface ViewController ()
 
 @end
@@ -27,18 +24,20 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     NSError *error = nil;
     
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
-    // Select video device
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    // Select video device - does this automatically turn it on?
+    AVCaptureDevice *device = [self frontCamera];
     AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
+    
     // Error handling
-    isUsingFrontFacingCamera = NO;
-    if ( [session canAddInput:deviceInput] )
+    if ([session canAddInput:deviceInput])
         [session addInput:deviceInput];
     
     // Make a still image output
     stillImageOutput = [AVCaptureStillImageOutput new];
-    [stillImageOutput addObserver:self forKeyPath:@"capturingStillImage" options:NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)(AVCaptureStillImageIsCapturingStillImageContext)];
-    if ( [session canAddOutput:stillImageOutput] )
+    NSLog(@"%@", stillImageOutput); // TEST
+    
+    if ([session canAddOutput:stillImageOutput])
         [session addOutput:stillImageOutput];
     
     // Make a video data output
@@ -56,7 +55,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
     [videoDataOutput setSampleBufferDelegate:self queue:videoDataOutputQueue];
     
-    if ( [session canAddOutput:videoDataOutput] )
+    if ([session canAddOutput:videoDataOutput])
         [session addOutput:videoDataOutput];
     [[videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:NO];
 
@@ -65,7 +64,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
 bail:
     if (error) {
-        // FIXME: Remove UIAlertView
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh"
                                                        message:@"Failed with error"
                                                        preferredStyle:UIAlertControllerStyleAlert];
@@ -74,10 +72,21 @@ bail:
     }
 }
 
+- (AVCaptureDevice *)frontCamera {
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices) {
+        if ([device position] == AVCaptureDevicePositionFront) {
+            return device;
+        }
+    }
+    return nil;
+}
+
+
 // clean up capture setup
 - (void)teardownAVCapture
 {
-    [stillImageOutput removeObserver:self forKeyPath:@"isCapturingStillImage"];
+
 }
 
 - (void)toggleFaceDetection:(id)sender {
@@ -85,7 +94,20 @@ bail:
     [[videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:detectFaces];
     if (!detectFaces) {
         // Toggle blur off
+        
+        
+//        [self drawFaceBoxesForFeatures:[NSArray array] forVideoBox:CGRectZero orientation:UIDeviceOrientationPortrait];
     }
+}
+
+#pragma mark- View Life Cycle Methods
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setupAVCapture];
+
+    NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyLow, CIDetectorAccuracy, nil];
+    faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
 }
 
 @end
