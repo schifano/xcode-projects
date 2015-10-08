@@ -18,7 +18,6 @@
     dispatch_queue_t videoDataOutputQueue;
     BOOL detectFaces;
     CIDetector *faceDetector;
-    
 }
 
 - (void)toggleFaceDetection;

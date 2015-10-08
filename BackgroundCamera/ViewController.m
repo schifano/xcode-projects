@@ -22,7 +22,6 @@
     NSError *error = nil;
     
     session = [[AVCaptureSession alloc] init];
-//    AVCaptureDevicePosition position = AVCaptureDevicePositionFront;
     AVCaptureDevice *device = [self frontCamera]; // automatically turn it on?
     AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
 
@@ -31,20 +30,16 @@
             [session addInput:deviceInput];
         }
         
-        NSLog(@"Inside !error"); // TEST
-        
         // Make a video data output
         videoDataOutput = [AVCaptureVideoDataOutput new];
-        
-        // we want BGRA, both CoreGraphics and OpenGL work well with 'BGRA'
+        // BGRA, both CoreGraphics and OpenGL work well with 'BGRA'
         NSDictionary *rgbOutputSettings = [NSDictionary dictionaryWithObject:
                                            [NSNumber numberWithInt:kCMPixelFormat_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
         [videoDataOutput setVideoSettings:rgbOutputSettings];
         [videoDataOutput setAlwaysDiscardsLateVideoFrames:YES]; // discard if the data output queue is blocked (as we process the still image)
         
-        // create a serial dispatch queue used for the sample buffer delegate as well as when a still image is captured
-        // a serial dispatch queue must be used to guarantee that video frames will be delivered in order
-        // see the header doc for setSampleBufferDelegate:queue: for more information
+        // Create a serial dispatch queue used for the sample buffer delegate
+        // A serial dispatch queue must be used to guarantee that video frames will be delivered in order
         videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
         [videoDataOutput setSampleBufferDelegate:self queue:videoDataOutputQueue];
         
@@ -52,7 +47,6 @@
             [session addOutput:videoDataOutput];
         }
         [[videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
-
         [session startRunning];
     } else {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh"
@@ -64,7 +58,7 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     
-    // get the image
+    // Get the image
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
     CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer:pixelBuffer
@@ -73,15 +67,24 @@
         CFRelease(attachments);
     }
     
-//    // make sure your device orientation is not locked.
-//    UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
-    
     NSDictionary *imageOptions = nil;
     
     NSArray *features = [faceDetector featuresInImage:ciImage options:imageOptions];
     
-    NSLog(@"HELLO I'M IN CAPTUREOUTPUT"); // TEST
-    NSLog(@"%@", features); // TEST
+    if (features.count != 1) {
+        // Toggle blur
+        NSLog(@"BLUR ME BLUR ME BLUR");
+        NSLog(@"Faces: %lu", features.count);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.view.backgroundColor = [UIColor whiteColor];
+        });
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.view.backgroundColor = [UIColor greenColor];
+        });
+        NSLog(@"HELLO I'M IN CAPTUREOUTPUT"); // TEST
+        NSLog(@"%@", features); // TEST
+    }
 }
 
 - (AVCaptureDevice *)frontCamera {
@@ -96,7 +99,6 @@
 }
 
 - (void)toggleFaceDetection {
-    
     [[videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
     if (!detectFaces) {
         // Toggle blur off
@@ -108,16 +110,9 @@
     [super viewDidLoad];
     
     [self setupAVCapture];
-    
     // Face Detection
     NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyLow, CIDetectorAccuracy, nil];
     faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
 }
 
 @end
-
-
-//An instance of AVCaptureDevice to represent the input device, such as a camera or microphone
-//An instance of a concrete subclass of AVCaptureInput to configure the ports from the input device
-//An instance of a concrete subclass of AVCaptureOutput to manage the output to a movie file or still image
-//An instance of AVCaptureSession to coordinate the data flow from the input to the output
