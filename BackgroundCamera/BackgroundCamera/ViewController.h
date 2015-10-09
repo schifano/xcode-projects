@@ -16,6 +16,7 @@
     AVCaptureVideoDataOutput *videoDataOutput;
     AVCaptureStillImageOutput *stillImageOutput;
     dispatch_queue_t videoDataOutputQueue;
+    BOOL isUsingFrontFacingCamera;
     BOOL detectFaces;
     CIDetector *faceDetector;
 }
