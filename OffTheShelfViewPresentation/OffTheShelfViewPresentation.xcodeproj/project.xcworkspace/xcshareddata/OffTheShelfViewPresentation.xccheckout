@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F4C0E6AF-9043-4B1A-A062-1203DC6CF424</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>OffTheShelfViewPresentation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
 		<string>github.com:schifano/xcode-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OffTheShelfViewPresentation/OffTheShelfViewPresentation.xcodeproj/project.xcworkspace</string>
+	<string>OffTheShelfViewPresentation/OffTheShelfViewPresentation.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>

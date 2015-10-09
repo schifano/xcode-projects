@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		294C1ACF1B756BC2008BB6B4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294C1ACE1B756BC2008BB6B4 /* main.swift */; };
+		294C1AD71B756C25008BB6B4 /* ugh.m in Sources */ = {isa = PBXBuildFile; fileRef = 294C1AD61B756C25008BB6B4 /* ugh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		294C1ACB1B756BC2008BB6B4 /* TestCommandLineProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCommandLineProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		294C1ACE1B756BC2008BB6B4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		294C1AD51B756C25008BB6B4 /* TestCommandLineProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCommandLineProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		294C1AD61B756C25008BB6B4 /* ugh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ugh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				294C1ACE1B756BC2008BB6B4 /* main.swift */,
+				294C1AD61B756C25008BB6B4 /* ugh.m */,
+				294C1AD51B756C25008BB6B4 /* TestCommandLineProject-Bridging-Header.h */,
 			);
 			path = TestCommandLineProject;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294C1AD71B756C25008BB6B4 /* ugh.m in Sources */,
 				294C1ACF1B756BC2008BB6B4 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,14 +212,21 @@
 		294C1AD31B756BC2008BB6B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestCommandLineProject/TestCommandLineProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		294C1AD41B756BC2008BB6B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestCommandLineProject/TestCommandLineProject-Bridging-Header.h";
 			};
 			name = Release;
 		};

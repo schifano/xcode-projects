@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7D11B865-2C6C-4AEB-A853-647E4B3FB208</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TextFieldChallengeApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
 		<string>github.com:schifano/xcode-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TextFieldChallengeApp/TextFieldChallengeApp.xcodeproj/project.xcworkspace</string>
+	<string>TextFieldChallengeApp/TextFieldChallengeApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>

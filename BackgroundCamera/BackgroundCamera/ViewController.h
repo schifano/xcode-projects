@@ -1,26 +1,14 @@
 //
 //  ViewController.h
-//  BackgroundCamera
+//  BlurText
 //
-//  Created by Rachel Schifano on 10/5/15.
-//  Copyright © 2015 schifano. All rights reserved.
+//  Created by Rachel Schifano on 9/21/15.
+//  Copyright (c) 2015 schifano. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-@class CIDetector;
+#import "BlurText.h"
 
-@interface ViewController : UIViewController <UIGestureRecognizerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate> {
-    
-    AVCaptureSession *session;
-    AVCaptureVideoDataOutput *videoDataOutput;
-    AVCaptureStillImageOutput *stillImageOutput;
-    dispatch_queue_t videoDataOutputQueue;
-    BOOL isUsingFrontFacingCamera;
-    BOOL detectFaces;
-    CIDetector *faceDetector;
-}
-
-- (void)toggleFaceDetection;
+@interface ViewController : UIViewController <BlurTextDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end

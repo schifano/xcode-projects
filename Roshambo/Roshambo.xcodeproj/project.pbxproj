@@ -14,6 +14,7 @@
 		2975A76D1B6C65D100CD306C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2975A76B1B6C65D100CD306C /* LaunchScreen.xib */; };
 		2975A7791B6C65D100CD306C /* RoshamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2975A7781B6C65D100CD306C /* RoshamboTests.swift */; };
 		2975A7831B6DD04300CD306C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2975A7821B6DD04300CD306C /* ResultViewController.swift */; };
+		29F58B781B719A1500593704 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F58B771B719A1500593704 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2975A7771B6C65D100CD306C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2975A7781B6C65D100CD306C /* RoshamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboTests.swift; sourceTree = "<group>"; };
 		2975A7821B6DD04300CD306C /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		29F58B771B719A1500593704 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				2975A7621B6C65D100CD306C /* AppDelegate.swift */,
+				29F58B771B719A1500593704 /* HistoryViewController.swift */,
 				2975A7641B6C65D100CD306C /* BeginMatchViewController.swift */,
 				2975A7821B6DD04300CD306C /* ResultViewController.swift */,
 				2975A7661B6C65D100CD306C /* Main.storyboard */,
@@ -218,6 +221,7 @@
 				2975A7651B6C65D100CD306C /* BeginMatchViewController.swift in Sources */,
 				2975A7631B6C65D100CD306C /* AppDelegate.swift in Sources */,
 				2975A7831B6DD04300CD306C /* ResultViewController.swift in Sources */,
+				29F58B781B719A1500593704 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +417,7 @@
 				2975A77E1B6C65D100CD306C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2975A77F1B6C65D100CD306C /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				2975A7811B6C65D100CD306C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

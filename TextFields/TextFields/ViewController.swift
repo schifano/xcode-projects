@@ -31,12 +31,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Set the three delegates
         self.textField1.delegate = emojiDelegate
-        self.textField2.delegate = randomColorDelegate
+        self.textField2.delegate = colorizerDelegate
         self.textField3.delegate = self
     }
 
     
-    // Text Field Delegate Methods
+    // Text Field Delegate Methods
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 

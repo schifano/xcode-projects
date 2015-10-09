@@ -41,7 +41,7 @@
                                         </constraints>
                                         <color key="onTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="changeColorComponent" destination="vXZ-lx-hvc" eventType="valueChanged" id="Y6S-Lv-NDH"/>
+                                            <action selector="changeColorComponent" destination="vXZ-lx-hvc" eventType="valueChanged" id="upJ-JG-jXu"/>
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeB-Ui-15Q">
@@ -82,7 +82,7 @@
                                         <rect key="frame" x="111" y="119" width="51" height="31"/>
                                         <color key="onTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="changeColorComponent" destination="vXZ-lx-hvc" eventType="valueChanged" id="l8k-YR-Ofj"/>
+                                            <action selector="changeColorComponent" destination="vXZ-lx-hvc" eventType="valueChanged" id="lIg-AB-XFv"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -135,7 +135,7 @@
                     </view>
                     <connections>
                         <outlet property="blueControl" destination="mrj-g1-6nX" id="cBG-gi-Ui5"/>
-                        <outlet property="colorView" destination="AjB-H9-6TC" id="eZi-8v-SXt"/>
+                        <outlet property="colorView" destination="AjB-H9-6TC" id="omI-vj-soO"/>
                         <outlet property="greenControl" destination="aoV-z2-sOS" id="UZz-C1-egh"/>
                         <outlet property="redControl" destination="zZ7-a9-FSD" id="aTf-D4-3nz"/>
                     </connections>

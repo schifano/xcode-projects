@@ -86,12 +86,18 @@ What should she do?</string>
                                 <state key="normal" title="Wait to see what happens next.">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Uxn-IV-fY3" kind="show" id="g9i-QP-gxd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IP-af-x9y">
                                 <rect key="frame" x="32" y="520" width="350" height="30"/>
                                 <state key="normal" title="Attack the old man!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TJt-Us-LeR" kind="show" id="JTM-gC-175"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8j-h7-CGl">
                                 <rect key="frame" x="32" y="64" width="350" height="386"/>
@@ -146,6 +152,84 @@ What should she do?</string>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="996" y="796"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wQN-DZ-rXU">
+            <objects>
+                <viewController id="Uxn-IV-fY3" customClass="ViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pAX-ro-zMs"/>
+                        <viewControllerLayoutGuide type="bottom" id="MGE-PL-O5n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qC6-WW-fbK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceL-Aw-zIT">
+                                <rect key="frame" x="32" y="473" width="350" height="30"/>
+                                <state key="normal" title="Wait to see what happens next.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUl-Ga-E9C">
+                                <rect key="frame" x="32" y="520" width="350" height="30"/>
+                                <state key="normal" title="Attack the old man!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-OI-cwV">
+                                <rect key="frame" x="32" y="64" width="350" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WwG-Mf-DTO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQE-Vb-AeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="400"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4qS-tv-K0b">
+            <objects>
+                <viewController id="TJt-Us-LeR" customClass="ViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="06Q-5B-Frh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wn0-97-hcn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7fn-jR-v5p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZN-um-abC">
+                                <rect key="frame" x="32" y="473" width="350" height="30"/>
+                                <state key="normal" title="Wait to see what happens next.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CA-5h-kjo">
+                                <rect key="frame" x="32" y="520" width="350" height="30"/>
+                                <state key="normal" title="Attack the old man!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rF7-dR-JwM">
+                                <rect key="frame" x="32" y="64" width="350" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fQD-BJ-iJX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXc-0X-e1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="-396"/>
         </scene>
     </scenes>
 </document>

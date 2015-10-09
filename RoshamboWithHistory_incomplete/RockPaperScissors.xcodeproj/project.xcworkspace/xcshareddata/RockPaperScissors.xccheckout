@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C00C0728-66E7-415E-8AF7-E0988208C566</string>
 	<key>IDESourceControlProjectName</key>
-	<string>RockPaperScissors</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
 		<string>github.com:schifano/xcode-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RoshamboWithHistory_incomplete/RockPaperScissors.xcodeproj</string>
+	<string>RoshamboWithHistory_incomplete/RockPaperScissors.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>

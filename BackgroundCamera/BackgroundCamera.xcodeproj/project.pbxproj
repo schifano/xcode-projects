@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290E89631BC8433100F187DF /* BlurredUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 290E89621BC8433100F187DF /* BlurredUILabel.m */; settings = {ASSET_TAGS = (); }; };
+		290E89661BC843AD00F187DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290E89651BC843AD00F187DF /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		290E89681BC84DA700F187DF /* BlurText.m in Sources */ = {isa = PBXBuildFile; fileRef = 290E89671BC84DA700F187DF /* BlurText.m */; settings = {ASSET_TAGS = (); }; };
 		2975BBDC1BC2C7C000FF63B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975BBDB1BC2C7C000FF63B5 /* main.m */; };
 		2975BBDF1BC2C7C000FF63B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975BBDE1BC2C7C000FF63B5 /* AppDelegate.m */; };
-		2975BBE21BC2C7C000FF63B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975BBE11BC2C7C000FF63B5 /* ViewController.m */; };
+		2975BBE21BC2C7C000FF63B5 /* FaceDetectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975BBE11BC2C7C000FF63B5 /* FaceDetectionViewController.m */; };
 		2975BBE51BC2C7C000FF63B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2975BBE31BC2C7C000FF63B5 /* Main.storyboard */; };
 		2975BBE71BC2C7C000FF63B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2975BBE61BC2C7C000FF63B5 /* Assets.xcassets */; };
 		2975BBEA1BC2C7C000FF63B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2975BBE81BC2C7C000FF63B5 /* LaunchScreen.storyboard */; };
@@ -36,12 +39,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290E89611BC8433100F187DF /* BlurredUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurredUILabel.h; sourceTree = "<group>"; };
+		290E89621BC8433100F187DF /* BlurredUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurredUILabel.m; sourceTree = "<group>"; };
+		290E89641BC843AD00F187DF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		290E89651BC843AD00F187DF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		290E89671BC84DA700F187DF /* BlurText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurText.m; sourceTree = "<group>"; };
+		290E89691BC84DD000F187DF /* BlurText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurText.h; sourceTree = "<group>"; };
 		2975BBD71BC2C7C000FF63B5 /* BackgroundCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2975BBDB1BC2C7C000FF63B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2975BBDD1BC2C7C000FF63B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2975BBDE1BC2C7C000FF63B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2975BBE01BC2C7C000FF63B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2975BBE11BC2C7C000FF63B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2975BBE01BC2C7C000FF63B5 /* FaceDetectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetectionViewController.h; sourceTree = "<group>"; };
+		2975BBE11BC2C7C000FF63B5 /* FaceDetectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDetectionViewController.m; sourceTree = "<group>"; };
 		2975BBE41BC2C7C000FF63B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2975BBE61BC2C7C000FF63B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2975BBE91BC2C7C000FF63B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,9 +116,15 @@
 			children = (
 				2975BBDD1BC2C7C000FF63B5 /* AppDelegate.h */,
 				2975BBDE1BC2C7C000FF63B5 /* AppDelegate.m */,
-				2975BBE01BC2C7C000FF63B5 /* ViewController.h */,
-				2975BBE11BC2C7C000FF63B5 /* ViewController.m */,
+				290E89641BC843AD00F187DF /* ViewController.h */,
+				290E89651BC843AD00F187DF /* ViewController.m */,
+				2975BBE01BC2C7C000FF63B5 /* FaceDetectionViewController.h */,
+				2975BBE11BC2C7C000FF63B5 /* FaceDetectionViewController.m */,
 				2975BBE31BC2C7C000FF63B5 /* Main.storyboard */,
+				290E89611BC8433100F187DF /* BlurredUILabel.h */,
+				290E89621BC8433100F187DF /* BlurredUILabel.m */,
+				290E89691BC84DD000F187DF /* BlurText.h */,
+				290E89671BC84DA700F187DF /* BlurText.m */,
 				2975BBE61BC2C7C000FF63B5 /* Assets.xcassets */,
 				2975BBE81BC2C7C000FF63B5 /* LaunchScreen.storyboard */,
 				2975BBEB1BC2C7C000FF63B5 /* Info.plist */,
@@ -282,9 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2975BBE21BC2C7C000FF63B5 /* ViewController.m in Sources */,
+				2975BBE21BC2C7C000FF63B5 /* FaceDetectionViewController.m in Sources */,
+				290E89631BC8433100F187DF /* BlurredUILabel.m in Sources */,
 				2975BBDF1BC2C7C000FF63B5 /* AppDelegate.m in Sources */,
 				2975BBDC1BC2C7C000FF63B5 /* main.m in Sources */,
+				290E89661BC843AD00F187DF /* ViewController.m in Sources */,
+				290E89681BC84DA700F187DF /* BlurText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +526,7 @@
 				2975BC061BC2C7C000FF63B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2975BC071BC2C7C000FF63B5 /* Build configuration list for PBXNativeTarget "BackgroundCameraTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +535,7 @@
 				2975BC091BC2C7C000FF63B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2975BC0A1BC2C7C000FF63B5 /* Build configuration list for PBXNativeTarget "BackgroundCameraUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +544,7 @@
 				2975BC0C1BC2C7C000FF63B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

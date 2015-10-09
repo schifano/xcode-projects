@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,19 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmv-QO-5qT">
-                                <rect key="frame" x="184" y="238" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgF-4H-4td">
+                                <rect key="frame" x="-5" y="80" width="419" height="581"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmv-QO-5qT">
+                                <rect key="frame" x="184" y="686" width="44" height="30"/>
+                                <state key="normal" title="Album">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="experiment" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7ae-61-2KZ"/>
+                                    <action selector="loadImageButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hCm-Na-VRY"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88393702651515149" green="0.87149573034718064" blue="0.82366507079842377" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Tmv-QO-5qT" secondAttribute="centerX" constant="1" id="6FB-2U-miH"/>
+                            <constraint firstItem="kgF-4H-4td" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-21" id="CQx-GF-aVe"/>
+                            <constraint firstItem="kgF-4H-4td" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="Htd-Nd-r2d"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kgF-4H-4td" secondAttribute="bottom" constant="75" id="KPW-Qg-Cdn"/>
+                            <constraint firstItem="kgF-4H-4td" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="16" id="Uso-TF-rav"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Tmv-QO-5qT" secondAttribute="bottom" constant="20" id="vbd-Qt-mDn"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="imageView" destination="kgF-4H-4td" id="0Ps-27-Dfb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

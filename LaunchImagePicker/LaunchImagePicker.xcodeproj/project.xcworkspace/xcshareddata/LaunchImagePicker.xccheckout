@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B7D7F15E-BCBD-497C-A181-BF0477C1BE20</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>LaunchImagePicker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
 		<string>github.com:schifano/xcode-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LaunchImagePicker/LaunchImagePicker.xcodeproj/project.xcworkspace</string>
+	<string>LaunchImagePicker/LaunchImagePicker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>

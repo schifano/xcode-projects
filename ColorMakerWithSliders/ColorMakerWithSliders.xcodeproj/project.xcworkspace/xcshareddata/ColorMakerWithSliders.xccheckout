@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AEACC97D-EF20-44D8-88A9-4C155695B66D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ColorMakerWithSliders</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
 		<string>github.com:schifano/xcode-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ColorMakerWithSliders/ColorMakerWithSliders.xcodeproj/project.xcworkspace</string>
+	<string>ColorMakerWithSliders/ColorMakerWithSliders.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D32C0006490F20252F07C43D373773DBC8D66C1</key>
