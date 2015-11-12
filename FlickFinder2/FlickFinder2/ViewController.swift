@@ -51,6 +51,39 @@ class ViewController: UIViewController {
         print("Remove the tapRecognizer and unsubscribe from keyboard notifications in viewWillDisappear")
     }
     
+    // MARK: Show/Hide Keyboard
+    func addKeyboardDismissRecognizer() {
+        print("Add the recognizer to dismiss the keyboard")
+    }
+    
+    func removeKeyboardDismissRecognizer() {
+        print("Remove the recognizer to dismiss the keyboard")
+    }
+    
+    func handleSingleTap(recognizer: UITapGestureRecognizer) {
+        print("End editing here")
+    }
+    
+    func subscribeToKeyboardNotifications() {
+        print("Subscribe to the KeyboardWillShow and KeyboardWillHide notifications")
+    }
+    
+    func unsubscribeToKeyboardNotifications() {
+        print("Unsubscribe to the KeyboardWillShow and KeyboardWillHide notifications")
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        print("Shift the view's frame up so that controls are shown")
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        print("Shift the view's frame down so that the view is back to its original placement")
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        print("Get and return the keyboard's height from the notification")
+        return 0.0
+    }
     
     @IBAction func searchPhotosByPhraseButtonTouchUp(sender: AnyObject) {
         /* 1. Hardcode the Arguments */
