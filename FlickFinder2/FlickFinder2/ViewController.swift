@@ -34,58 +34,76 @@ class ViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
+        tapRecognizer?.numberOfTapsRequired = 1
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print("Initialize the tapRecognizer in viewDidLoad")
+
+        self.addKeyboardDismissRecognizer()
+        self.subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        print("Add the tapRecognizer and subscribe to keyboard notifications in viewWillAppear")
+
+        self.removeKeyboardDismissRecognizer()
+        self.unsubscribeToKeyboardNotifications()
     }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("Remove the tapRecognizer and unsubscribe from keyboard notifications in viewWillDisappear")
-    }
-    
+
     // MARK: Show/Hide Keyboard
     func addKeyboardDismissRecognizer() {
-        print("Add the recognizer to dismiss the keyboard")
+        self.view.addGestureRecognizer(tapRecognizer!)
     }
     
     func removeKeyboardDismissRecognizer() {
-        print("Remove the recognizer to dismiss the keyboard")
+        self.view.removeGestureRecognizer(tapRecognizer!)
     }
     
     func handleSingleTap(recognizer: UITapGestureRecognizer) {
-        print("End editing here")
+        self.view.endEditing(true)
     }
     
     func subscribeToKeyboardNotifications() {
-        print("Subscribe to the KeyboardWillShow and KeyboardWillHide notifications")
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func unsubscribeToKeyboardNotifications() {
-        print("Unsubscribe to the KeyboardWillShow and KeyboardWillHide notifications")
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        print("Shift the view's frame up so that controls are shown")
+        if self.photoImageView.image != nil {
+            self.defaultLabel.alpha = 0.0
+        }
+        if self.view.frame.origin.y == 0.0 {
+            self.view.frame.origin.y -= self.getKeyboardHeight(notification) / 2
+        }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        print("Shift the view's frame down so that the view is back to its original placement")
+        if self.photoImageView.image == nil {
+            self.defaultLabel.alpha = 1.0
+        }
+        if self.view.frame.origin.y != 0.0 {
+            self.view.frame.origin.y += self.getKeyboardHeight(notification) / 2
+        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
-        print("Get and return the keyboard's height from the notification")
-        return 0.0
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.CGRectValue().height
     }
     
     @IBAction func searchPhotosByPhraseButtonTouchUp(sender: AnyObject) {
+        
+        /* Hide keyboard after searching */
+        self.dismissAnyVisibleKeyboards()
+        
         /* 1. Hardcode the Arguments */
         let methodArguments: [String: String!] = [
             "method": METHOD_NAME,
@@ -235,6 +253,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func searchPhotosByLatLonButtonTouchUp(sender: AnyObject) {
+        /* Hide keyboard after searching */
+        self.dismissAnyVisibleKeyboards()
+        
         print("Will implement this function in a later step...")
+    }
+}
+
+// MARK: - ViewController (Keyboard Fix)
+
+/* This extension was added as a fix based on student comments */
+extension ViewController {
+    func dismissAnyVisibleKeyboards() {
+        if phraseTextField.isFirstResponder() || latitudeTextField.isFirstResponder() || longitudeTextField.isFirstResponder() {
+            self.view.endEditing(true)
+        }
     }
 }
