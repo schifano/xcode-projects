@@ -29,6 +29,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
     
+    var tapRecognizer: UITapGestureRecognizer? = nil
+    
+    // MARK: Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Initialize the tapRecognizer in viewDidLoad")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("Add the tapRecognizer and subscribe to keyboard notifications in viewWillAppear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("Remove the tapRecognizer and unsubscribe from keyboard notifications in viewWillDisappear")
+    }
+    
+    
     @IBAction func searchPhotosByPhraseButtonTouchUp(sender: AnyObject) {
         /* 1. Hardcode the Arguments */
         let methodArguments: [String: String!] = [
@@ -138,6 +161,9 @@ class ViewController: UIViewController {
                 /* 6. Update the UI on the main thread */
                 if let imageData = NSData(contentsOfURL: imageURL!) {
                     dispatch_async(dispatch_get_main_queue(), {
+                        self.defaultLabel.alpha = 0.0
+                        self.photoImageView.image = UIImage(data: imageData)
+                        self.photoTitleLabel.text = "\(photoTitle!)"
                         print("Success, update the UI here...")
                         print(photoTitle)
                         print(imageData)
@@ -147,6 +173,9 @@ class ViewController: UIViewController {
                 }
             } else {
                 dispatch_async(dispatch_get_main_queue(), {
+                    self.photoTitleLabel.text = "No Photos Found. Search Again"
+                    self.defaultLabel.alpha = 1.0
+                    self.photoImageView.image = nil
                     print("No Photos Found. Search Again")
                 })
             }
