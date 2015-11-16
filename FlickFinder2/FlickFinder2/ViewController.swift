@@ -393,7 +393,8 @@ class ViewController: UIViewController {
     /* Check to make sure the latitude falls within [-90, 90] */
     func validLatitude() -> Bool {
         // if let latitude : Double? = self.latitudeTextField.text!.toDouble() ERROR
-        if let latitude : Double? = (self.latitudeTextField.text! as NSString).doubleValue {
+        let latitude = Double(self.latitudeTextField.text!)
+        if let latitude : Double? = latitude {
             if latitude < LAT_MIN || latitude > LAT_MAX {
                 return false
             }
@@ -405,7 +406,8 @@ class ViewController: UIViewController {
     
     /* Check to make sure the longitude falls within [-180, 180] */
     func validLongitude() -> Bool {
-        if let longitude : Double? = (self.longitudeTextField.text! as NSString).doubleValue {
+        let longitude = Double(self.longitudeTextField.text!)
+        if let longitude : Double? = longitude {
             if longitude < LON_MIN || longitude > LON_MAX {
                 return false
             }
