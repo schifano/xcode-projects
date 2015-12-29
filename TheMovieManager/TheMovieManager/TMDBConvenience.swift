@@ -178,5 +178,52 @@ extension TMDBClient {
         }
     }
     
+    func getWatchlistMovies(completionHandler: (result: [TMDBMovie]?, error: NSError?) -> Void) {
+        
+        /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
+        /* 2. Make the request */
+        /* 3. Send the desired value(s) to completion handler */
+        print("implement me: TMDBClient getWatchlistMovies")
+    }
     
+    func getMoviesForSearchString(searchString: String, completionHandler: (result: [TMDBMovie]?, error: NSError?) -> Void) -> NSURLSessionDataTask? {
+        
+        /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
+        let parameters = [TMDBClient.ParameterKeys.Query: searchString]
+        
+        /* 2. Make the request */
+        let task = taskForGETMethod(Methods.SearchMovie, parameters: parameters) { JSONResult, error in
+            /* 3. Send the desired value(s) to completion handler */
+            if let error = error {
+                completionHandler(result: nil, error: error)
+            } else {
+                if let results = JSONResult[TMDBClient.JSONResponseKeys.MovieResults] as? [[String : AnyObject]] {
+                    let movies = TMDBMovie.moviesFromResults(results)
+                    completionHandler(result: movies, error: nil)
+                } else {
+                    completionHandler(result: nil, error: NSError(domain: "getMOviesForSearchString parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getMoviesForSearchString"]))
+                }
+            }
+        }
+        return task
+    }
+    
+    func getConfig(completionHandler: (didSucceed: Bool, error: NSError?) -> Void) {
+        /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
+        let parameters = [String: AnyObject]()
+        
+        /* 2. Make the request */
+        taskForGETMethod(Methods.Config, parameters: parameters) { JSONResult, error in
+            /* 3. Send the desired value(s) to completion handler */
+            if let error = error {
+                completionHandler(didSucceed: false, error: error)
+            } else if let newConfig = TMDBConfig(dictionary: JSONResult as! [String : AnyObject]) {
+                self.config = newConfig
+                completionHandler(didSucceed: true, error: nil)
+            } else {
+                completionHandler(didSucceed: false, error: NSError(domain: "getConfig parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getConfig"]))
+            }
+        }
+    }
+
 }
