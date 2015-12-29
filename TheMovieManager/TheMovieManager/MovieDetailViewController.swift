@@ -91,20 +91,20 @@ class MovieDetailViewController: UIViewController {
             }
             
             /* Set the poster image */
-            if let posterPath = movie.posterPath {
-                TMDBClient.sharedInstance().taskForGETImage(TMDBClient.PosterSizes.DetailPoster, filePath: posterPath, completionHandler: { (imageData, error) in
-                    if let image = UIImage(data: iamgeData!) {
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.activityIndicator.alpha = 0.0
-                            self.activityIndicator.stopAnimating()
-                            self.posterImageView.image = image
-                        }
-                    }
-                })
-            } else {
-                self.activityIndicator.alpha = 0.0
-                self.activityIndicator.stopAnimating()
-            }
+//            if let posterPath = movie.posterPath {
+//                TMDBClient.sharedInstance().taskForGETImage(TMDBClient.PosterSizes.DetailPoster, filePath: posterPath, completionHandler: { (imageData, error) in
+//                    if let image = UIImage(data: iamgeData!) {
+//                        dispatch_async(dispatch_get_main_queue()) {
+//                            self.activityIndicator.alpha = 0.0
+//                            self.activityIndicator.stopAnimating()
+//                            self.posterImageView.image = image
+//                        }
+//                    }
+//                })
+//            } else {
+//                self.activityIndicator.alpha = 0.0
+//                self.activityIndicator.stopAnimating()
+//            }
         }
     }
     
@@ -112,15 +112,55 @@ class MovieDetailViewController: UIViewController {
     // TODO: Implement actions
     
     @IBAction func toggleFavoriteButtonTouchUp(sender: AnyObject) {
-        
-        // TODO: Add the movie to favorites, then update favorite button */
-        print("implement me: MovieDetailViewController toggleFavoriteButtonTouchUp()")
-        
+        if isFavorite {
+            TMDBClient.sharedInstance().postToFavorites(movie!, favorite: false) { status_code, error in
+                if let err = error {
+                    print(err)
+                } else {
+                    if status_code == 13 {
+                        self.isFavorite = false
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.toggleFavoriteButton.tintColor = UIColor.blackColor()
+                        }
+                    } else {
+                        print("Unexpected status code \(status_code)")
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func toggleWatchlistButtonTouchUp(sender: AnyObject) {
-        
-        // TODO: Add the movie to watchlist, then update watchlist button */
-        print("implement me: MovieDetailViewController toggleWatchlistButtonTouchUp()")
+        if isWatchlist {
+            TMDBClient.sharedInstance().postToWatchlist(movie!, watchlist: false) { status_code, error in
+                if let err = error {
+                    print(err)
+                } else {
+                    if status_code == 13 {
+                        self.isWatchlist = false
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.toggleWatchlistButton.tintColor = UIColor.blackColor()
+                        }
+                    } else {
+                        print("Unexpected status code \(status_code)")
+                    }
+                }
+            }
+        } else {
+            TMDBClient.sharedInstance().postToWatchlist(movie!, watchlist: true) { status_code, error in
+                if let err = error {
+                    print(err)
+                } else {
+                    if status_code == 1 || status_code == 12 {
+                        self.isWatchlist = true
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.toggleWatchlistButton.tintColor = nil
+                        }
+                    } else {
+                        print("Unexpected status code \(status_code)")
+                    }
+                }
+            }
+        }
     }
 }
