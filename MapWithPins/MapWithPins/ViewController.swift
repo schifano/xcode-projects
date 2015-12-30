@@ -42,5 +42,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return pinView
     }
     
-
+    /**
+        Tells the delegate that the user tapped one of the annotation view's accessory buttons.
+        - parameter mapView: The map view containing the specified annotation view.
+        - parameter view: The annotation view whose button was tapped.
+        - parameter control: The control that was tapped.
+    */
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            let app = UIApplication.sharedApplication()
+            if let toOpen = view.annotation?.subtitle! {
+                app.openURL(NSURL(string: toOpen)!)
+            }
+        }
+    }
 }
