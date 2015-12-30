@@ -16,6 +16,12 @@
                     <view key="view" contentMode="scaleToFill" id="W4O-l7-zal">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xcn-lT-aAZ">
+                                <rect key="frame" x="20" y="20" width="335" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="roG-IQ-5o4"/>
@@ -27,7 +33,7 @@
         <!--Item 1-->
         <scene sceneID="7HC-px-BFV">
             <objects>
-                <viewController id="gBS-wv-WYE" sceneMemberID="viewController">
+                <viewController id="gBS-wv-WYE" customClass="ViewController" customModule="MapWithPins" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VTd-52-U1t"/>
                         <viewControllerLayoutGuide type="bottom" id="Ruc-Vx-jf4"/>
@@ -35,9 +41,17 @@
                     <view key="view" contentMode="scaleToFill" id="bQv-kP-oUB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xcw-YJ-9f1">
+                                <rect key="frame" x="20" y="20" width="335" height="598"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="AXb-ng-2V9"/>
+                    <connections>
+                        <outlet property="mapView" destination="xcw-YJ-9f1" id="vOG-nU-cHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xa-De-DOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
