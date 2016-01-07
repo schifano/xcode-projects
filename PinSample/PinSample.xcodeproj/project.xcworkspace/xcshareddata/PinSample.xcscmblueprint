@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0D32C0006490F20252F07C43D373773DBC8D66C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0D32C0006490F20252F07C43D373773DBC8D66C1" : 0,
+    "06B17395845E828303F27DC33B46C98360A84829" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C97B5560-CD71-48A6-BA02-E725F1AD5022",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0D32C0006490F20252F07C43D373773DBC8D66C1" : "xcode-projects\/",
+    "06B17395845E828303F27DC33B46C98360A84829" : "ios-networking"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PinSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PinSample\/PinSample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/udacity\/ios-networking",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "06B17395845E828303F27DC33B46C98360A84829"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:schifano\/xcode-projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0D32C0006490F20252F07C43D373773DBC8D66C1"
+    }
+  ]
+}
