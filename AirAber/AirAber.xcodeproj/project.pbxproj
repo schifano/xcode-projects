@@ -15,6 +15,7 @@
 		291F5EF81D2A1B0000A485FF /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 291F5EDE1D2A1B0000A485FF /* Watch.app */; };
 		291F5F001D2A1CD000A485FF /* Flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FA27C1B724A7400B1E765 /* Flights.json */; };
 		291F5F011D2A1DBF00A485FF /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FA27F1B724A9900B1E765 /* Flight.swift */; };
+		291F5F031D2A233800A485FF /* FlightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F5F021D2A233800A485FF /* FlightInterfaceController.swift */; };
 		7B8FA23D1B72275A00B1E765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FA23C1B72275A00B1E765 /* AppDelegate.swift */; };
 		7B8FA23F1B72275A00B1E765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FA23E1B72275A00B1E765 /* ViewController.swift */; };
 		7B8FA2421B72275A00B1E765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FA2401B72275A00B1E765 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		291F5EF11D2A1B0000A485FF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		291F5EF31D2A1B0000A485FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291F5EF51D2A1B0000A485FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		291F5F021D2A233800A485FF /* FlightInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInterfaceController.swift; sourceTree = "<group>"; };
 		7B8FA2391B72275A00B1E765 /* AirAber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirAber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8FA23C1B72275A00B1E765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8FA23E1B72275A00B1E765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				291F5EF11D2A1B0000A485FF /* ExtensionDelegate.swift */,
 				291F5EF31D2A1B0000A485FF /* Assets.xcassets */,
 				291F5EF51D2A1B0000A485FF /* Info.plist */,
+				291F5F021D2A233800A485FF /* FlightInterfaceController.swift */,
 			);
 			path = "Watch Extension";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				291F5EF21D2A1B0000A485FF /* ExtensionDelegate.swift in Sources */,
+				291F5F031D2A233800A485FF /* FlightInterfaceController.swift in Sources */,
 				291F5F011D2A1DBF00A485FF /* Flight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
