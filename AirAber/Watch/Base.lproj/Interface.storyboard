@@ -36,6 +36,12 @@
                                 <label alignment="left" text="On time" id="Ytc-sM-WUE">
                                     <color key="textColor" red="0.015686274509803921" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
+                                <group width="1" alignment="left" id="roq-cB-gZN">
+                                    <items>
+                                        <label alignment="left" text="Gate 1A" id="1Fp-JJ-ijp"/>
+                                        <label alignment="right" text="Seat 64A" id="dsO-LO-4uD"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
