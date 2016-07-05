@@ -8,7 +8,7 @@
         <!--Flight-->
         <scene sceneID="BJm-7z-kIR">
             <objects>
-                <controller identifier="Flight" id="wrT-Qu-ITe">
+                <controller identifier="Flight" id="wrT-Qu-ITe" customClass="FlightInterfaceController" customModule="Watch_Extension">
                     <items>
                         <group width="1" alignment="left" id="cvy-7K-YgQ">
                             <items>
@@ -45,6 +45,15 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="boardTimeLabel" destination="ksV-l7-HSw" id="RW8-WT-ZMo"/>
+                        <outlet property="boardingLabel" destination="UxY-0o-s4t" id="JKE-jk-SYI"/>
+                        <outlet property="flightLabel" destination="Pcb-QQ-QLE" id="iZE-He-2l2"/>
+                        <outlet property="gateLabel" destination="1Fp-JJ-ijp" id="9bd-bw-KEt"/>
+                        <outlet property="routeLabel" destination="cpd-Nx-MKb" id="CDS-8Z-qTA"/>
+                        <outlet property="seatLabel" destination="dsO-LO-4uD" id="hJp-1y-hCa"/>
+                        <outlet property="statusLabel" destination="Ytc-sM-WUE" id="ug0-Az-Deh"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="243" y="331"/>
