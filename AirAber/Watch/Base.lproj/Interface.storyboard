@@ -66,7 +66,24 @@
                         <table alignment="left" id="Wqd-V3-P58">
                             <items>
                                 <tableRow identifier="FlightRow" id="jnG-Qu-rIy">
-                                    <group key="rootItem" width="1" alignment="left" id="NbI-rh-Vbd"/>
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="NbI-rh-Vbd">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="OZK-fJ-mzp">
+                                                <color key="color" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="Auo-dh-Vh8">
+                                                <items>
+                                                    <group width="1" height="32" alignment="left" spacing="4" id="pUf-dQ-obH">
+                                                        <items>
+                                                            <label alignment="left" text="Label" id="HHV-UG-2W9"/>
+                                                            <imageView alignment="left" id="sUl-tL-jbZ"/>
+                                                            <label alignment="left" text="Label" id="dxq-Km-HBw"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
