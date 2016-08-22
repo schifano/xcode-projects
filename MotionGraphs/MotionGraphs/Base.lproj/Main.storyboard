@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEw-Me-Yib" userLabel="Graph View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEw-Me-Yib" userLabel="Graph View" customClass="APLGraphView">
                                 <rect key="frame" x="-4" y="65" width="383" height="112"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -125,7 +125,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="graphView" destination="yEw-Me-Yib" id="hW8-mb-pHy"/>
+                        <outlet property="graphView" destination="yEw-Me-Yib" id="eOw-nA-ghv"/>
                         <outlet property="intervalLabel" destination="al3-Nm-BD6" id="sku-Al-VfW"/>
                         <outlet property="updateIntervalSlider" destination="G7O-VK-LtX" id="bVb-fD-0dB"/>
                         <outlet property="xLabel" destination="Jy7-7c-oOE" id="4O3-JK-a3s"/>

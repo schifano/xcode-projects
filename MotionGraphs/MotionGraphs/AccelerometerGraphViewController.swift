@@ -11,7 +11,7 @@ import CoreMotion
 
 class AccelerometerGraphViewController: UIViewController {
 
-    @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var graphView: APLGraphView!
     @IBOutlet weak var intervalLabel: UILabel!
     @IBOutlet weak var xLabel: UILabel!
     @IBOutlet weak var yLabel: UILabel!
@@ -34,7 +34,7 @@ class AccelerometerGraphViewController: UIViewController {
                 [weak self] (data: CMAccelerometerData?, error: NSError?) in
                 if let acceleration = data?.acceleration {
                     
-                    APLGraphView().addX(acceleration.x, y: acceleration.y, z: acceleration.z)
+                    self!.graphView.addX(acceleration.x, y: acceleration.y, z: acceleration.z)
                     
                     self!.xLabel.text = String(format: "%.2f", acceleration.x)
                     self!.yLabel.text = String(format: "%.2f", acceleration.y)
