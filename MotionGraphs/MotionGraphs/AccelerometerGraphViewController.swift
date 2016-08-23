@@ -12,10 +12,10 @@ import CoreMotion
 class AccelerometerGraphViewController: UIViewController {
 
     @IBOutlet weak var graphView: APLGraphView!
-    @IBOutlet weak var intervalLabel: UILabel!
     @IBOutlet weak var xLabel: UILabel!
     @IBOutlet weak var yLabel: UILabel!
     @IBOutlet weak var zLabel: UILabel!
+    @IBOutlet weak var intervalLabel: UILabel!
     @IBOutlet weak var updateIntervalSlider: UISlider!
     
     let accelerometerMin: NSTimeInterval = 0.01
@@ -35,7 +35,7 @@ class AccelerometerGraphViewController: UIViewController {
                 if let acceleration = data?.acceleration {
                     
                     self!.graphView.addX(acceleration.x, y: acceleration.y, z: acceleration.z)
-                    
+                    self!.intervalLabel.text = String(self!.updateIntervalSlider.value)
                     self!.xLabel.text = String(format: "%.2f", acceleration.x)
                     self!.yLabel.text = String(format: "%.2f", acceleration.y)
                     self!.zLabel.text = String(format: "%.2f", acceleration.z)
@@ -43,16 +43,6 @@ class AccelerometerGraphViewController: UIViewController {
                 
             }
         }
-        
-//        if let accelerometerData = motionManager!.accelerometerData {
-//            print(accelerometerData.acceleration.x) // TEST
-//            dispatch_async(dispatch_get_main_queue()) {
-//                self.xLabel.text = String(accelerometerData.acceleration.x)
-//                self.yLabel.text = String(accelerometerData.acceleration.y)
-//                self.zLabel.text = String(accelerometerData.acceleration.z)
-//            }
-//        }
-//        startUpdatesWithSliderValue(updateIntervalSlider.value)
     }
     
     // Start updates with given slider value
